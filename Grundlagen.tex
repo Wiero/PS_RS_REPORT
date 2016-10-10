@@ -4,5 +4,8 @@
 \section{Spill and Fill}
 \section{Verwendung eines Spill and Fill Mechanismus in anderen Prozessoren}
 \subsection{Sun Sparc Prozessoren}
-Die Sun Sparc Prozessoren V8/V9 verfügen über ein sliding register Window mit jeweils 16 8 byte Registern in 7 Registersätzen.  
+Die Sun Sparc Prozessoren V8/V9 verfügen über ein sliding register Window mit jeweils 16 8 byte Registern in 7 Registersätzen. Sliding Window bezeichnet ein Verfahren, bei dem die Registersätze im Falle eines Funktionsaufruf nicht auf dem Stack gesichert werden müssen, stattdessen wird auf den nächsten Registersatz gewechselt. Dabei wird meistens auch die Parameterübergabe realisiert. Dabei sind die Input Register in dem Registerwindow des Callers identisch mit dem Output Registern, in dem Registerwindow des Callee.   
+Mit speziellen Bytecode Instruktionen werden im Spill an Fill Verfahren Registersätze ausgetauscht, sobald die 7 Registersätze nicht mehr ausreichen, was allerdings wegen den großen Registersätzen recht viel Zeit in Anspruch nimmt.
 \section{AMIDAR}
+\subsection{Funktion}
+\subsection{Framestack}
