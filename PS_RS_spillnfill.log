@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.10.3)  5 OCT 2016 21:45
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.10.3)  10 OCT 2016 20:11
 entering extended mode
 **./PS_RS_spillnfill.tex
 (PS_RS_spillnfill.tex
@@ -1555,7 +1555,7 @@ LaTeX Font Info:    Font shape `OML/mdput/m/it' will be
 (Font)              scaled to size 7.52002pt on input line 63.
 LaTeX Font Info:    Font shape `OML/mdput/m/it' will be
 (Font)              scaled to size 6.48601pt on input line 63.
- <tud_logo.pdf, id=114, 157.58875pt x 63.23625pt>
+ <tud_logo.pdf, id=126, 157.58875pt x 63.23625pt>
 File: tud_logo.pdf Graphic file (type pdf)
  <use tud_logo.pdf>
 Package pdftex.def Info: tud_logo.pdf used on input line 63.
@@ -1597,7 +1597,7 @@ File: tud_logo.pdf Graphic file (type pdf)
 <use tud_logo.pdf>
 Package pdftex.def Info: tud_logo.pdf used on input line 63.
 (pdftex.def)             Requested size: 134.92238pt x 62.59605pt.
- <images/logo.pdf, id=117, 137.51375pt x 99.37125pt>
+ <images/logo.pdf, id=129, 137.51375pt x 99.37125pt>
 File: images/logo.pdf Graphic file (type pdf)
 
 <use images/logo.pdf>
@@ -1682,38 +1682,18 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 6.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 6.
-LaTeX Font Info:    Try loading font information for TS1+5ch on input line 7.
-("C:\Program Files\tuddesign\tex\latex\tex-tudfonts\softmake\charter\ts15ch.fd"
-File: ts15ch.fd 2008/06/23 Fontinst v1.927 font definitions for TS1/5ch.
-)
-Package microtype Info: Loading generic settings for font family
-(microtype)             `5ch' (encoding: TS1).
-(microtype)             For optimal results, create family-specific settings.
-(microtype)             See the microtype manual for details.
-
-
-! Package textcomp Error: Symbol \textcurrency not provided by
-(textcomp)                font family 5ch in TS1 encoding.
-(textcomp)                Default family used instead.
-
-See the textcomp package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.7 ...eweils 16 8 byte Registern in 7 Registersä
-                                                  tzen.
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-(C:\Users\Rober\AppData\Roaming\MiKTeX\2.9\tex\latex\microtype\mt-cmr.cfg
-File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman 
-(RS)
-)
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 8.
+(babel)             in language  on input line 9.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 8.
+(babel)             in language  on input line 9.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 10.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 10.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 11.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 11.
 )
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 74.
@@ -1723,8 +1703,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 74.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 74.
-
-[2
+ [2
 
 
 
@@ -2002,6 +1981,17 @@ Package babel Info: Redefining ngerman shorthand "|
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 138.
 [8]
+LaTeX Font Info:    Try loading font information for TS1+5ch on input line 145.
+
+
+("C:\Program Files\tuddesign\tex\latex\tex-tudfonts\softmake\charter\ts15ch.fd"
+File: ts15ch.fd 2008/06/23 Fontinst v1.927 font definitions for TS1/5ch.
+)
+Package microtype Info: Loading generic settings for font family
+(microtype)             `5ch' (encoding: TS1).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
+
 Underfull \hbox (badness 10000) in paragraph at lines 155--158
 
  []
@@ -2372,7 +2362,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 1.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 1.
-<images/blockschaltbild.pdf, id=241, 403.26662pt x 138.7584pt>
+<images/blockschaltbild.pdf, id=251, 403.26662pt x 138.7584pt>
 File: images/blockschaltbild.pdf Graphic file (type pdf)
 
 <use images/blockschaltbild.pdf>
@@ -2506,44 +2496,36 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 93.
 (uberschriften.aux) (text.aux) (formeln.aux) (graph.aux) (tabellen.aux))
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 93.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 93.
-
-
-Package rerunfilecheck Warning: File `PS_RS_spillnfill.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `PS_RS_spillnfill.out':
-(rerunfilecheck)             Before: 93EBF69424AB2960415B5E535D95499C;1689
-(rerunfilecheck)             After:  AA54EFA09899D5867C774B6EE1131646;1765.
+Package rerunfilecheck Info: File `PS_RS_spillnfill.out' has not changed.
+(rerunfilecheck)             Checksum: 44AD03AE019204E855AE6EDFE0ECA4A1;1893.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 93.
  ) 
 Here is how much of TeX's memory you used:
- 25852 strings out of 493334
- 489251 string characters out of 3139252
- 668574 words of memory out of 3000000
- 28542 multiletter control sequences out of 15000+200000
- 126930 words of font info for 189 fonts, out of 3000000 for 9000
+ 25765 strings out of 493334
+ 487504 string characters out of 3139252
+ 668576 words of memory out of 3000000
+ 28458 multiletter control sequences out of 15000+200000
+ 125832 words of font info for 187 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  59i,13n,100p,8830b,525s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/fontname/texnansi.enc}{C:/Progra
-m Files/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc} <C:\Users\Rober\AppData\Loc
-al\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi660\tcrm1000.pk><C:/Program Files/
-tuddesign/fonts/type1/softmake/charter/5chb8a.pfb><C:/Program Files/tuddesign/f
-onts/type1/softmake/charter/5chr8a.pfb><C:/Program Files/tuddesign/fonts/type1/
-softmake/frontpage/5fpm8a.pfb><C:/Program Files/tuddesign/fonts/type1/softmake/
-frontpage/5fpr8a.pfb><C:/Users/Rober/AppData/Roaming/MiKTeX/2.9/fonts/type1/bit
-strea/charter/bchr8a.pfb><C:/Users/Rober/AppData/Roaming/MiKTeX/2.9/fonts/type1
-/bitstrea/charter/bchri8a.pfb><C:/Users/Rober/AppData/Roaming/MiKTeX/2.9/fonts/
-type1/mathdesign/mdbch/md-chr7t.pfb><C:/Users/Rober/AppData/Roaming/MiKTeX/2.9/
-fonts/type1/mathdesign/mdbch/md-chr7v.pfb><C:/Users/Rober/AppData/Roaming/MiKTe
-X/2.9/fonts/type1/mathdesign/mdbch/md-chr7y.pfb><C:/Users/Rober/AppData/Roaming
-/MiKTeX/2.9/fonts/type1/mathdesign/mdbch/md-chri7m.pfb><C:/Users/Rober/AppData/
-Roaming/MiKTeX/2.9/fonts/type1/mathdesign/mdbch/md-chrma.pfb><C:/Users/Rober/Ap
-pData/Roaming/MiKTeX/2.9/fonts/type1/public/txfonts/t1xtt.pfb><C:/Users/Rober/A
-ppData/Roaming/MiKTeX/2.9/fonts/type1/public/txfonts/tcxtt.pfb>
-Output written on PS_RS_spillnfill.pdf (22 pages, 222751 bytes).
+m Files/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}<C:/Program Files/tuddesign/
+fonts/type1/softmake/charter/5chb8a.pfb><C:/Program Files/tuddesign/fonts/type1
+/softmake/charter/5chr8a.pfb><C:/Program Files/tuddesign/fonts/type1/softmake/f
+rontpage/5fpm8a.pfb><C:/Program Files/tuddesign/fonts/type1/softmake/frontpage/
+5fpr8a.pfb><C:/Users/Rober/AppData/Roaming/MiKTeX/2.9/fonts/type1/bitstrea/char
+ter/bchr8a.pfb><C:/Users/Rober/AppData/Roaming/MiKTeX/2.9/fonts/type1/bitstrea/
+charter/bchri8a.pfb><C:/Users/Rober/AppData/Roaming/MiKTeX/2.9/fonts/type1/math
+design/mdbch/md-chr7t.pfb><C:/Users/Rober/AppData/Roaming/MiKTeX/2.9/fonts/type
+1/mathdesign/mdbch/md-chr7v.pfb><C:/Users/Rober/AppData/Roaming/MiKTeX/2.9/font
+s/type1/mathdesign/mdbch/md-chr7y.pfb><C:/Users/Rober/AppData/Roaming/MiKTeX/2.
+9/fonts/type1/mathdesign/mdbch/md-chri7m.pfb><C:/Users/Rober/AppData/Roaming/Mi
+KTeX/2.9/fonts/type1/mathdesign/mdbch/md-chrma.pfb><C:/Users/Rober/AppData/Roam
+ing/MiKTeX/2.9/fonts/type1/public/txfonts/t1xtt.pfb><C:/Users/Rober/AppData/Roa
+ming/MiKTeX/2.9/fonts/type1/public/txfonts/tcxtt.pfb>
+Output written on PS_RS_spillnfill.pdf (22 pages, 222730 bytes).
 PDF statistics:
- 347 PDF objects out of 1000 (max. 8388607)
- 73 named destinations out of 1000 (max. 500000)
- 27398 words of extra memory for PDF output out of 29859 (max. 10000000)
+ 353 PDF objects out of 1000 (max. 8388607)
+ 75 named destinations out of 1000 (max. 500000)
+ 26398 words of extra memory for PDF output out of 29859 (max. 10000000)
 
