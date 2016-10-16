@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.10.3)  10 OCT 2016 20:11
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.10.3)  11 OCT 2016 18:13
 entering extended mode
 **./PS_RS_spillnfill.tex
 (PS_RS_spillnfill.tex
@@ -1686,14 +1686,22 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 9.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 9.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 10.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 10.
+LaTeX Font Info:    Try loading font information for TS1+5ch on input line 10.
+("C:\Program Files\tuddesign\tex\latex\tex-tudfonts\softmake\charter\ts15ch.fd"
+File: ts15ch.fd 2008/06/23 Fontinst v1.927 font definitions for TS1/5ch.
+)
+Package microtype Info: Loading generic settings for font family
+(microtype)             `5ch' (encoding: TS1).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 11.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 11.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 15.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 15.
 )
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 74.
@@ -1981,17 +1989,6 @@ Package babel Info: Redefining ngerman shorthand "|
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 138.
 [8]
-LaTeX Font Info:    Try loading font information for TS1+5ch on input line 145.
-
-
-("C:\Program Files\tuddesign\tex\latex\tex-tudfonts\softmake\charter\ts15ch.fd"
-File: ts15ch.fd 2008/06/23 Fontinst v1.927 font definitions for TS1/5ch.
-)
-Package microtype Info: Loading generic settings for font family
-(microtype)             `5ch' (encoding: TS1).
-(microtype)             For optimal results, create family-specific settings.
-(microtype)             See the microtype manual for details.
-
 Underfull \hbox (badness 10000) in paragraph at lines 155--158
 
  []
@@ -2501,10 +2498,10 @@ Package rerunfilecheck Info: File `PS_RS_spillnfill.out' has not changed.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 93.
  ) 
 Here is how much of TeX's memory you used:
- 25765 strings out of 493334
- 487504 string characters out of 3139252
+ 25766 strings out of 493334
+ 487521 string characters out of 3139252
  668576 words of memory out of 3000000
- 28458 multiletter control sequences out of 15000+200000
+ 28459 multiletter control sequences out of 15000+200000
  125832 words of font info for 187 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  59i,13n,100p,8830b,525s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -2523,7 +2520,7 @@ s/type1/mathdesign/mdbch/md-chr7y.pfb><C:/Users/Rober/AppData/Roaming/MiKTeX/2.
 KTeX/2.9/fonts/type1/mathdesign/mdbch/md-chrma.pfb><C:/Users/Rober/AppData/Roam
 ing/MiKTeX/2.9/fonts/type1/public/txfonts/t1xtt.pfb><C:/Users/Rober/AppData/Roa
 ming/MiKTeX/2.9/fonts/type1/public/txfonts/tcxtt.pfb>
-Output written on PS_RS_spillnfill.pdf (22 pages, 222730 bytes).
+Output written on PS_RS_spillnfill.pdf (22 pages, 223877 bytes).
 PDF statistics:
  353 PDF objects out of 1000 (max. 8388607)
  75 named destinations out of 1000 (max. 500000)
