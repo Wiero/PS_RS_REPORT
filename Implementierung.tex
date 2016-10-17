@@ -1,6 +1,8 @@
 \chapter{Implementierung}
 \label{cha:Implementierung}
 \section{DRAM Anbindung über AXI}
+AMIDAR ist über AXI mit 512 MB DDR Ram verbunden, der auf 800 MHz getaktet.
+Die Schwierigkeit bei der Anbindung des Framestacks an den Hauptspeicher ist die Unterschiedliche Wortbreite.  
 \section{Framestackteile des aktiven Threads auslagern}
 \section{Threadwechsel mit Verdrängung}
 \section{Garbage Collector Interface}
