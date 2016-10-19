@@ -1,8 +1,11 @@
 \chapter{Implementierung}
 \label{cha:Implementierung}
-\section{DRAM Anbindung über AXI}
-AMIDAR ist über AXI mit 512 MB DDR Ram verbunden, der auf 800 MHz getaktet.
-Die Schwierigkeit bei der Anbindung des Framestacks an den Hauptspeicher ist die Unterschiedliche Wortbreite.  
+\section{DRAM Anbindung \"uber AXI}
+AMIDAR ist \"uber AXI mit 512 MB DDR Ram verbunden, der auf 800 MHz getaktet.
+Die Schwierigkeit bei der Anbindung des Framestacks an den Hauptspeicher ist die Unterschiedliche Wortbreite. 
+F\"ur den Garbarbagecollector werden zu jedem 32bit Datenwort noch 2 Statusbit gespeichert in den festgehalten wird, ob es sich bei den Daten um Metadaten, Referenzen oder Werte handelt. Damit beim Auslagern der Daten auf dem externen Speicher diese Informationen nicht verloren gehen werden die Schreibvorg\"ange immer in Bl\"ocken von 16 W\"ortern durchgef\"uhrt, wobei die Statusbits der 16 W\"orter als weiteres 32Bit Wort in den Speicher geschrieben werden. Dies ist kein Problem, da die Gr\"oße der beim Spill and Fill Vorgang \"ubertragenen Bereiche einen Vielfachen von 16 entspricht. 
+
+
 \section{Framestackteile des aktiven Threads auslagern}
-\section{Threadwechsel mit Verdrängung}
+\section{Threadwechsel mit Verdr\"angung}
 \section{Garbage Collector Interface}
