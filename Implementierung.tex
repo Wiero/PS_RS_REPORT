@@ -3,9 +3,12 @@
 \section{DRAM Anbindung \"uber AXI}
 AMIDAR ist \"uber AXI mit 512 MB DDR Ram verbunden, der auf 800 MHz getaktet.
 Die Schwierigkeit bei der Anbindung des Framestacks an den Hauptspeicher ist die Unterschiedliche Wortbreite. 
-F\"ur den Garbarbagecollector werden zu jedem 32bit Datenwort noch 2 Statusbit gespeichert in den festgehalten wird, ob es sich bei den Daten um Metadaten, Referenzen oder Werte handelt. Damit beim Auslagern der Daten auf dem externen Speicher diese Informationen nicht verloren gehen werden die Schreibvorg\"ange immer in Bl\"ocken von 16 W\"ortern durchgef\"uhrt, wobei die Statusbits der 16 W\"orter als weiteres 32Bit Wort in den Speicher geschrieben werden. Dies ist kein Problem, da die Gr\"oße der beim Spill and Fill Vorgang \"ubertragenen Bereiche einen Vielfachen von 16 entspricht. 
-
+F\"ur den Garbarbagecollector werden zu jedem 32bit Datenwort noch 2 Statusbit gespeichert in den festgehalten wird, ob es sich bei den Daten um Metadaten, Referenzen oder Werte handelt. Damit beim Auslagern der Daten auf dem externen Speicher diese Informationen nicht verloren gehen werden die Schreibvorg\"ange immer in Bl\"ocken von 16 W\"ortern durchgef\"uhrt, wobei die Statusbits der 16 W\"orter als weiteres 32Bit Wort in den Speicher geschrieben werden. Dies ist kein Problem, da die Gr\"o"se der beim Spill and Fill Vorgang \"ubertragenen Bereiche einen Vielfachen von 16 W\"ortern entspricht. 
+F\"ur das Zwischenspeichern und packen der Bl\"ocke wird ein eigenes Modul verwendet.
+Vom Framestack aus kann auf dieses Modul geschrieben werden. Dabei wird die Startaddresse des Blocks angelegt und anschließend 16 W\"orter mit Statusbits \"ubertragen. Sobald 16 W\"orter \"ubertragen sind, werden diese zusammen mit der Startadresse in einen Fifo zwischengespeichert. Die in den Fifo gespeicherten Bl\"ocke werden dann \"uber AXI auf dem DDR3 Speicher \"ubertragen, wobei vorher die Framestackadresse //todo umgerechnet wird. 
+Wenn die Daten wieder ausgelesen werden sollen, wird das selbe Modul verwendet. Es wird die Startadresse des auszulesenden Blocks \"ubergeben. Diese wird f\"ur den DDR umgerechnet und der Lesevorgang \"uber AXI gestartet. Das erfolgreiche Einlesen wird dem Framestack signalisiert, worauf die Daten des Blocks ausgelesen werden. 
 
 \section{Framestackteile des aktiven Threads auslagern}
+
 \section{Threadwechsel mit Verdr\"angung}
 \section{Garbage Collector Interface}
