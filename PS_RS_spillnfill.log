@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.10.5)  19 OCT 2016 17:31
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.10.5)  29 NOV 2016 17:45
 entering extended mode
 **./PS_RS_spillnfill.tex
 (PS_RS_spillnfill.tex
@@ -1514,7 +1514,7 @@ LaTeX Font Info:    Font shape `OML/mdput/m/it' will be
 LaTeX Font Info:    Font shape `OML/mdput/m/it' will be
 (Font)              scaled to size 6.48601pt on input line 63.
 
-<tud_logo.pdf, id=154, 157.58875pt x 63.23625pt>
+<tud_logo.pdf, id=162, 157.58875pt x 63.23625pt>
 File: tud_logo.pdf Graphic file (type pdf)
  <use tud_logo.pdf>
 Package pdftex.def Info: tud_logo.pdf used on input line 63.
@@ -1556,7 +1556,7 @@ File: tud_logo.pdf Graphic file (type pdf)
 <use tud_logo.pdf>
 Package pdftex.def Info: tud_logo.pdf used on input line 63.
 (pdftex.def)             Requested size: 134.92238pt x 62.59605pt.
- <images/logo.pdf, id=157, 137.51375pt x 99.37125pt>
+ <images/logo.pdf, id=165, 137.51375pt x 99.37125pt>
 File: images/logo.pdf Graphic file (type pdf)
 
 <use images/logo.pdf>
@@ -1688,17 +1688,25 @@ Package babel Info: Redefining ngerman shorthand "|
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 3.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 7.
+(babel)             in language  on input line 12.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 7.
+(babel)             in language  on input line 12.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 8.
+(babel)             in language  on input line 18.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 8.
+(babel)             in language  on input line 18.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 9.
+(babel)             in language  on input line 22.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 9.
+(babel)             in language  on input line 22.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 25.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 25.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 26.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 26.
 )
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 75.
@@ -2346,7 +2354,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 1.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 1.
-<images/blockschaltbild.pdf, id=279, 403.26662pt x 138.7584pt>
+<images/blockschaltbild.pdf, id=287, 403.26662pt x 138.7584pt>
 File: images/blockschaltbild.pdf Graphic file (type pdf)
 
 <use images/blockschaltbild.pdf>
@@ -2481,15 +2489,15 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 93.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 93.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 93.
 Package rerunfilecheck Info: File `PS_RS_spillnfill.out' has not changed.
-(rerunfilecheck)             Checksum: 9B6C2D3E248FD9D195BD8B57BB65CB6B;2426.
+(rerunfilecheck)             Checksum: 5D9A4BCCDB18EF4A1A2DFBF0B64C988F;2593.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 93.
  ) 
 Here is how much of TeX's memory you used:
- 25783 strings out of 493334
- 484197 string characters out of 3139249
+ 25791 strings out of 493334
+ 484295 string characters out of 3139249
  668577 words of memory out of 3000000
- 28466 multiletter control sequences out of 15000+200000
- 126086 words of font info for 189 fonts, out of 3000000 for 9000
+ 28469 multiletter control sequences out of 15000+200000
+ 126340 words of font info for 191 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  59i,13n,100p,8830b,525s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/fontname/texnansi.enc}{C:/Progra
@@ -2506,9 +2514,9 @@ ts/type1/mathdesign/mdbch/md-chri7m.pfb><C:/Program Files/MiKTeX 2.9/fonts/type
 1/mathdesign/mdbch/md-chrma.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public
 /txfonts/t1xtt.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/txfonts/tcxt
 t.pfb>
-Output written on PS_RS_spillnfill.pdf (22 pages, 228091 bytes).
+Output written on PS_RS_spillnfill.pdf (22 pages, 230928 bytes).
 PDF statistics:
- 382 PDF objects out of 1000 (max. 8388607)
- 82 named destinations out of 1000 (max. 500000)
- 26454 words of extra memory for PDF output out of 29859 (max. 10000000)
+ 390 PDF objects out of 1000 (max. 8388607)
+ 84 named destinations out of 1000 (max. 500000)
+ 26470 words of extra memory for PDF output out of 29859 (max. 10000000)
 

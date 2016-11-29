@@ -7,9 +7,20 @@ Die Schwierigkeit bei der Anbindung des Framestacks an den Hauptspeicher ist die
 F\"ur den Garbarbagecollector werden zu jedem 32bit Datenwort noch 2 Statusbit gespeichert in den festgehalten wird, ob es sich bei den Daten um Metadaten, Referenzen oder Werte handelt. Damit beim Auslagern der Daten auf dem externen Speicher diese Informationen nicht verloren gehen werden die Schreibvorg\"ange immer in Bl\"ocken von 16 W\"ortern durchgef\"uhrt, wobei die Statusbits der 16 W\"orter als weiteres 32Bit Wort in den Speicher geschrieben werden. Dies ist kein Problem, da die Gr\"o"se der beim Spill and Fill Vorgang \"ubertragenen Bereiche einen Vielfachen von 16 W\"ortern entspricht. 
 F\"ur das Zwischenspeichern und packen der Bl\"ocke wird ein eigenes Modul verwendet.
 Vom Framestack aus kann auf dieses Modul geschrieben werden. Dabei wird die Startaddresse des Blocks angelegt und anschließend 16 W\"orter mit Statusbits \"ubertragen. Sobald 16 W\"orter \"ubertragen sind, werden diese zusammen mit der Startadresse in einen Fifo zwischengespeichert. Die in den Fifo gespeicherten Bl\"ocke werden dann \"uber AXI auf dem DDR3 Speicher \"ubertragen, wobei vorher die Framestackadresse //todo umgerechnet wird. 
-Wenn die Daten wieder ausgelesen werden sollen, wird das selbe Modul verwendet. Es wird die Startadresse des auszulesenden Blocks \"ubergeben. Diese wird f\"ur den DDR umgerechnet und der Lesevorgang \"uber AXI gestartet. Das erfolgreiche Einlesen wird dem Framestack signalisiert, worauf die Daten des Blocks ausgelesen werden. 
+Wenn die Daten wieder ausgelesen werden sollen, wird das selbe Modul verwendet. Es wird die Startadresse des auszulesenden Blocks \"ubergeben. Diese wird f\"ur den DDR Speicher umgerechnet und der Lesevorgang \"uber AXI gestartet. Das erfolgreiche Einlesen wird dem Framestack signalisiert, woraufhin die Daten des Blocks ausgelesen werden. 
 
-\section{Framestackteile des aktiven Threads auslagern}
+\section{Spill and Fill Windows}
+
+Bei den Spill and Fill Prozess werden Teile des aktuellen Threads  und evtl die anderer Threads in sogenanntes Windows vorgehalten. Die Windows werden als Blockrams realisiert. 
+Die Anzahl und Größe dieser Windows kann über Parameter eingestellt werden. Für jedes Window werden für den Betrieb wichtige Daten in Registern gespeichert. 
+
+
+\section{Framestackteile des aktiven Threads auslagern (Spill)}
+
+Stackteile des aktiven Threads auf den externen Speicher auslagern ist eines der zwei Hauptbestandteile des Spill and Fill Mechanismus. N"amlich Spill. Bei dieser Implementierung wird der Spill Mechanismus ausgel"ost, wenn beim Funktionsaufruf festgestellt wird, dass der Stack das aktuelle Window "uberschreiten w"urde.
+
+\subsection{"Uberpr"ufen der gr"o"se}
+
 
 \section{Threadwechsel mit Verdr\"angung}
 \section{Garbage Collector Interface}
