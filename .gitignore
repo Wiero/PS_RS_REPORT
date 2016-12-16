@@ -2,4 +2,10 @@ PS_RS_spillnfill.log
 *.log
 *.aux
 *.aux
-*.odp#
+*.aux
+Evaluation.aux
+*.aux
+*.aux
+*.out
+installation.aux
+*.aux*.odp#
