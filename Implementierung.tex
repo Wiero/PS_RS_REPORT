@@ -2,12 +2,19 @@
 \label{cha:Implementierung}
 \section{DRAM Anbindung \"uber AXI}
 AMIDAR ist \"uber AXI mit 512 MB DDR Ram verbunden, der auf 800 MHz getaktet.
-Die Schwierigkeit bei der Anbindung des Framestacks an den Hauptspeicher ist die Unterschiedliche Wortbreite. 
+Eine Schwierigkeit bei der Auslagerung des Framestacks an den Hauptspeicher ist die Unterschiedliche Wortbreite. 
 
 F\"ur den Garbarbagecollector werden zu jedem 32bit Datenwort noch 2 Statusbit gespeichert in den festgehalten wird, ob es sich bei den Daten um Metadaten, Referenzen oder Werte handelt. Damit beim Auslagern der Daten auf dem externen Speicher diese Informationen nicht verloren gehen werden die Schreibvorg\"ange immer in Bl\"ocken von 16 W\"ortern durchgef\"uhrt, wobei die Statusbits der 16 W\"orter als weiteres 32Bit Wort in den Speicher geschrieben werden. Dies ist kein Problem, da die Gr\"o"se der beim Spill and Fill Vorgang \"ubertragenen Bereiche einen Vielfachen von 16 W\"ortern entspricht. 
+
+Der Ausgelagerter Framestack wird in das obere Ende des 512MB großen DDR3 Speicher gelegt und belegt$ #max_threads * words_per_thread +  $s
 F\"ur das Zwischenspeichern und packen der Bl\"ocke wird ein eigenes Modul verwendet.
-Vom Framestack aus kann auf dieses Modul geschrieben werden. Dabei wird die Startaddresse des Blocks angelegt und anschließend 16 W\"orter mit Statusbits \"ubertragen. Sobald 16 W\"orter \"ubertragen sind, werden diese zusammen mit der Startadresse in einen Fifo zwischengespeichert. Die in den Fifo gespeicherten Bl\"ocke werden dann \"uber AXI auf dem DDR3 Speicher \"ubertragen, wobei vorher die Framestackadresse //todo umgerechnet wird. 
-Wenn die Daten wieder ausgelesen werden sollen, wird das selbe Modul verwendet. Es wird die Startadresse des auszulesenden Blocks \"ubergeben. Diese wird f\"ur den DDR Speicher umgerechnet und der Lesevorgang \"uber AXI gestartet. Das erfolgreiche Einlesen wird dem Framestack signalisiert, woraufhin die Daten des Blocks ausgelesen werden. 
+Vom Framestack aus kann auf dieses Modul geschrieben werden. Dabei wird die Startadresse des Blocks, die l"ange des AXI Bursts und das erste Datenwort angelegt. Zum Zwischenspeichern dieser Daten werden jeweils Fifos verwendet. Wobei die Fifos für Burstl"ange und Startadresse einen Sechzehntel der Gr"oße des Datenfifos haben. Für jedes "ubertragene Datenwort werden 2 Statusbits in einen 32 Bit Register geschrieben. Nach dem 16 Datenworte in den Datenfifo geschrieben wurden wird der Inhalt dieses Registers in den Fifo geschrieben. 
+Das Modul, indem die eigentliche AXI "Ubertragung verarbeitet wird wartet darauf das der Adress- und Burstlengthfifo nicht leer sind. Wenn die der Fall ist wird die Adresse und Burstl"ange ausgelesen und wie folgt umgerechnet:
+
+Anschlie"send werden die Daten aus dem Fifo übertragen bis die neu berechnete Burstl"ange erreicht wurde. Solange der noch Einträge in den Fifos für Bursl"ange und Addresse liegen wird eine neue "Ubertragung gestartet.
+
+
+Wenn die Daten ausgelesen werden sollen, wird das selbe Modul verwendet. Es wird die Startadresse des auszulesenden Blocks \"ubergeben. Diese wird f\"ur den DDR Speicher umgerechnet und der Lesevorgang \"uber AXI gestartet. Das erfolgreiche Einlesen wird dem Framestack signalisiert, woraufhin die Daten des Blocks ausgelesen werden. 
 
 \section{Spill and Fill Windows}
 
