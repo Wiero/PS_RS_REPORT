@@ -8,31 +8,39 @@ AMIDAR ist \"uber AXI mit 512 MB DDR Ram verbunden, der auf 800 MHz getaktet.
 Eine Schwierigkeit bei der Auslagerung des Framestacks an den Hauptspeicher ist die Unterschiedliche Wortbreite. 
 F\"ur den Garbarbagecollector werden zu jedem 32bit Datenwort noch 2 Statusbit gespeichert in den festgehalten wird, ob es sich bei den Daten um Metadaten, Referenzen oder Werte handelt. Damit beim Auslagern der Daten auf dem externen Speicher diese Informationen nicht verloren gehen werden die Schreibvorg\"ange immer in Bl\"ocken von 16 W\"ortern durchgef\"uhrt, wobei die Statusbits der 16 W\"orter als weiteres 32Bit Wort in den Speicher geschrieben werden. Dies ist kein Problem, da die Gr\"o"se der beim Spill and Fill Vorgang \"ubertragenen Bereiche einen Vielfachen von 16 W\"ortern entspricht. 
 
-Der Ausgelagerter Framestack wird in das obere Ende des 512MB großen DDR3 Speicher gelegt und belegt  $number max threads * words per thread +  $
+Der Ausgelagerter Framestack wird in das obere Ende des 512MB großen DDR3 Speicher gelegt und belegt  $number max threads * words per thread +  $.
+Als Ausgangspunkt wird die h"ochste Speicheradresse des DDR Speichers verwendet und 2 mal nach links geshiftet, da der externe Speicher Byte adressiert, der Framestack jedoch wortadressiert ist. Davon wird die Maximale Gr"oße des Framestacks abgezogen. Von da an aufw"arts werden die Daten der einzelnen Threads gespeichert.
 
 \subsection{Schreiben von Framestackinhalten in den Hauptspeicher}
 F\"ur das Zwischenspeichern und packen der Bl\"ocke wird ein eigenes Modul verwendet.
 Vom Framestack aus kann auf dieses Modul geschrieben werden. Dabei wird die Startadresse des Blocks, die l"ange des AXI Bursts und das erste Datenwort angelegt. Zum Zwischenspeichern dieser Daten werden jeweils Fifos verwendet. Wobei die Fifos f"ur Burstl"ange und Startadresse einen Sechzehntel der Gr"o{\ss}e des Datenfifos haben. F"ur jedes "ubertragene Datenwort werden 2 Statusbits in einen 32 Bit Register geschrieben. Nach dem 16 Datenworte in den Datenfifo geschrieben wurden wird der Inhalt dieses Registers in den Fifo geschrieben. 
 Das Modul, indem die eigentliche AXI "Ubertragung verarbeitet wird wartet darauf das der Adress- und Burstlengthfifo nicht leer sind. Wenn die der Fall ist wird die Adresse und Burstl"ange ausgelesen und wie folgt umgerechnet:
 
-Anschlie{\ss}end werden die Daten aus dem Fifo \"ubertragen bis die neu berechnete Burstl"ange erreicht wurde. Solange der noch Eintr\"age in den Fifos f"ur Bursl"ange und Adresse liegen wird eine neue "Ubertragung gestartet.
+Anschlie{\ss}end werden die Daten aus dem Fifo \"ubertragen bis die neu berechnete Burstl"ange erreicht wurde. Solange der noch Eintr\"age in den Fifos f"ur Bursl"ange und Adresse liegen wird eine neue "Ubertragung gestartet. 
 
 
 \subsection{Lesen von Framestackinhalten aus den Hauptspeicher}
-Wenn die Daten ausgelesen werden sollen, wird das selbe Modul verwendet. Es wird die Startadresse des auszulesenden Blocks \"ubergeben. Diese wird f\"ur den DDR Speicher umgerechnet und der Lesevorgang \"uber AXI gestartet. Das erfolgreiche Einlesen wird dem Framestack signalisiert, woraufhin die Daten des Blocks ausgelesen werden. 
+Wenn die Daten ausgelesen werden sollen, wird das selbe Modul verwendet. Es wird die Startadresse des auszulesenden Blocks und die Burstl"ange \"ubergeben. Diese wird f\"ur den DDR Speicher umgerechnet und der Lesevorgang \"uber AXI gestartet. F"ur das Zwischenspeichern der ausgelesenen Daten werden  Das erfolgreiche Einlesen wird dem Framestack signalisiert, woraufhin die Daten des Blocks ausgelesen werden. Zum Zwischenspeichern der ausgelesenen Daten werden 2 Fifos verwendet. Ein Fifo wird f"ur die gelesenen Daten speichert 32 Wörter mit 32 Bit Wortbreite. In einen weiteren Fifo ebenfalls 32Bit werden die kumulierten Statusbits gespeichert. Nachdem die ersten 16bit Datenworte in den Fifo gespeichert wurden, enth"alt das n"achste Wort die Statusbits, dieses wird in den entsprechenden Fifo gespeichert. Sobald das Fifo für die Statusbits nicht leer ist, kann auf Seiten des Framestacks mit den Auslesen begonnen werden. Bei jeden takt in dem eine 1 an readenable angegelegt ist wird ein Datenwort aus dem Fifo und 2 Statusbits "ubertragen. Nach dem 16 W"orter aus den Datenfifo gelesen wurden wird wenn vorhanden das n"achste Statuswort aus den Statusfifo gelesen. 
 
 \section{Spill and Fill Windows}
 
 Bei den Spill and Fill Prozess werden Teile des aktuellen Threads  und evtl die anderer Threads in sogenanntes Windows vorgehalten. Die Windows werden als Blockrams realisiert. 
-Die Anzahl und Gr"oße dieser Windows kann "uber Parameter eingestellt werden. Für jedes Window werden die Framestack Adressen der obersten und untersten Grenze gespeichert die in dem Window vorgehalten werden. Dazu wird jeweils die Basis Adresse im Window gespeichert, die angibt an welcher Window adresse die unterste Framestackaddresse liegt. 
-
+Die Anzahl und Gr"oße dieser Windows kann "uber Parameter eingestellt werden. Für jedes Window werden die Framestack Adressen der obersten und untersten Grenze, des Adressbereichs gespeichert, der in dem Window vorgehalten wird. Dazu wird jeweils die Basis Adresse im Window gespeichert, die angibt an welcher Window Adresse die unterste Framestackaddresse liegt. 
+#todo picture
+Das Window selber wird als Ringspeicher organisiert. Für jedes Window wird in einen Register gespeichert welcher Thread in diesen Momentan gespeichert wird.  
 
 \section{Framestackteile des aktiven Threads auslagern (Spill)}
 
 Stackteile des aktiven Threads auf den externen Speicher auslagern ist eines der zwei Hauptbestandteile des Spill and Fill Mechanismus. N"amlich Spill. Bei dieser Implementierung wird der Spill Mechanismus ausgel"ost, wenn beim Funktionsaufruf festgestellt wird, dass der Stack das aktuelle Window "uberschreiten w"urde.
 
 \subsection{"Uberpr"ufen der gr"o"se}
+Bei jeden Funktionsaufruf wird der Platzbedarf im Stack abgesch"atzt und gepr"uft ob noch Platz daf"ur im aktuellen Window ist. 
+Ein Stackframe in AMIDAR besteht aus 
+#todo Stackframe
 
+\subsection{Spill}
+
+\subsection{Fill}
 
 \section{Threadwechsel mit Verdr\"angung}
 
