@@ -38,9 +38,11 @@ Stackteile des aktiven Threads auf den externen Speicher auslagern ist eines der
 \subsection{"Uberpr"ufen der gr"o"se}
 Bei jeden Funktionsaufruf wird der Platzbedarf im Stack abgesch"atzt und gepr"uft ob noch Platz daf"ur im aktuellen Window ist. 
 
-Ein Stackframe in AMIDAR beginnt mit den Argumenten und lokalen Variablen, darüber kommt der Callercontext bestehend aus: Localspointer, Callercontextpointer und Stackpointer. 
+Ein Stackframe in AMIDAR beginnt mit den Argumenten und lokalen Variablen, darüber kommt der Callercontext bestehend aus: Localspointer, Callercontextpointer und Stackpointer. Zum bestimmen ob der im Window vorhandene Platz noch ausreicht wird vom 
 
 #todo Stackframe
+
+
 
 \subsection{Spill}
 
