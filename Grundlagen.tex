@@ -5,7 +5,7 @@
 \section{Verwendung eines Spill and Fill Mechanismus in anderen Prozessoren}
 \subsection{Sun Sparc Prozessoren}
 Die Sun Sparc Prozessoren V8/V9 verf\"ugen \"uber ein sliding register Window mit jeweils 16 8 byte Registern in 7 Registers\"atzen. Sliding Window bezeichnet ein Verfahren, bei dem die Registers\"atze im Falle eines Funktionsaufruf nicht auf dem Stack gesichert werden m\"ussen, stattdessen wird auf den n\"achsten Registersatz gewechselt. Dabei wird meistens auch die Parameter\"ubergabe realisiert. Dabei sind die Input Register in dem Registerwindow des Callers identisch mit dem Output Registern, in dem Registerwindow des Callee.   
-Mit speziellen Bytecode Instruktionen werden im Spill an Fill Verfahren Registers\"atze ausgetauscht, sobald die 7 Registers\"atze nicht mehr ausreichen, was allerdings wegen den großen Registers\"atzen recht viel Zeit in Anspruch nimmt.
+Mit speziellen Bytecode Instruktionen werden im Spill an Fill Verfahren Registers\"atze ausgetauscht, sobald diese nicht mehr ausreichen, was allerdings wegen den großen Registers\"atzen recht viel Zeit in Anspruch nimmt.
 \section{AMIDAR}
 Bei der Klasse der AMIDAR Prozessoren handelt es sich um ein konfigurierbares System bestehend aus Function Units (FU) für die jeweiligen Aufgaben. Die FUs sind dabei untereinander mit einen Token- und einem Datennetzwerk verbunden. 
 \subsection{Funktion}
@@ -13,3 +13,16 @@ Bei der Klasse der AMIDAR Prozessoren handelt es sich um ein konfigurierbares Sy
 
 
 \subsection{Framestack}
+
+Die Framestack FU dient dazu die Funktionen des Operand Stacks und des Speichers f"ur lokale Variablen zur Verf"ugung zu stellen. 
+Der AMIDAR Framestack arbeitet bei der Stackframe Verarbeitung mit drei grunds"atzlichen Zeigern. Der Stackpointer gibt die nächste freie Speicheradresse "uber den aktuellen Stackframe an. Der Locals Pointer gibt die unterste Lokale Variable und damit auch das untere Ende des Stackframes an. Die dritte wichtige Zeiger ist der Callercontext Pointer, der auf die unterste Adresse des Callcontext deutet. 
+
+\subsubsection{Stackframe}
+Ein Stackframe beginnt mit den Parametern und den Lokalen Variablen.  Dar"uber kommt der Callercontext mit den alten Localspointer, Stackpointer und Callercontextpointer. Das obere Ende des Stackframes besteht aus dem Callercontext. 
+
+\subsubsection{Funktionsaufrufe}
+
+Eine f"ur dieses Projekt wichtige Funktion des Framestacks sind Funktionsaufrufe bei einen Funktionsaufruf wird der Zeiger 
+
+
+

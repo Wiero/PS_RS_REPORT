@@ -13,32 +13,38 @@
 \BOOKMARK [2][-]{subsection.3.1.3}{Lesen von Framestackinhalten aus den Hauptspeicher}{section.3.1}% 13
 \BOOKMARK [1][-]{section.3.2}{Spill and Fill Windows}{chapter.3}% 14
 \BOOKMARK [1][-]{section.3.3}{Framestackteile des aktiven Threads auslagern \(Spill\)}{chapter.3}% 15
-\BOOKMARK [2][-]{subsection.3.3.1}{\334berpr\374fen der gr\366\337e}{section.3.3}% 16
+\BOOKMARK [2][-]{subsection.3.3.1}{\334berpr\374fen des freien Speichers im Window}{section.3.3}% 16
 \BOOKMARK [2][-]{subsection.3.3.2}{Spill}{section.3.3}% 17
-\BOOKMARK [2][-]{subsection.3.3.3}{Fill}{section.3.3}% 18
-\BOOKMARK [1][-]{section.3.4}{Threadwechsel mit Verdr\344ngung}{chapter.3}% 19
-\BOOKMARK [1][-]{section.3.5}{Garbage Collector Interface}{chapter.3}% 20
-\BOOKMARK [0][-]{chapter.4}{Evaluation}{}% 21
-\BOOKMARK [1][-]{section.4.1}{Dauer }{chapter.4}% 22
-\BOOKMARK [1][-]{section.4.2}{Dauer von Spill and Fill Vorg\344ngen}{chapter.4}% 23
-\BOOKMARK [1][-]{section.4.3}{Dauer von Threadwechseln}{chapter.4}% 24
-\BOOKMARK [0][-]{chapter.5}{Fazit}{}% 25
-\BOOKMARK [0][-]{chapter.6}{Installation von Latex}{}% 26
-\BOOKMARK [1][-]{section.6.1}{Wie beschaffe ich mir LaTeX?}{chapter.6}% 27
-\BOOKMARK [2][-]{subsection.6.1.1}{tudfonts und tuddesign}{section.6.1}% 28
-\BOOKMARK [1][-]{section.6.2}{Installation des TUD-Design}{chapter.6}% 29
-\BOOKMARK [2][-]{subsection.6.2.1}{WinXP / MiKTeX}{section.6.2}% 30
-\BOOKMARK [2][-]{subsection.6.2.2}{Apple OS-X}{section.6.2}% 31
-\BOOKMARK [2][-]{subsection.6.2.3}{Debian / Ubuntu \(Global\)}{section.6.2}% 32
-\BOOKMARK [2][-]{subsection.6.2.4}{Linux \(Global\)}{section.6.2}% 33
-\BOOKMARK [2][-]{subsection.6.2.5}{Linux \(Lokal\)}{section.6.2}% 34
-\BOOKMARK [0][-]{chapter.7}{\334berschriften}{}% 35
-\BOOKMARK [1][-]{section.7.1}{\334berschrift2}{chapter.7}% 36
-\BOOKMARK [2][-]{subsection.7.1.1}{\334berschrift3}{section.7.1}% 37
-\BOOKMARK [0][-]{chapter.8}{Text in Latex}{}% 38
-\BOOKMARK [1][-]{section.8.1}{Umlaute und \304hnliches}{chapter.8}% 39
-\BOOKMARK [1][-]{section.8.2}{Querverweis}{chapter.8}% 40
-\BOOKMARK [0][-]{chapter.9}{Formeln in Latex}{}% 41
-\BOOKMARK [0][-]{chapter.10}{Einbindung von Graphen}{}% 42
-\BOOKMARK [0][-]{chapter.11}{Tabellen}{}% 43
-\BOOKMARK [0][-]{chapter.12}{Literaturverzeichnis}{}% 44
+\BOOKMARK [1][-]{section.3.4}{Ausgelagerte Framestackteile des aktiven Threads wiederherstellen \(Fill\)}{chapter.3}% 18
+\BOOKMARK [2][-]{subsection.3.4.1}{Ablauf eines return Vorgangs mit fill}{section.3.4}% 19
+\BOOKMARK [2][-]{subsection.3.4.2}{Ablauf des eigentlichen Fill Vorgangs}{section.3.4}% 20
+\BOOKMARK [1][-]{section.3.5}{Multithreading mit Verdr\344ngung}{chapter.3}% 21
+\BOOKMARK [2][-]{subsection.3.5.1}{Zuordnung von Threads zu den Windows}{section.3.5}% 22
+\BOOKMARK [2][-]{subsection.3.5.2}{\304nderungen am der Threaderzeugung}{section.3.5}% 23
+\BOOKMARK [2][-]{subsection.3.5.3}{Threadwechsel}{section.3.5}% 24
+\BOOKMARK [1][-]{section.3.6}{Garbage Collector Interface}{chapter.3}% 25
+\BOOKMARK [1][-]{section.3.7}{Lesezugriff Wishbone}{chapter.3}% 26
+\BOOKMARK [0][-]{chapter.4}{Evaluation}{}% 27
+\BOOKMARK [1][-]{section.4.1}{Dauer }{chapter.4}% 28
+\BOOKMARK [1][-]{section.4.2}{Dauer von Spill and Fill Vorg\344ngen}{chapter.4}% 29
+\BOOKMARK [1][-]{section.4.3}{Dauer von Threadwechseln}{chapter.4}% 30
+\BOOKMARK [0][-]{chapter.5}{Fazit}{}% 31
+\BOOKMARK [0][-]{chapter.6}{Installation von Latex}{}% 32
+\BOOKMARK [1][-]{section.6.1}{Wie beschaffe ich mir LaTeX?}{chapter.6}% 33
+\BOOKMARK [2][-]{subsection.6.1.1}{tudfonts und tuddesign}{section.6.1}% 34
+\BOOKMARK [1][-]{section.6.2}{Installation des TUD-Design}{chapter.6}% 35
+\BOOKMARK [2][-]{subsection.6.2.1}{WinXP / MiKTeX}{section.6.2}% 36
+\BOOKMARK [2][-]{subsection.6.2.2}{Apple OS-X}{section.6.2}% 37
+\BOOKMARK [2][-]{subsection.6.2.3}{Debian / Ubuntu \(Global\)}{section.6.2}% 38
+\BOOKMARK [2][-]{subsection.6.2.4}{Linux \(Global\)}{section.6.2}% 39
+\BOOKMARK [2][-]{subsection.6.2.5}{Linux \(Lokal\)}{section.6.2}% 40
+\BOOKMARK [0][-]{chapter.7}{\334berschriften}{}% 41
+\BOOKMARK [1][-]{section.7.1}{\334berschrift2}{chapter.7}% 42
+\BOOKMARK [2][-]{subsection.7.1.1}{\334berschrift3}{section.7.1}% 43
+\BOOKMARK [0][-]{chapter.8}{Text in Latex}{}% 44
+\BOOKMARK [1][-]{section.8.1}{Umlaute und \304hnliches}{chapter.8}% 45
+\BOOKMARK [1][-]{section.8.2}{Querverweis}{chapter.8}% 46
+\BOOKMARK [0][-]{chapter.9}{Formeln in Latex}{}% 47
+\BOOKMARK [0][-]{chapter.10}{Einbindung von Graphen}{}% 48
+\BOOKMARK [0][-]{chapter.11}{Tabellen}{}% 49
+\BOOKMARK [0][-]{chapter.12}{Literaturverzeichnis}{}% 50
