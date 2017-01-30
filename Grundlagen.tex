@@ -15,7 +15,7 @@ Bei der Klasse der AMIDAR Prozessoren handelt es sich um ein konfigurierbares Sy
 \subsection{Framestack}
 
 Die Framestack FU dient dazu die Funktionen des Operand Stacks und des Speichers f"ur lokale Variablen zur Verf"ugung zu stellen. 
-Der AMIDAR Framestack arbeitet bei der Stackframe Verarbeitung mit drei grunds"atzlichen Zeigern. Der Stackpointer gibt die nächste freie Speicheradresse "uber den aktuellen Stackframe an. Der Locals Pointer gibt die unterste Lokale Variable und damit auch das untere Ende des Stackframes an. Die dritte wichtige Zeiger ist der Callercontext Pointer, der auf die unterste Adresse des Callcontext deutet. 
+Der AMIDAR Framestack arbeitet bei der Stackframe Verarbeitung mit drei grunds"atzlichen Zeigern. Der Stackpointer gibt die n"achste freie Speicheradresse "uber den aktuellen Stackframe an. Der Locals Pointer gibt die unterste Lokale Variable und damit auch das untere Ende des Stackframes an. Die dritte wichtige Zeiger ist der Callercontext Pointer, der auf die unterste Adresse des Callcontext deutet. 
 
 \subsubsection{Stackframe}
 Ein Stackframe beginnt mit den Parametern und den Lokalen Variablen.  Dar"uber kommt der Callercontext mit den alten Localspointer, Stackpointer und Callercontextpointer. Das obere Ende des Stackframes besteht aus dem Callercontext. 
