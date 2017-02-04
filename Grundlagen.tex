@@ -22,7 +22,10 @@ Ein Stackframe beginnt mit den Parametern und den Lokalen Variablen.  Dar"uber k
 
 \subsubsection{Funktionsaufrufe}
 
-Eine f"ur dieses Projekt wichtige Funktion des Framestacks sind Funktionsaufrufe bei einen Funktionsaufruf wird der Zeiger 
+Eine f"ur dieses Projekt wichtige Funktion des Framestacks sind Funktionsaufrufe. Bei einen Funktionsaufruf werden im Framestack die die 3 wichtigen Pointer neu gesetzt. Und der alte Callercontext gesichert. Der neue Localspointer wird berechnet in dem man vom aktuellen Stackpointer die Anzahl der Parameter der aufgerufenen Methode abzieht. Der neue Callercontextpointer wird berechnet indem auf dem neuen Localspointer die mit den Token "ubergebene Anzahl lokaler Parameter drauf addiert wird. Der neue Stackpointer wird berechnet, in dem auf dem Callercontextpointer die gr"o{ss}e des Callercontext drauf addiert wird. 
+In den n"achten Takten werden die alten Localspointer, Stackpointer und in den Callercontextpointer geschrieben. 
+%todo Grafik
 
+\subsubsection{Funktionsr"ucksprung}
 
-
+Bei einen Funktionsr"ucksprung werden im AMIDAR Framestack die Locals- Stack- und Callercontextpointer aktualisiert. Der Vorgang beginnt wenn eines der entsprechenden Token "uber den AMDIAR Bus gesendet wird. Es gibt 3 Varianten des Tokens. Einer liefert keinen R"uckgabewert, die anderen geben jeweils 32 oder 64 Bit zurück. Wenn der Token abgearbeitet wird, werden nacheinander die drei Pointer ausgelesen und wiederhergestellt. Anschließend wirf gegebenenfalls der R"uckgabewerte gesichert dieser steht in den "top of Stack" bzw. "next of stack" Registern. Der R"uckgabewert wird an stelle des obersten, im Falle eines Return64 der oberen beiden, Operanden des Urspr"unglichen Funktionsaufruf gespeichert. 
