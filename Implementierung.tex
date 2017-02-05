@@ -8,7 +8,13 @@ AMIDAR ist \"uber AXI mit 512 MB DDR Ram verbunden, der auf 800 MHz getaktet.
 Eine Schwierigkeit bei der Auslagerung des Framestacks an den Hauptspeicher ist die Unterschiedliche Wortbreite. 
 F\"ur den Garbarbagecollector werden zu jedem 32bit Datenwort noch 2 Statusbit gespeichert in den festgehalten wird, ob es sich bei den Daten um Metadaten, Referenzen oder Werte handelt. Damit beim Auslagern der Daten auf dem externen Speicher diese Informationen nicht verloren gehen werden die Schreibvorg\"ange immer in Bl\"ocken von 16 W\"ortern durchgef\"uhrt, wobei die Statusbits der 16 W\"orter als weiteres 32Bit Wort in den Speicher geschrieben werden. Dies ist kein Problem, da die Gr\"o"se der beim Spill and Fill Vorgang \"ubertragenen Bereiche einen Vielfachen von 16 W\"ortern entspricht. 
 
-Der Ausgelagerter Framestack wird in das obere Ende des 512MB großen DDR3 Speicher gelegt und belegt  $number max threads * words per thread +  $.
+\begin{figure}
+	\centering
+	\includegraphics[height = 15cm]{PS_RS_graphics/FS Blocks in Ram.pdf}
+	\caption{Zuordnung der Framestack Adressen im Hauptspeicher}
+\end{figure}
+
+Der Ausgelagerter Framestack wird in das obere Ende des 512MB großen DDR3 Speicher gelegt und belegt:\\ $(number max threads * words per thread)*(1+1/16) $ W"orter.\\
 Als Ausgangspunkt wird die h"ochste Speicheradresse des DDR Speichers verwendet und 2 mal nach links geshiftet, da der externe Speicher Byte adressiert, der Framestack jedoch wortadressiert ist. Davon wird die Maximale Gr"o{\ss} des Framestacks abgezogen. Von da an aufw"arts werden die Daten der einzelnen Threads gespeichert.
 
 \subsection{Schreiben von Framestackinhalten in den Hauptspeicher}
@@ -18,16 +24,25 @@ Das Modul, indem die eigentliche AXI "Ubertragung verarbeitet wird wartet darauf
 
 Anschlie{\ss}end werden die Daten aus dem Fifo \"ubertragen bis die neu berechnete Burstl"ange erreicht wurde. Solange der noch Eintr\"age in den Fifos f"ur Bursl"ange und Adresse liegen wird eine neue "Ubertragung gestartet. 
 
+\begin{figure}
+	\centering
+	\includegraphics[height = 15cm]{PS_RS_graphics/Axi Write Buffer.pdf}
+	\caption{Schema des AXI Schreib Puffers}
+\end{figure}
 
 \subsection{Lesen von Framestackinhalten aus den Hauptspeicher}
-Wenn die Daten ausgelesen werden sollen, wird das selbe Modul verwendet. Es wird die Startadresse des auszulesenden Blocks und die Burstl"ange \"ubergeben. Diese wird f\"ur den DDR Speicher umgerechnet und der Lesevorgang \"uber AXI gestartet. F"ur das Zwischenspeichern der ausgelesenen Daten werden  Das erfolgreiche Einlesen wird dem Framestack signalisiert, woraufhin die Daten des Blocks ausgelesen werden. Zum Zwischenspeichern der ausgelesenen Daten werden 2 Fifos verwendet. Ein Fifo wird f"ur die gelesenen Daten speichert 32 Wörter mit 32 Bit Wortbreite. In einen weiteren Fifo ebenfalls 32Bit werden die kumulierten Statusbits gespeichert. Nachdem die ersten 16bit Datenworte in den Fifo gespeichert wurden, enth"alt das n"achste Wort die Statusbits, dieses wird in den entsprechenden Fifo gespeichert. Sobald das Fifo für die Statusbits nicht leer ist, kann auf Seiten des Framestacks mit den Auslesen begonnen werden. Bei jeden takt in dem eine 1 an readenable angelegt ist wird ein Datenwort aus dem Fifo und 2 Statusbits "ubertragen. Nach dem 16 W"orter aus den Datenfifo gelesen wurden wird wenn vorhanden das n"achste Statuswort aus den Statusfifo gelesen. 
+Wenn die Daten ausgelesen werden sollen, wird das selbe Modul verwendet. Es wird die Startadresse des auszulesenden Blocks und die Burstl"ange \"ubergeben. Diese wird f\"ur den DDR Speicher umgerechnet und der Lesevorgang \"uber AXI gestartet. F"ur das Zwischenspeichern der ausgelesenen Daten werden  Das erfolgreiche Einlesen wird dem Framestack signalisiert, woraufhin die Daten des Blocks ausgelesen werden. Zum Zwischenspeichern der ausgelesenen Daten werden 2 Fifos verwendet. Ein Fifo wird f"ur die gelesenen Daten speichert 32 W"orter mit 32 Bit Wortbreite. In einen weiteren Fifo ebenfalls 32Bit werden die kumulierten Statusbits gespeichert. Nachdem die ersten 16bit Datenworte in den Fifo gespeichert wurden, enth"alt das n"achste Wort die Statusbits, dieses wird in den entsprechenden Fifo gespeichert. Sobald das Fifo f"ur die Statusbits nicht leer ist, kann auf Seiten des Framestacks mit den Auslesen begonnen werden. Bei jeden takt in dem eine 1 an readenable angelegt ist wird ein Datenwort aus dem Fifo und 2 Statusbits "ubertragen. Nach dem 16 W"orter aus den Datenfifo gelesen wurden wird wenn vorhanden das n"achste Statuswort aus den Statusfifo gelesen. 
 
-
+\begin{figure}
+	\centering
+	\includegraphics[height = 15cm]{PS_RS_graphics/Axi Read Buffer.pdf}
+	\caption{Schema des AXI Lese Puffers}
+\end{figure}
 
 \section{Spill and Fill Windows}
 
 Bei den Spill and Fill Prozess werden Teile des aktuellen Threads  und evtl die anderer Threads in sogenanntes Windows vorgehalten. Die Windows werden als Blockrams realisiert. 
-Die Anzahl und Gr"o{ss}e dieser Windows kann "uber Parameter eingestellt werden. Für jedes Window werden die Framestack Adressen der obersten und untersten Grenze, des Adressbereichs gespeichert, der in dem Window vorgehalten wird. Dazu wird jeweils die Basis Adresse im Window gespeichert, die angibt an welcher Window Adresse die unterste Framestackaddresse liegt. 
+Die Anzahl und Gr"o{ss}e dieser Windows kann "uber Parameter eingestellt werden. Für jedes Window werden die Framestack Adressen der oberen und unteren Grenze, des Adressbereichs gespeichert, der in dem Window vorgehalten wird. Dazu wird jeweils die Basis Adresse im Window gespeichert, die angibt an welcher Window Adresse die unterste Framestackaddresse liegt. 
 %todo picture
 Das Window selber wird als Ringspeicher organisiert. Für jedes Window wird in einen Register gespeichert welcher Thread in diesen momentan vorgehalten wird. 
 Die Adressen werden f"ur das Window wie folgt umgerechnet:
@@ -42,14 +57,22 @@ Bei jeden Funktionsaufruf wird der Platzbedarf im Stack abgesch"atzt und gepr"uf
 
 Ein Stackframe in AMIDAR beginnt mit den Argumenten und lokalen Variablen, darüber kommt der Callercontext bestehend aus: Localspointer, Callercontextpointer und Stackpointer. Zum bestimmen ob der im Window vorhandene Platz noch ausreicht wird vom aktuellen Stackpointer die Anzahl der Parameter der aufgerufen nen Funktion abgezogen und Anzahl lokaler Variablen die gr"o{"ss}e des Callercontexts darauf addiert und eine Kostante f"ur die Anzahl m"oglicher Parameter drauf addiert. Wenn das Ergebnis noch im aktuellen Addressbereichs des Windows liegt, wird ein normaler Invoke durchgef"uhrt, andernfalls wird ein Spill durchgef"uhrt. 
 
-%todo Stackframe
+\begin{figure}
+	\centering
+	\includegraphics[height = 10cm]{PS_RS_graphics/Stackframe after Invoke.pdf}
+	\caption{Stackframe nach einen Funktionsaufruf}
+\end{figure}
 
 \subsection{Spill}
 Zu beginn des Spill Vorgangs wird die Burstl"ange f"ur die AXI "Ubertragung auf 128 gesetzt und die Bottom Adresse des unteren Windows wird in ein Register zwischengespeichert, das als Laufvariable f"ur den folgenden Prozess verwendet wird und in ein Register kopiert die Basis des aktuellen 16er Block angibt. 
 Anschlie{\ss}end wird darauf gewartet, dass das AXI Modul geschrieben werden kann, ist dies der Fall wird der Speicher im Window mit den Wert im Address Register adressiert. 
 Nachdem die Daten aus dem Blockram gelesen wurden wird ein in das oben beschriebene AXI Modul geschrieben. Dafür wird die Threadadresse zur Framestackadresse umgerechnet. Gleichzeitig wird der Wert im Register mit der Laufvariable um eins erh"oht.  In den folgenden Takten wird dieses Vorgang wiederholt, bis die Laufvariable um 15 "uber der Basisadresse des aktuellen Blocks liegt. Ist dies der Fall wird gepr"uft, ob das ende des zu "ubertragenen Window Parts erreicht ist. Ansonsten wird der Vorgang mit ge"anderter Adresse neu gestartet. 
 Am Ende des Spill Vorgangs werden die Register f"ur die bottom and top Adressen aktualisiert. Im drauf folgenden Takt wird die Ausf"uhrung der Invoke Instruktion neu gestartet.
-
+\begin{figure}
+	\centering
+	\includegraphics[height = 10cm]{PS_RS_graphics/spill.pdf}
+	\caption{Spill: Verschieben des Windows }
+\end{figure}
 
 \section{Ausgelagerte Framestackteile des aktiven Threads wiederherstellen (Fill)}
 Wenn der Stack durch R"uckspr"unge schrumpft und nahe dem unteren Ende des vorgehaltenen Adressbereichs kommt muss der ausgelagerte Framestack wiederhergestellt werden. 
@@ -63,7 +86,11 @@ Ansonsten geht der return Vorgang normal weiter mit der Wiederherstellung des Ca
 
 Bevor das kopieren der Stackdaten passieren kann werden m"ussen die -Bottom -Top und Baseadressregister des aktuellen Windows angepasst werden. Im n"achsten Takt muss der vorher ausgelesene Programmcounter in einen Register zwischengespeichert werden, damit dieser sp"ater zur"uck gegeben werden kann. Anschlie{"ss}end wird die neue untere Adresse des Windows umgerechnet und der Lesevorgang im AXI Modul gestartet. In dem n"achsten Takt wird gewartet bis der Lesebuffer gefüllt ist. Wenn dies der Fall ist wird mit jeden weiteren Takt ein Datenwort und die dazu gehörigen Status Bits ausgelesen und von unten beginnend in das Window gespeichert. Nach jeden gespeicherten 16 Bit block wird "uberp"uft ob ein ganzes Segment "ubertragen wurde oder der ganze Burst ausgelesen wurde. Wenn ersteres der Fall ist wird der Vorgang beendet. Falls der Burst komplett "ubertragen wurde das aktuelle Segment jedoch nicht vollst"andig "ubertragen wurde wird ein neuer Leseburst mit der aktuellen Adresse gestartet. 
 
-
+\begin{figure}
+	\centering
+	\includegraphics[height = 10cm]{PS_RS_graphics/fill.pdf}
+	\caption{fill: Verschieben des Windows}
+\end{figure}
 \section{Multithreading mit Verdr\"angung}
 Es kann eine konstante Anzahl an Threads in den Windows vorgehalten werden. Um die Multithreading Funktionalit"at mit Threads weiterhin zu gew"arleisten wurde eine Threadverdr"angung implementiert durch die Stacks von in den Hauptspeicher ausgelagert und wiederhergestellt werden k"onnen.
 

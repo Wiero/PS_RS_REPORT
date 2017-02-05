@@ -25,27 +25,11 @@
 \BOOKMARK [1][-]{section.3.6}{Garbage Collector Interface}{chapter.3}% 25
 \BOOKMARK [1][-]{section.3.7}{Lesezugriff Wishbone}{chapter.3}% 26
 \BOOKMARK [0][-]{chapter.4}{Evaluation}{}% 27
-\BOOKMARK [1][-]{section.4.1}{neue Testf\344lle}{chapter.4}% 28
-\BOOKMARK [1][-]{section.4.2}{Dauer }{chapter.4}% 29
-\BOOKMARK [1][-]{section.4.3}{Dauer von Spill and Fill Vorg\344ngen}{chapter.4}% 30
-\BOOKMARK [1][-]{section.4.4}{Dauer von Threadwechseln}{chapter.4}% 31
-\BOOKMARK [0][-]{chapter.5}{Fazit}{}% 32
-\BOOKMARK [0][-]{chapter.6}{Installation von Latex}{}% 33
-\BOOKMARK [1][-]{section.6.1}{Wie beschaffe ich mir LaTeX?}{chapter.6}% 34
-\BOOKMARK [2][-]{subsection.6.1.1}{tudfonts und tuddesign}{section.6.1}% 35
-\BOOKMARK [1][-]{section.6.2}{Installation des TUD-Design}{chapter.6}% 36
-\BOOKMARK [2][-]{subsection.6.2.1}{WinXP / MiKTeX}{section.6.2}% 37
-\BOOKMARK [2][-]{subsection.6.2.2}{Apple OS-X}{section.6.2}% 38
-\BOOKMARK [2][-]{subsection.6.2.3}{Debian / Ubuntu \(Global\)}{section.6.2}% 39
-\BOOKMARK [2][-]{subsection.6.2.4}{Linux \(Global\)}{section.6.2}% 40
-\BOOKMARK [2][-]{subsection.6.2.5}{Linux \(Lokal\)}{section.6.2}% 41
-\BOOKMARK [0][-]{chapter.7}{\334berschriften}{}% 42
-\BOOKMARK [1][-]{section.7.1}{\334berschrift2}{chapter.7}% 43
-\BOOKMARK [2][-]{subsection.7.1.1}{\334berschrift3}{section.7.1}% 44
-\BOOKMARK [0][-]{chapter.8}{Text in Latex}{}% 45
-\BOOKMARK [1][-]{section.8.1}{Umlaute und \304hnliches}{chapter.8}% 46
-\BOOKMARK [1][-]{section.8.2}{Querverweis}{chapter.8}% 47
-\BOOKMARK [0][-]{chapter.9}{Formeln in Latex}{}% 48
-\BOOKMARK [0][-]{chapter.10}{Einbindung von Graphen}{}% 49
-\BOOKMARK [0][-]{chapter.11}{Tabellen}{}% 50
-\BOOKMARK [0][-]{chapter.12}{Literaturverzeichnis}{}% 51
+\BOOKMARK [1][-]{section.4.1}{Testumgebung}{chapter.4}% 28
+\BOOKMARK [2][-]{subsection.4.1.1}{Hardware\344nderungen zur Performance Evaluation}{section.4.1}% 29
+\BOOKMARK [2][-]{subsection.4.1.2}{angepasste Testbench}{section.4.1}% 30
+\BOOKMARK [1][-]{section.4.2}{Performance Messungen}{chapter.4}% 31
+\BOOKMARK [2][-]{subsection.4.2.1}{Spill and Fill}{section.4.2}% 32
+\BOOKMARK [2][-]{subsection.4.2.2}{Threadswitch}{section.4.2}% 33
+\BOOKMARK [0][-]{chapter.5}{Fazit}{}% 34
+\BOOKMARK [0][-]{chapter.6}{Literaturverzeichnis}{}% 35
