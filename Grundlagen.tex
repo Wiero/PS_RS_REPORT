@@ -4,8 +4,8 @@
 \section{Spill and Fill}
 \section{Verwendung eines Spill and Fill Mechanismus in anderen Prozessoren}
 \subsection{Sun Sparc Prozessoren}
-Die Sun Sparc Prozessoren V8/V9 verf\"ugen \"uber ein sliding register Window mit jeweils 16 8 byte Registern in 7 Registers\"atzen. Sliding Window bezeichnet ein Verfahren, bei dem die Registers\"atze im Falle eines Funktionsaufruf nicht auf dem Stack gesichert werden m\"ussen, stattdessen wird auf den n\"achsten Registersatz gewechselt. Dabei wird meistens auch die Parameter\"ubergabe realisiert. Dabei sind die Input Register in dem Registerwindow des Callers identisch mit dem Output Registern, in dem Registerwindow des Callee.   
-Mit speziellen Bytecode Instruktionen werden im Spill an Fill Verfahren Registers\"atze ausgetauscht, sobald diese nicht mehr ausreichen, was allerdings wegen den großen Registers\"atzen recht viel Zeit in Anspruch nimmt.
+Die Sun Sparc Prozessoren V8/V9 verf\"ugen \"uber ein sliding register Window mit jeweils 16 64 Bit großen Registern in 7 Registers\"atzen. Sliding Window bezeichnet ein Verfahren, bei dem die Registers\"atze im Falle eines Funktionsaufruf nicht auf dem Stack gesichert werden m\"ussen, stattdessen wird auf den n\"achsten Registersatz gewechselt. Dabei wird meistens auch die Parameter\"ubergabe realisiert. Dabei sind die Input Register in dem Registerwindow des Callers identisch mit dem Output Registern, in dem Registerwindow des Callee.   
+Mit speziellen Bytecode Instruktionen werden im Spill an Fill Verfahren Registers\"atze auf einen externen Speicher gesichert, was allerdings wegen den großen Registers\"atzen recht viel Zeit in Anspruch nimmt. Da das Spill and Fill durch spezielle Bytecodes ausgelöst wird muss der Compiler vorher festlegen an welchen Stellen das Spill and Fill stattfinden soll.
 \section{AMIDAR}
 Bei der Klasse der AMIDAR Prozessoren handelt es sich um ein konfigurierbares System bestehend aus Function Units (FU) f"ur die jeweiligen Aufgaben. Die FUs sind dabei untereinander mit einen Token- und einem Datennetzwerk verbunden. 
 \subsection{Funktion}

@@ -1,2 +1,12 @@
 \chapter{Fazit}
 \label{cha:Fazit}
+
+Im Zusammenhang dieses Projektseminars wurde die AMIDAR Framestack FU um Spill and Fill erweitert. Was deutlich gr"o{ss}ere Stackframes erm"oglicht bei gleichzeitiger Reduzierung des ben"otigten Blockrams. Der Gesamteinfluss auf die Performance des Prozessors dabei ist minimal. 
+
+Um dies zu erm"oglichen wurde eine Anbindung des Framestacks "uber AXI eingebaut. Daf"ur wurde ein Modul gebaut was neben der AXI Ansteuerung auch das konvertieren der Unterschiedlichen Adressbereiche von Framestack zu DDR RAM "ubernimmt sowie das Puffern der Daten beim Lesen und schreiben.  
+
+Der Ablauf der Spill and Fill Vorg"ange wurde implementiert und neue Testf"alle geschrieben um diese zu testen. 
+Um weiterhin Multithreading ohne Einschr"ankungen zu erlauben ein System zur Verdr"angung wenig genutzten Threads aus den Spill and Fill Windows implementiert. 
+
+Dazu kommen ein paar Problem die durch den in den Hauptspeicher ausgelagerten Framestack auftreten, an die vorher nicht gedacht wurde. 
+Es musste sichergestellt werden das der Framestack weiterhin "uber das Wishbone Interface ausgelesen werden kann um die Funktion des Debuggers weiterhin zu gewährleisten ohne das es zu Deadlocks mit anderen FUs kommt. Des weiteren musste die Threadinitialisierung ge"andert werden und das Garbage Collector Interface wurde weitgehend neu geschrieben, um auch das Rootset des ausgelagerten Teil des Framestacks zu erfassen.  
