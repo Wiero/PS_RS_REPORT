@@ -8,5 +8,9 @@ Um dies zu erm"oglichen wurde eine Anbindung des Framestacks "uber AXI eingebaut
 Der Ablauf der Spill and Fill Vorg"ange wurde implementiert und neue Testf"alle geschrieben um diese zu testen. 
 Um weiterhin Multithreading ohne Einschr"ankungen zu erlauben ein System zur Verdr"angung wenig genutzten Threads aus den Spill and Fill Windows implementiert. 
 
-Dazu kommen ein paar Problem die durch den in den Hauptspeicher ausgelagerten Framestack auftreten, an die vorher nicht gedacht wurde. 
-Es musste sichergestellt werden das der Framestack weiterhin "uber das Wishbone Interface ausgelesen werden kann um die Funktion des Debuggers weiterhin zu gewährleisten ohne das es zu Deadlocks mit anderen FUs kommt. Des weiteren musste die Threadinitialisierung ge"andert werden und das Garbage Collector Interface wurde weitgehend neu geschrieben, um auch das Rootset des ausgelagerten Teil des Framestacks zu erfassen.  
+Dazu kamen einige Probleme die durch den in den Hauptspeicher ausgelagerten Framestack auftraten, an die vorher nicht gedacht wurde. 
+Es musste sichergestellt werden das der Framestack weiterhin "uber das Wishbone Interface ausgelesen werden kann um die Funktion des Debuggers weiterhin zu gew"ahrleisten ohne das es zu Deadlocks mit anderen FUs kommt. Des weiteren musste die Threadinitialisierung ge"andert werden und das Garbage Collector Interface wurde weitgehend neu geschrieben, um auch das Rootset des ausgelagerten Teil des Framestacks zu erfassen.  
+
+\section{Ausblick}
+
+Als Zuk"unftige kann eine dynamische Vergr"oßerung des Speicherbereichs implementiert werden. Dabei sollten Maßnahmen eingebaut werden um eine "Uberlappung von Heap und Framestack zu verhindern.

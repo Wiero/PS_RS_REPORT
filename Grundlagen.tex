@@ -2,15 +2,16 @@
 \label{cha:Grundlagen}
 
 \section{Spill and Fill}
+
+Spill and Fill beschreibt eine Strategie, durch die der Zugriff auf einen Stapelspeicher deutlich beschleunigt werden kann. Ein kleinerer schnellerer Speicher h"alt einen Ausschnitt des Hauptspeichers vor der je nach Bedarf hoch oder runter geschoben werden kann, sodass immer das obere Ende des Stapelspeichers im Window Ausschnitt liegt. Spill beschreibt dabei den Vorgang des nach oben Schiebens des Speichers bei den der untere Abschnitt des Ausschnitts in den Hauptspeicher geschrieben wird. Wird des Stack weit genug abgebaut wird ein Fill durchgef"uhrt, bei den ausgelagerte Teile zur"uck kopiert werden.  
+
+
 \section{Verwendung eines Spill and Fill Mechanismus in anderen Prozessoren}
 \subsection{Sun Sparc Prozessoren}
 Die Sun Sparc Prozessoren V8/V9 verf\"ugen \"uber ein sliding register Window mit jeweils 16 64 Bit großen Registern in 7 Registers\"atzen. Sliding Window bezeichnet ein Verfahren, bei dem die Registers\"atze im Falle eines Funktionsaufruf nicht auf dem Stack gesichert werden m\"ussen, stattdessen wird auf den n\"achsten Registersatz gewechselt. Dabei wird meistens auch die Parameter\"ubergabe realisiert. Dabei sind die Input Register in dem Registerwindow des Callers identisch mit dem Output Registern, in dem Registerwindow des Callee.   
-Mit speziellen Bytecode Instruktionen werden im Spill an Fill Verfahren Registers\"atze auf einen externen Speicher gesichert, was allerdings wegen den großen Registers\"atzen recht viel Zeit in Anspruch nimmt. Da das Spill and Fill durch spezielle Bytecodes ausgelöst wird muss der Compiler vorher festlegen an welchen Stellen das Spill and Fill stattfinden soll.
+Mit speziellen Bytecode Instruktionen werden im Spill an Fill Verfahren Registers\"atze auf einen externen Speicher gesichert, was allerdings wegen den großen Registers\"atzen recht viel Zeit in Anspruch nimmt. Da das Spill and Fill durch spezielle Bytecodes ausgel"ost wird muss der Compiler vorher festlegen an welchen Stellen das Spill and Fill stattfinden soll.
 \section{AMIDAR}
-Bei der Klasse der AMIDAR Prozessoren handelt es sich um ein konfigurierbares System bestehend aus Function Units (FU) f"ur die jeweiligen Aufgaben. Die FUs sind dabei untereinander mit einen Token- und einem Datennetzwerk verbunden. 
-\subsection{Funktion}
-
-
+Bei der Klasse der AMIDAR Prozessoren handelt es sich um ein konfigurierbares System bestehend aus Function Units (FU). Die Komplexen Instruktionen werden in mehrere Arbeitsschritte unterteilt, die als Token an die einzelnen FUs verteilt werden. Daf"ur wird das Token Distribution Network genutzt. F"ur die Kommunikation zwischen den FUs gibt es auch noch einen Datenbus. Ein Vorteil der AMIDAR Architektur ist, das leicht FUs eingef"ugt werden k"onnen um den Prozessor an die Aufgaben anzupassen. Ein gutes Beispiel daf"ur sind die Hardwarebeschleuniger. 
 
 \subsection{Framestack}
 
@@ -23,24 +24,24 @@ Ein Stackframe beginnt mit den Parametern und den Lokalen Variablen.  Dar"uber k
 \subsubsection{Funktionsaufrufe}
 \begin{figure}
 	\centering
-	\includegraphics[height = 10cm]{PS_RS_graphics/Stackframe before Invoke.pdf}
+	\includegraphics[height = 10cm]{PS_RS_graphics/StackframebeforeInvoke.pdf}
 	\caption{Stackframe vor einen Funktionsaufruf}
 \end{figure}
-Eine f"ur dieses Projekt wichtige Funktion des Framestacks sind Funktionsaufrufe. Bei einen Funktionsaufruf werden im Framestack die die 3 wichtigen Pointer neu gesetzt. Und der alte Callercontext gesichert. Der neue Localspointer wird berechnet in dem man vom aktuellen Stackpointer die Anzahl der Parameter der aufgerufenen Methode abzieht. Der neue Callercontextpointer wird berechnet indem auf dem neuen Localspointer die mit den Token "ubergebene Anzahl lokaler Parameter drauf addiert wird. Der neue Stackpointer wird berechnet, in dem auf dem Callercontextpointer die gr"o{ss}e des Callercontext drauf addiert wird. 
+Eine f"ur dieses Projekt wichtige Funktion des Framestacks sind Funktionsaufrufe. Bei einen Funktionsaufruf werden im Framestack die die 3 wichtigen Pointer neu gesetzt. Und der alte Callercontext gesichert. Der neue Localspointer wird berechnet in dem man vom aktuellen Stackpointer die Anzahl der Parameter der aufgerufenen Methode abzieht. Der neue Callercontextpointer wird berechnet indem auf dem neuen Localspointer die mit den Token "ubergebene Anzahl lokaler Parameter drauf addiert wird. Der neue Stackpointer wird berechnet, in dem auf dem Callercontextpointer die gr"o"ze des Callercontext drauf addiert wird. 
 In den n"achten Takten werden die alten Localspointer, Stackpointer und in den Callercontextpointer geschrieben. 
 \begin{figure}
 	\centering
-	\includegraphics[height = 10cm]{PS_RS_graphics/Stackframe after Invoke.pdf}
+	\includegraphics[height = 10cm]{PS_RS_graphics/StackframeafterInvoke.pdf}
 	\caption{Stackframe nach einen Funktionsaufruf}
 \end{figure}
 
 
 \subsubsection{Funktionsr"ucksprung}
 
-Bei einen Funktionsr"ucksprung werden im AMIDAR Framestack die Locals- Stack- und Callercontextpointer aktualisiert. Der Vorgang beginnt wenn eines der entsprechenden Token "uber den AMDIAR Bus gesendet wird. Es gibt 3 Varianten des Tokens. Einer liefert keinen R"uckgabewert, die anderen geben jeweils 32 oder 64 Bit zur"uck. Wenn der Token abgearbeitet wird, werden nacheinander die drei Pointer ausgelesen und wiederhergestellt. Anschlie{ss}end wird gegebenenfalls der R"uckgabewerte gesichert dieser steht in den "top of Stack" bzw. "next of stack" Registern. Der R"uckgabewert wird an stelle des obersten, im Falle eines Return64 der oberen beiden, Operanden des Urspr"unglichen Funktionsaufruf gespeichert. 
+Bei einen Funktionsr"ucksprung werden im AMIDAR Framestack die Locals- Stack- und Callercontextpointer aktualisiert. Der Vorgang beginnt wenn eines der entsprechenden Token "uber den AMDIAR Bus gesendet wird. Es gibt 3 Varianten des Tokens. Einer liefert keinen R"uckgabewert, die anderen geben jeweils 32 oder 64 Bit zur"uck. Wenn der Token abgearbeitet wird, werden nacheinander die drei Pointer ausgelesen und wiederhergestellt. Anschlie"zend wird gegebenenfalls der R"uckgabewerte gesichert dieser steht in den "top of Stack" bzw. "next of stack" Registern. Der R"uckgabewert wird an stelle des obersten, im Falle eines Return64 der oberen beiden, Operanden des Urspr"unglichen Funktionsaufruf gespeichert. 
 
 \begin{figure}
 	\centering
-	\includegraphics[height = 15cm]{PS_RS_graphics/Stackframe after return.pdf}
+	\includegraphics[height = 15cm]{PS_RS_graphics/Stackframeafterreturn.pdf}
 	\caption{Stackframe nach einen Funktionsr"ucksprung}
 \end{figure}

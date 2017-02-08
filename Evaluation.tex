@@ -2,16 +2,34 @@
 \label{cha:Evaluation}
 Um die korrekte Funktionsweise und die Performance des ge"anderten Framestacks zu "uberpr"ufen wurde eine modifizierte AMIDAR Testbench verwendet. Vorallem im Fokus stand die korrekte Ausf"uhrung der "Spill and Fill" Abl"aufe und die Threadwechsel. 
 \section{Testumgebung}
-F"ur die Tests wurde die AMIDAR Testbench modifiziert um Funktionen mit einen großen Framestack oder Threadwechseln zu testen. Au{ss}erdem wurde die Hardware des Framestacks erweitert um die ben"otigte Anzahl an Takten f"ur einen bestimmten Vorgang aufzuzeichnen. 
+F"ur die Tests wurde die AMIDAR Testbench modifiziert um Funktionen mit einen großen Framestack oder Threadwechseln zu testen. Au"zerdem wurde die Hardware des Framestacks erweitert um die ben"otigte Anzahl an Takten f"ur einen bestimmten Vorgang aufzuzeichnen. 
 \subsection{Hardware"anderungen zur Performance Evaluation}
 Um die Performance evaluieren zu k"onnen ein zus"atzlicher Blockram angelegt in dem jeweils die Dauer eines bestimmten Vorgangs protokolliert wird. Es kann entweder die Dauer der Spill, der Fill oder der Threadswitch Vorg"ange protokolliert werden. 
 Um auf diese Daten zuzugreifen wurden dem Framestack die Wishbone Register 15, 16, 17 und 18 hinzugef"ufgt. Mit den Register 18 wird dabei angegeben ob und welcher Vorgang protokolliert werden soll. Wird eine 0 in das Register geschrieben wird die Protokollfunktion deaktiviert. Mit Register 15 Wird angegeben aus welcher Adresse des Speichers gelesen werden soll. Die ausgelesenen Daten selber stehen in Register 18. Das Register 17 gibt die Anzahl der Eintr"age in dem Speicher an. 
 Zur Protokollierung eines Vorgans werden die Takte gez"ahlt sobald der Startzustand eines Vorgangs erreicht ist und endet wenn der Vorgang beendet wurde und neue Tokens abgearbeitet werden k"onnen. Zu beachten dabei ist, das bei jeden Vorgang nur die Anzahl der Takte gemessen wird bei denen die Framestack FSM besch"aftig ist. Beim Spill zum Beispiel wird das z"ahlen beendet sobald die letzten Stackdaten in den Schreibfifo geschrieben wurde. Die Zeit, in der der AXI Bus belegt ist, ist etwas l"anger, da der FIFO noch abgearbeitet werden muss. Der Framestack selber kann w"ahrenddessen schon weitere Token abarbeiten.
 Alle eben beschriebenen "Anderungen lassen sich wenn nicht ben"otigt durch eine Pr"aprozessordefinition deaktivieren. 
 \subsection{angepasste Testbench}
-Um die weiterhin korrekte Funktionsweise der Grundlegenden Framestack Funktionalit"aten zu testen wurde die AMIDAR Testbench genutzt. Erweitert wurde diese dabei zum einen um Tests, die den Spill and Fill Vorgang testen. Daf"ur wurde eine Funktion ben"otigt, die einen m"oglichst gro{ss}en Stack erzeugt und dennoch eine einigerma{ss}en kurze Laufzeit hat. Die Funktion zur Rekursiven Berechnung der Fibonaci Folge erzeugt zwar schnell einen sehr großen Stack, allerdings ist die Laufzeit dieser deutlich zu lang um als Test in Frage zu kommen. Zum  Testen der Spill and Fill Funktionen wurde eine vereinfachte Ackermann Funktion genutzt, die mit 2 Parametern arbeitet.
-%todo code
-In dem neuen Testfall AckermannTest wird diese Funktion mit unterschiedlichen Parametern aufgerufen: \\\\
+Um die weiterhin korrekte Funktionsweise der Grundlegenden Framestack Funktionalit"aten zu testen wurde die AMIDAR Testbench genutzt. Erweitert wurde diese dabei zum einen um Tests, die den Spill and Fill Vorgang testen. Daf"ur wurde eine Funktion ben"otigt, die einen m"oglichst gro"zen Stack erzeugt und dennoch eine einigerma"zen kurze Laufzeit hat. Die Funktion zur Rekursiven Berechnung der Fibonaci Folge erzeugt zwar schnell einen sehr großen Stack, allerdings ist die Laufzeit dieser deutlich zu lang um als Test in Frage zu kommen. Zum  Testen der Spill and Fill Funktionen wurde eine vereinfachte Ackermann Funktion genutzt, die mit 2 Parametern arbeitet.\\
+
+\begin{minipage}{\linewidth}
+\begin{lstlisting}
+private static int ackermann(int n, int m) {
+	int i= 0;	
+		if(n==0 && m== 0) {
+			i=1;			
+		}
+		if (n == 0)
+			return m + 1;
+		else
+		if (m == 0){			
+			return ackermann(n - 1, 1);
+		}
+		else
+			return ackermann(n - 1, ackermann(n, m - 1));
+	}
+\end{lstlisting}
+\end{minipage}
+In dem neuen Testfall AckermannTest wird diese Funktion mit unterschiedlichen Parametern aufgerufen: \
 
 \begin{table}[]
 \centering
@@ -20,15 +38,15 @@ In dem neuen Testfall AckermannTest wird diese Funktion mit unterschiedlichen Pa
 \begin{tabular}{lllll}
  & Ackermann (3,3):  & \\
  &  & Rekursionstiefe 		= 63 \\
- &  & Maximale Stackgr"o{ss}e = 450 W"orter  \\
+ &  & Maximale Stackgr"o"ze = 450 W"orter  \\
  &  & 	R"uckgabewert 			= 9 \\
  & Ackermann (3,4)  &\\
  &  & Rekursionstiefe			= 127 \\
- &	& Maximale Stackgr"o{ss}e = 890 W"orter\\
+ &	& Maximale Stackgr"o"ze = 890 W"orter\\
  &  & R"uckgabewert			= 61\\
  & Ackermann (3,5): &\\
  & & Rekursionstiefe			= 255\\
- & & Maximale Stackgr"o{ss}e = 1785 W"orter\\
+ & & Maximale Stackgr"o"ze = 1785 W"orter\\
  & &	R"uckgabewert			= 253
 \end{tabular}
 \end{table}
@@ -36,14 +54,14 @@ In dem neuen Testfall AckermannTest wird diese Funktion mit unterschiedlichen Pa
 
 
 			
-Weitere wichtige Testf"alle waren die schon vorhandenen, jedoch nicht einkommentierten Multithreading Tests. Genutzt wurde der "BasicThreadTest" und der "AdvancedThreadTest". Au{ss}erdem wurde eine Modifizierte Variante des BasicThreadTests genutzt, bei der der Ackermanntest in mehreren Threads ausgef"uhrt wurde. \\
+Weitere wichtige Testf"alle waren die schon vorhandenen, jedoch nicht einkommentierten Multithreading Tests. Genutzt wurde der "BasicThreadTest" und der "AdvancedThreadTest". Au"zerdem wurde eine Modifizierte Variante des BasicThreadTests genutzt, bei der der Ackermanntest in mehreren Threads ausgef"uhrt wurde. \\
 
 Eine weitere Anpassung der Testbench ist eine Methode die "uber Wishbone die im Framestackmodul gemessenen Performancedaten ausliest.  Zuerst wird die Anzahl der erfassten Vorg"ange ausgelesen. Anschließend wird "uber den Speicher mit den Messdaten iteriert und der Inhalt ausgegeben, dabei wird das arithmetische Mittel der Messwerte berechnet und ebenfalls ausgegeben. 
 
 
 \section{Performance Messungen}
 Bei den Performance Messungen wurde die Dauer bestimmter Vorg"ange gemessen in dem die oben beschriebenen Tests ausgef"uhrt und die Messdaten ausgelesen worden sind. 
-Die Tests wurden mit Unterschiedlichen Konfigurationen den Spill and Fill Windows des Framestacks durchgef"uhrt. Es wurde sowohl mit einer Window Gr"o{ss}e von 512 W"orter als auch mit 1024 W"ortern getestet. 1024 W"orter entspricht dabei der Anzahl der W"orter die im urspr"unglichen Framestack einen Thread jeweils zur Verf"ugung standen. Das Window wird dabei in 2 Segmente geteilt, die jeweils 256 oder 512 W"orter gro{ss} sind.
+Die Tests wurden mit Unterschiedlichen Konfigurationen den Spill and Fill Windows des Framestacks durchgef"uhrt. Es wurde sowohl mit einer Window Gr"o"ze von 512 W"orter als auch mit 1024 W"ortern getestet. 1024 W"orter entspricht dabei der Anzahl der W"orter die im urspr"unglichen Framestack einen Thread jeweils zur Verf"ugung standen. Das Window wird dabei in 2 Segmente geteilt, die jeweils 256 oder 512 W"orter gro"z sind.
 
 \subsection{Spill and Fill}
 
@@ -53,7 +71,7 @@ Ein Fill ben"otigt mehr Takte, da zum einen das adressieren des AXI Busses f"ur 
 Wenn ein Window 1024 W"orter umfasst werden f"ur einen Spill 576 Takte gemessen. F"ur den Fill werden dabei zwischen 725 und 744 Takte gemessen. Im Durchschnitt werden 726 Takte ben"otigt. 
 Es finden beim Durchlauf der Testbench jeweils 131 Spill and Fill Vorg"ange statt. 
 \subsubsection{Interpretation}
-Bei der Variante mit 512 W"ortern werden insgesamt 300762 Takte f"ur Spill and Fill Operationen genutzt. Mit einen 1024 W"orter gro"{ss}en Window werden lediglich 162702 Takte durch Spill and Fill blockiert. Bei der Variante mit einen 1024 W"orter großen Window ist in diesen Testf"allen die Anzahl der Takte die f"ur Spill and Fill ben"otigt werden beinahe halbiert, was ein großen Performance Vorteil andeutet. Ber"ucksichtigt man jedoch, das die Gesamtlaufzeit der Testf"alle 17943867 bzw 17805807 Takte betr"agt, ist Spill and Fill nur f"ur 0,91376\% bzw 0,1676\% der Laufzeit der Tests verantwortlich. Gemessen wurde dabei wirklich nur die Laufzeit der Testf"alle ohne Bootloader, static Initializer und uart Ausgaben. Bei realen Anwendungen d"urften der Prozentsatz deutlich niedriger liegen als bei der Ackermannfunktion. 
+Bei der Variante mit 512 W"ortern werden insgesamt 300762 Takte f"ur Spill and Fill Operationen genutzt. Mit einen 1024 W"orter gro"zen Window werden lediglich 162702 Takte durch Spill and Fill blockiert. Bei der Variante mit einen 1024 W"orter großen Window ist in diesen Testf"allen die Anzahl der Takte die f"ur Spill and Fill ben"otigt werden beinahe halbiert, was ein großen Performance Vorteil andeutet. Ber"ucksichtigt man jedoch, das die Gesamtlaufzeit der Testf"alle 17943867 bzw 17805807 Takte betr"agt, ist Spill and Fill nur f"ur 0,91376\% bzw 0,1676\% der Laufzeit der Tests verantwortlich. Gemessen wurde dabei wirklich nur die Laufzeit der Testf"alle ohne Bootloader, static Initializer und uart Ausgaben. Bei realen Anwendungen d"urften der Prozentsatz deutlich niedriger liegen als bei der Ackermannfunktion. 
 
 
 \subsection{Threadswitch}

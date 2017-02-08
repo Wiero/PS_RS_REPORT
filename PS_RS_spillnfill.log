@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.10.3)  7 FEB 2017 16:26
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.10.3)  8 FEB 2017 22:27
 entering extended mode
 **./PS_RS_spillnfill.tex
 (PS_RS_spillnfill.tex
@@ -649,9 +649,26 @@ Package microtype Info: Loading configuration file microtype.cfg.
 (C:\Users\Rober\AppData\Roaming\MiKTeX\2.9\tex\latex\microtype\microtype.cfg
 File: microtype.cfg 2016/05/14 v2.6a microtype main configuration file (RS)
 ))
+(C:\Users\Rober\AppData\Roaming\MiKTeX\2.9\tex\latex\caption\caption.sty
+Package: caption 2016/02/21 v3.3-144 Customizing captions (AR)
+
+(C:\Users\Rober\AppData\Roaming\MiKTeX\2.9\tex\latex\caption\caption3.sty
+Package: caption3 2016/05/22 v1.7-166 caption3 kernel (AR)
+Package caption3 Info: TeX engine: e-TeX on input line 67.
+\captionmargin=\dimen122
+\captionmargin@=\dimen123
+\captionwidth=\dimen124
+\caption@tempdima=\dimen125
+\caption@indent=\dimen126
+\caption@parindent=\dimen127
+\caption@hangindent=\dimen128
+)
+Package caption Info: KOMA-Script document class.
+\c@ContinuedFloat=\count101
+)
 ("C:\Program Files\MiKTeX 2.9\tex\latex\float\float.sty"
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count101
+\c@float@type=\count102
 \float@exts=\toks22
 \float@box=\box31
 \@float@everytoks=\toks23
@@ -659,26 +676,26 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 )
 (C:\Users\Rober\AppData\Roaming\MiKTeX\2.9\tex\latex\booktabs\booktabs.sty
 Package: booktabs 2005/04/14 v1.61803 publication quality tables
-\heavyrulewidth=\dimen122
-\lightrulewidth=\dimen123
-\cmidrulewidth=\dimen124
-\belowrulesep=\dimen125
-\belowbottomsep=\dimen126
-\aboverulesep=\dimen127
-\abovetopsep=\dimen128
-\cmidrulesep=\dimen129
-\cmidrulekern=\dimen130
-\defaultaddspace=\dimen131
-\@cmidla=\count102
-\@cmidlb=\count103
-\@aboverulesep=\dimen132
-\@belowrulesep=\dimen133
-\@thisruleclass=\count104
-\@lastruleclass=\count105
-\@thisrulewidth=\dimen134
+\heavyrulewidth=\dimen129
+\lightrulewidth=\dimen130
+\cmidrulewidth=\dimen131
+\belowrulesep=\dimen132
+\belowbottomsep=\dimen133
+\aboverulesep=\dimen134
+\abovetopsep=\dimen135
+\cmidrulesep=\dimen136
+\cmidrulekern=\dimen137
+\defaultaddspace=\dimen138
+\@cmidla=\count103
+\@cmidlb=\count104
+\@aboverulesep=\dimen139
+\@belowrulesep=\dimen140
+\@thisruleclass=\count105
+\@lastruleclass=\count106
+\@thisrulewidth=\dimen141
 )
 ("C:\Program Files\MiKTeX 2.9\tex\latex\multirow\multirow.sty"
-\bigstrutjot=\dimen135
+\bigstrutjot=\dimen142
 )
 ("C:\Program Files\MiKTeX 2.9\tex\latex\tools\longtable.sty"
 Package: longtable 2014/10/28 v4.11 Multi-page Table package (DPC)
@@ -686,37 +703,37 @@ Package: longtable 2014/10/28 v4.11 Multi-page Table package (DPC)
 \LTright=\skip111
 \LTpre=\skip112
 \LTpost=\skip113
-\LTchunksize=\count106
-\LTcapwidth=\dimen136
+\LTchunksize=\count107
+\LTcapwidth=\dimen143
 \LT@head=\box33
 \LT@firsthead=\box34
 \LT@foot=\box35
 \LT@lastfoot=\box36
-\LT@cols=\count107
-\LT@rows=\count108
-\c@LT@tables=\count109
-\c@LT@chunks=\count110
+\LT@cols=\count108
+\LT@rows=\count109
+\c@LT@tables=\count110
+\c@LT@chunks=\count111
 \LT@p@ftn=\toks24
 )
-Class scrreprt Info: longtable captions redefined on input line 31.
+Class scrreprt Info: longtable captions redefined on input line 32.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\tools\tabularx.sty"
 Package: tabularx 2016/02/03 v2.11 `tabularx' package (DPC)
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\tools\array.sty"
 Package: array 2014/10/28 v2.4c Tabular extension package (FMi)
-\col@sep=\dimen137
-\extrarowheight=\dimen138
+\col@sep=\dimen144
+\extrarowheight=\dimen145
 \NC@list=\toks25
 \extratabsurround=\skip114
 \backup@length=\skip115
 )
-\TX@col@width=\dimen139
-\TX@old@table=\dimen140
-\TX@old@col=\dimen141
-\TX@target=\dimen142
-\TX@delta=\dimen143
-\TX@cols=\count111
+\TX@col@width=\dimen146
+\TX@old@table=\dimen147
+\TX@old@col=\dimen148
+\TX@target=\dimen149
+\TX@delta=\dimen150
+\TX@cols=\count112
 \TX@ftn=\toks26
 )
 (C:\Users\Rober\AppData\Roaming\MiKTeX\2.9\tex\latex\pgf\basiclayer\pgf.sty
@@ -724,8 +741,8 @@ Package: array 2014/10/28 v2.4c Tabular extension package (FMi)
 (C:\Users\Rober\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\utilities\pgfutil-co
 mmon.tex
 \pgfutil@everybye=\toks27
-\pgfutil@tempdima=\dimen144
-\pgfutil@tempdimb=\dimen145
+\pgfutil@tempdima=\dimen151
+\pgfutil@tempdimb=\dimen152
 
 (C:\Users\Rober\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\utilities\pgfutil-co
 mmon-lists.tex))
@@ -758,20 +775,20 @@ de.tex
 tered.code.tex
 \pgfkeys@tmptoks=\toks30
 ))
-\pgf@x=\dimen146
-\pgf@y=\dimen147
-\pgf@xa=\dimen148
-\pgf@ya=\dimen149
-\pgf@xb=\dimen150
-\pgf@yb=\dimen151
-\pgf@xc=\dimen152
-\pgf@yc=\dimen153
+\pgf@x=\dimen153
+\pgf@y=\dimen154
+\pgf@xa=\dimen155
+\pgf@ya=\dimen156
+\pgf@xb=\dimen157
+\pgf@yb=\dimen158
+\pgf@xc=\dimen159
+\pgf@yc=\dimen160
 \w@pgf@writea=\write3
 \r@pgf@reada=\read1
-\c@pgf@counta=\count112
-\c@pgf@countb=\count113
-\c@pgf@countc=\count114
-\c@pgf@countd=\count115
+\c@pgf@counta=\count113
+\c@pgf@countb=\count114
+\c@pgf@countc=\count115
+\c@pgf@countd=\count116
 \t@pgf@toka=\toks31
 \t@pgf@tokb=\toks32
 \t@pgf@tokc=\toks33
@@ -792,8 +809,8 @@ File: pgfsys-common-pdf.def 2013/10/10  (rcs-revision 1.13)
 (C:\Users\Rober\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\systemlayer\pgfsysso
 ftpath.code.tex
 File: pgfsyssoftpath.code.tex 2013/09/09  (rcs-revision 1.9)
-\pgfsyssoftpath@smallbuffer@items=\count116
-\pgfsyssoftpath@bigbuffer@items=\count117
+\pgfsyssoftpath@smallbuffer@items=\count117
+\pgfsyssoftpath@bigbuffer@items=\count118
 )
 (C:\Users\Rober\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\systemlayer\pgfsyspr
 otocol.code.tex
@@ -811,8 +828,8 @@ e.tex
 e.tex)
 (C:\Users\Rober\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\math\pgfmathparser.c
 ode.tex
-\pgfmath@dimen=\dimen154
-\pgfmath@count=\count118
+\pgfmath@dimen=\dimen161
+\pgfmath@count=\count119
 \pgfmath@box=\box38
 \pgfmath@toks=\toks34
 \pgfmath@stack@operand=\toks35
@@ -838,37 +855,37 @@ s.misc.code.tex)
 s.integerarithmetics.code.tex)))
 (C:\Users\Rober\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\math\pgfmathfloat.co
 de.tex
-\c@pgfmathroundto@lastzeros=\count119
+\c@pgfmathroundto@lastzeros=\count120
 ))
 (C:\Users\Rober\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\basiclayer\pgfcorepo
 ints.code.tex
 File: pgfcorepoints.code.tex 2013/10/07  (rcs-revision 1.27)
-\pgf@picminx=\dimen155
-\pgf@picmaxx=\dimen156
-\pgf@picminy=\dimen157
-\pgf@picmaxy=\dimen158
-\pgf@pathminx=\dimen159
-\pgf@pathmaxx=\dimen160
-\pgf@pathminy=\dimen161
-\pgf@pathmaxy=\dimen162
-\pgf@xx=\dimen163
-\pgf@xy=\dimen164
-\pgf@yx=\dimen165
-\pgf@yy=\dimen166
-\pgf@zx=\dimen167
-\pgf@zy=\dimen168
+\pgf@picminx=\dimen162
+\pgf@picmaxx=\dimen163
+\pgf@picminy=\dimen164
+\pgf@picmaxy=\dimen165
+\pgf@pathminx=\dimen166
+\pgf@pathmaxx=\dimen167
+\pgf@pathminy=\dimen168
+\pgf@pathmaxy=\dimen169
+\pgf@xx=\dimen170
+\pgf@xy=\dimen171
+\pgf@yx=\dimen172
+\pgf@yy=\dimen173
+\pgf@zx=\dimen174
+\pgf@zy=\dimen175
 )
 (C:\Users\Rober\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\basiclayer\pgfcorepa
 thconstruct.code.tex
 File: pgfcorepathconstruct.code.tex 2013/10/07  (rcs-revision 1.29)
-\pgf@path@lastx=\dimen169
-\pgf@path@lasty=\dimen170
+\pgf@path@lastx=\dimen176
+\pgf@path@lasty=\dimen177
 )
 (C:\Users\Rober\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\basiclayer\pgfcorepa
 thusage.code.tex
 File: pgfcorepathusage.code.tex 2014/11/02  (rcs-revision 1.24)
-\pgf@shorten@end@additional=\dimen171
-\pgf@shorten@start@additional=\dimen172
+\pgf@shorten@end@additional=\dimen178
+\pgf@shorten@start@additional=\dimen179
 )
 (C:\Users\Rober\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\basiclayer\pgfcoresc
 opes.code.tex
@@ -876,19 +893,19 @@ File: pgfcorescopes.code.tex 2015/05/08  (rcs-revision 1.46)
 \pgfpic=\box39
 \pgf@hbox=\box40
 \pgf@layerbox@main=\box41
-\pgf@picture@serial@count=\count120
+\pgf@picture@serial@count=\count121
 )
 (C:\Users\Rober\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\basiclayer\pgfcoregr
 aphicstate.code.tex
 File: pgfcoregraphicstate.code.tex 2014/11/02  (rcs-revision 1.12)
-\pgflinewidth=\dimen173
+\pgflinewidth=\dimen180
 )
 (C:\Users\Rober\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\basiclayer\pgfcoretr
 ansformations.code.tex
 File: pgfcoretransformations.code.tex 2015/08/07  (rcs-revision 1.20)
-\pgf@pt@x=\dimen174
-\pgf@pt@y=\dimen175
-\pgf@pt@temp=\dimen176
+\pgf@pt@x=\dimen181
+\pgf@pt@y=\dimen182
+\pgf@pt@temp=\dimen183
 )
 (C:\Users\Rober\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\basiclayer\pgfcorequ
 ick.code.tex
@@ -905,13 +922,13 @@ File: pgfcorepathprocessing.code.tex 2013/09/09  (rcs-revision 1.9)
 (C:\Users\Rober\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\basiclayer\pgfcorear
 rows.code.tex
 File: pgfcorearrows.code.tex 2015/05/14  (rcs-revision 1.43)
-\pgfarrowsep=\dimen177
+\pgfarrowsep=\dimen184
 )
 (C:\Users\Rober\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\basiclayer\pgfcoresh
 ade.code.tex
 File: pgfcoreshade.code.tex 2013/07/15  (rcs-revision 1.15)
-\pgf@max=\dimen178
-\pgf@sys@shading@range@num=\count121
+\pgf@max=\dimen185
+\pgf@sys@shading@range@num=\count122
 )
 (C:\Users\Rober\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\basiclayer\pgfcoreim
 age.code.tex
@@ -946,8 +963,8 @@ File: pgfmoduleplot.code.tex 2015/08/03  (rcs-revision 1.13)
 (C:\Users\Rober\AppData\Roaming\MiKTeX\2.9\tex\latex\pgf\compatibility\pgfcomp-
 version-0-65.sty
 Package: pgfcomp-version-0-65 2007/07/03 v3.0.1a (rcs-revision 1.7)
-\pgf@nodesepstart=\dimen179
-\pgf@nodesepend=\dimen180
+\pgf@nodesepstart=\dimen186
+\pgf@nodesepend=\dimen187
 )
 (C:\Users\Rober\AppData\Roaming\MiKTeX\2.9\tex\latex\pgf\compatibility\pgfcomp-
 version-1-18.sty
@@ -967,8 +984,8 @@ Package: pgffor 2013/12/13 v3.0.1a (rcs-revision 1.25)
 
 (C:\Users\Rober\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\math\pgfmath.code.te
 x)
-\pgffor@iter=\dimen181
-\pgffor@skip=\dimen182
+\pgffor@iter=\dimen188
+\pgffor@skip=\dimen189
 \pgffor@stack=\toks37
 \pgffor@toks=\toks38
 ))
@@ -979,32 +996,32 @@ Package: tikz 2015/08/07 v3.0.1a (rcs-revision 1.151)
 (C:\Users\Rober\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\libraries\pgflibrary
 plothandlers.code.tex
 File: pgflibraryplothandlers.code.tex 2013/08/31 v3.0.1a (rcs-revision 1.20)
-\pgf@plot@mark@count=\count122
-\pgfplotmarksize=\dimen183
+\pgf@plot@mark@count=\count123
+\pgfplotmarksize=\dimen190
 )
-\tikz@lastx=\dimen184
-\tikz@lasty=\dimen185
-\tikz@lastxsaved=\dimen186
-\tikz@lastysaved=\dimen187
-\tikzleveldistance=\dimen188
-\tikzsiblingdistance=\dimen189
+\tikz@lastx=\dimen191
+\tikz@lasty=\dimen192
+\tikz@lastxsaved=\dimen193
+\tikz@lastysaved=\dimen194
+\tikzleveldistance=\dimen195
+\tikzsiblingdistance=\dimen196
 \tikz@figbox=\box44
 \tikz@figbox@bg=\box45
 \tikz@tempbox=\box46
 \tikz@tempbox@bg=\box47
-\tikztreelevel=\count123
-\tikznumberofchildren=\count124
-\tikznumberofcurrentchild=\count125
-\tikz@fig@count=\count126
+\tikztreelevel=\count124
+\tikznumberofchildren=\count125
+\tikznumberofcurrentchild=\count126
+\tikz@fig@count=\count127
 
 (C:\Users\Rober\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\modules\pgfmodulemat
 rix.code.tex
 File: pgfmodulematrix.code.tex 2013/09/17  (rcs-revision 1.8)
-\pgfmatrixcurrentrow=\count127
-\pgfmatrixcurrentcolumn=\count128
-\pgf@matrix@numberofcolumns=\count129
+\pgfmatrixcurrentrow=\count128
+\pgfmatrixcurrentcolumn=\count129
+\pgf@matrix@numberofcolumns=\count130
 )
-\tikz@expandcount=\count130
+\tikz@expandcount=\count131
 
 (C:\Users\Rober\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\frontendlayer\tikz\l
 ibraries\tikzlibrarytopaths.code.tex
@@ -1017,7 +1034,7 @@ File: tikzlibraryarrows.code.tex 2008/01/09 v3.0.1a (rcs-revision 1.1)
 (C:\Users\Rober\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\libraries\pgflibrary
 arrows.code.tex
 File: pgflibraryarrows.code.tex 2013/09/23 v3.0.1a (rcs-revision 1.16)
-\arrowsize=\dimen190
+\arrowsize=\dimen197
 ))
 (C:\Users\Rober\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\frontendlayer\tikz\l
 ibraries\tikzlibraryautomata.code.tex
@@ -1064,46 +1081,46 @@ Package: amstext 2000/06/29 v2.01 AMS text
 ("C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsgen.sty"
 File: amsgen.sty 1999/11/30 v2.0 generic functions
 \@emptytoks=\toks39
-\ex@=\dimen191
+\ex@=\dimen198
 ))
 ("C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsbsy.sty"
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
-\pmbraise@=\dimen192
+\pmbraise@=\dimen199
 )
 ("C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsopn.sty"
 Package: amsopn 2016/03/08 v2.02 operator names
 )
-\inf@bad=\count131
+\inf@bad=\count132
 LaTeX Info: Redefining \frac on input line 199.
-\uproot@=\count132
-\leftroot@=\count133
+\uproot@=\count133
+\leftroot@=\count134
 LaTeX Info: Redefining \overline on input line 297.
-\classnum@=\count134
-\DOTSCASE@=\count135
+\classnum@=\count135
+\DOTSCASE@=\count136
 LaTeX Info: Redefining \ldots on input line 394.
 LaTeX Info: Redefining \dots on input line 397.
 LaTeX Info: Redefining \cdots on input line 518.
 \Mathstrutbox@=\box68
 \strutbox@=\box69
-\big@size=\dimen193
+\big@size=\dimen256
 LaTeX Font Info:    Redeclaring font encoding OML on input line 634.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 635.
-\macc@depth=\count136
-\c@MaxMatrixCols=\count137
+\macc@depth=\count137
+\c@MaxMatrixCols=\count138
 \dotsspace@=\muskip10
-\c@parentequation=\count138
-\dspbrk@lvl=\count139
+\c@parentequation=\count139
+\dspbrk@lvl=\count140
 \tag@help=\toks40
-\row@=\count140
-\column@=\count141
-\maxfields@=\count142
+\row@=\count141
+\column@=\count142
+\maxfields@=\count143
 \andhelp@=\toks41
-\eqnshift@=\dimen194
-\alignsep@=\dimen195
-\tagshift@=\dimen196
-\tagwidth@=\dimen197
-\totwidth@=\dimen198
-\lineht@=\dimen199
+\eqnshift@=\dimen257
+\alignsep@=\dimen258
+\tagshift@=\dimen259
+\tagwidth@=\dimen260
+\totwidth@=\dimen261
+\lineht@=\dimen262
 \@envbody=\toks42
 \multlinegap=\skip117
 \multlinetaggap=\skip118
@@ -1187,14 +1204,14 @@ Package: auxhook 2016/05/16 v1.4 Hooks for auxiliary files (HO)
 ("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\kvoptions.sty"
 Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
 )
-\@linkdim=\dimen256
-\Hy@linkcounter=\count143
-\Hy@pagecounter=\count144
+\@linkdim=\dimen263
+\Hy@linkcounter=\count144
+\Hy@pagecounter=\count145
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\pd1enc.def"
 File: pd1enc.def 2016/06/24 v6.83q Hyperref: PDFDocEncoding definition (HO)
 )
-\Hy@SavedSpaceFactor=\count145
+\Hy@SavedSpaceFactor=\count146
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\00miktex\hyperref.cfg"
 File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
@@ -1207,17 +1224,17 @@ Package hyperref Info: Plain pages OFF on input line 4501.
 Package hyperref Info: Backreferencing OFF on input line 4506.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4735.
-\c@Hy@tempcnt=\count146
+\c@Hy@tempcnt=\count147
 
 (C:\Users\Rober\AppData\Roaming\MiKTeX\2.9\tex\latex\url\url.sty
 \Urlmuskip=\muskip11
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
 LaTeX Info: Redefining \url on input line 5088.
-\XeTeXLinkMargin=\dimen257
-\Fld@menulength=\count147
-\Field@Width=\dimen258
-\Fld@charsize=\dimen259
+\XeTeXLinkMargin=\dimen264
+\Fld@menulength=\count148
+\Field@Width=\dimen265
+\Fld@charsize=\dimen266
 Package hyperref Info: Hyper figures OFF on input line 6342.
 Package hyperref Info: Link nesting OFF on input line 6347.
 Package hyperref Info: Hyper index ON on input line 6350.
@@ -1227,17 +1244,17 @@ Package hyperref Info: Link coloring with OCG OFF on input line 6367.
 Package hyperref Info: PDF/A mode OFF on input line 6372.
 LaTeX Info: Redefining \ref on input line 6412.
 LaTeX Info: Redefining \pageref on input line 6416.
-\Hy@abspage=\count148
-\c@Item=\count149
-\c@Hfootnote=\count150
+\Hy@abspage=\count149
+\c@Item=\count150
+\c@Hfootnote=\count151
 )
 
 Package hyperref Message: Driver (autodetected): hpdftex.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\hpdftex.def"
 File: hpdftex.def 2016/06/24 v6.83q Hyperref driver for pdfTeX
-\Fld@listcount=\count151
-\c@bookmark@seq@number=\count152
+\Fld@listcount=\count152
+\c@bookmark@seq@number=\count153
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\rerunfilecheck.sty"
 Package: rerunfilecheck 2016/05/16 v1.8 Rerun checks for auxiliary files (HO)
@@ -1250,58 +1267,85 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 Package: enumerate 2015/07/23 v3.00 enumerate extensions (DPC)
 \@enLab=\toks45
 )
+(C:\Users\Rober\AppData\Roaming\MiKTeX\2.9\tex\latex\listings\listings.sty
+\lst@mode=\count154
+\lst@gtempboxa=\box70
+\lst@token=\toks46
+\lst@length=\count155
+\lst@currlwidth=\dimen267
+\lst@column=\count156
+\lst@pos=\count157
+\lst@lostspace=\dimen268
+\lst@width=\dimen269
+\lst@newlines=\count158
+\lst@lineno=\count159
+\lst@maxwidth=\dimen270
+
+(C:\Users\Rober\AppData\Roaming\MiKTeX\2.9\tex\latex\listings\lstmisc.sty
+File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
+\c@lstnumber=\count160
+\lst@skipnumbers=\count161
+\lst@framebox=\box71
+)
+(C:\Users\Rober\AppData\Roaming\MiKTeX\2.9\tex\latex\listings\listings.cfg
+File: listings.cfg 2015/06/04 1.6 listings configuration
+))
+Package: listings 2015/06/04 1.6 (Carsten Heinz)
+
+(C:\Users\Rober\AppData\Roaming\MiKTeX\2.9\tex\latex\listings\lstlang1.sty
+File: lstlang1.sty 2015/06/04 1.6 listings language file
+)
 (PS_RS_spillnfill.aux (Aufgabenstellung.aux) (Grundlagen.aux)
-(Implementierung.aux) (Evaluation.aux) (Fazit.aux) (installation.aux)
-(uberschriften.aux) (text.aux) (formeln.aux) (graph.aux) (tabellen.aux))
+(Implementierung.aux) (Evaluation.aux) (Fazit.aux))
 \openout1 = `PS_RS_spillnfill.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 60.
-LaTeX Font Info:    ... okay on input line 60.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 60.
-LaTeX Font Info:    ... okay on input line 60.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 60.
-LaTeX Font Info:    ... okay on input line 60.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 60.
-LaTeX Font Info:    ... okay on input line 60.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 60.
-LaTeX Font Info:    ... okay on input line 60.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 60.
-LaTeX Font Info:    ... okay on input line 60.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 60.
-LaTeX Font Info:    ... okay on input line 60.
-LaTeX Font Info:    Checking defaults for MDA/cmr/m/n on input line 60.
-LaTeX Font Info:    Try loading font information for MDA+cmr on input line 60.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 83.
+LaTeX Font Info:    ... okay on input line 83.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 83.
+LaTeX Font Info:    ... okay on input line 83.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 83.
+LaTeX Font Info:    ... okay on input line 83.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 83.
+LaTeX Font Info:    ... okay on input line 83.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 83.
+LaTeX Font Info:    ... okay on input line 83.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 83.
+LaTeX Font Info:    ... okay on input line 83.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 83.
+LaTeX Font Info:    ... okay on input line 83.
+LaTeX Font Info:    Checking defaults for MDA/cmr/m/n on input line 83.
+LaTeX Font Info:    Try loading font information for MDA+cmr on input line 83.
 
 (C:\Users\Rober\AppData\Roaming\MiKTeX\2.9\tex\latex\mathdesign\mdacmr.fd
 File: mdacmr.fd 
 )
-LaTeX Font Info:    ... okay on input line 60.
-LaTeX Font Info:    Checking defaults for MDB/cmr/m/n on input line 60.
-LaTeX Font Info:    Try loading font information for MDB+cmr on input line 60.
+LaTeX Font Info:    ... okay on input line 83.
+LaTeX Font Info:    Checking defaults for MDB/cmr/m/n on input line 83.
+LaTeX Font Info:    Try loading font information for MDB+cmr on input line 83.
 
 (C:\Users\Rober\AppData\Roaming\MiKTeX\2.9\tex\latex\mathdesign\mdbcmr.fd
 File: mdbcmr.fd 
 )
-LaTeX Font Info:    ... okay on input line 60.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 60.
-LaTeX Font Info:    ... okay on input line 60.
-LaTeX Font Info:    Try loading font information for T1+5ch on input line 60.
+LaTeX Font Info:    ... okay on input line 83.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 83.
+LaTeX Font Info:    ... okay on input line 83.
+LaTeX Font Info:    Try loading font information for T1+5ch on input line 83.
 
 ("C:\Program Files\tuddesign\tex\latex\tex-tudfonts\softmake\charter\t15ch.fd"
 File: t15ch.fd 2008/06/23 Fontinst v1.927 font definitions for T1/5ch.
 ) (C:\Users\Rober\AppData\Roaming\MiKTeX\2.9\tex\context\base\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count153
-\scratchdimen=\dimen260
-\scratchbox=\box70
-\nofMPsegments=\count154
-\nofMParguments=\count155
-\everyMPshowfont=\toks46
-\MPscratchCnt=\count156
-\MPscratchDim=\dimen261
-\MPnumerator=\count157
-\makeMPintoPDFobject=\count158
-\everyMPtoPDFconversion=\toks47
+\scratchcounter=\count162
+\scratchdimen=\dimen271
+\scratchbox=\box72
+\nofMPsegments=\count163
+\nofMParguments=\count164
+\everyMPshowfont=\toks47
+\MPscratchCnt=\count165
+\MPscratchDim=\dimen272
+\MPnumerator=\count166
+\makeMPintoPDFobject=\count167
+\everyMPtoPDFconversion=\toks48
 ) ("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\epstopdf-base.sty"
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
 
@@ -1315,7 +1359,7 @@ Package grfext Info: Graphics extension search list:
 G,.JBIG2,.JB2,.eps]
 (grfext)             \AppendGraphicsExtensions on input line 456.
 )
-\AtBeginShipoutBox=\box71
+\AtBeginShipoutBox=\box73
 
 *geometry* detected driver: dvips
 *geometry* verbose mode - [ preamble ] result:
@@ -1351,7 +1395,7 @@ G,.JBIG2,.JB2,.eps]
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 \TUD@part@topskip=\skip127
-LaTeX Info: Redefining \microtypecontext on input line 60.
+LaTeX Info: Redefining \microtypecontext on input line 83.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
@@ -1365,8 +1409,18 @@ Package microtype Info: Loading generic settings for font family
 (microtype)             `5ch' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: float package is loaded.
+Package caption Info: hyperref package is loaded.
+Package caption Info: listings package is loaded.
+Package caption Info: longtable package is loaded.
+(C:\Users\Rober\AppData\Roaming\MiKTeX\2.9\tex\latex\caption\ltcaption.sty
+Package: ltcaption 2013/06/09 v1.4-94 longtable captions (AR)
+)
+Package caption Info: End \AtBeginDocument code.
+
 ABD: EveryShipout initializing macros
-Package hyperref Info: Link coloring OFF on input line 60.
+Package hyperref Info: Link coloring OFF on input line 83.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\nameref.sty"
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
@@ -1374,24 +1428,25 @@ Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
 ("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\gettitlestring.sty"
 Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
-\c@section@level=\count159
+\c@section@level=\count168
 )
-LaTeX Info: Redefining \ref on input line 60.
-LaTeX Info: Redefining \pageref on input line 60.
-LaTeX Info: Redefining \nameref on input line 60.
+LaTeX Info: Redefining \ref on input line 83.
+LaTeX Info: Redefining \pageref on input line 83.
+LaTeX Info: Redefining \nameref on input line 83.
 
 (PS_RS_spillnfill.out) (PS_RS_spillnfill.out)
 \@outlinefile=\write4
 \openout4 = `PS_RS_spillnfill.out'.
 
+\c@lstlisting=\count169
 \@TUD@tmp@baselineskip=\skip128
-\TUD@titlebox=\box72
-\TUD@subtitlebox=\box73
-\TUD@logobox=\box74
-\TUD@instbox=\box75
+\TUD@titlebox=\box74
+\TUD@subtitlebox=\box75
+\TUD@logobox=\box76
+\TUD@instbox=\box77
 \TUD@tmp@height=\skip129
 \TUD@tmp@depth=\skip130
-LaTeX Font Info:    Try loading font information for T1+5fp on input line 64.
+LaTeX Font Info:    Try loading font information for T1+5fp on input line 86.
 
 ("C:\Program Files\tuddesign\tex\latex\tex-tudfonts\softmake\frontpage\t15fp.fd
 "
@@ -1402,8 +1457,8 @@ Package microtype Info: Loading generic settings for font family
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 LaTeX Font Info:    Font shape `T1/5fp/b/n' in size <36> not available
-(Font)              Font shape `T1/5fp/mb/n' tried instead on input line 64.
-LaTeX Font Info:    Try loading font information for OT1+mdbch on input line 64
+(Font)              Font shape `T1/5fp/mb/n' tried instead on input line 86.
+LaTeX Font Info:    Try loading font information for OT1+mdbch on input line 86
 .
 
 (C:\Users\Rober\AppData\Roaming\MiKTeX\2.9\tex\latex\mathdesign\mdbch\ot1mdbch.
@@ -1411,16 +1466,16 @@ fd
 File: ot1mdbch.fd 2013/08/29 Fontinst v1.933 font definitions for OT1/mdbch.
 )
 LaTeX Font Info:    Font shape `OT1/mdbch/m/n' will be
-(Font)              scaled to size 11.04007pt on input line 64.
+(Font)              scaled to size 11.04007pt on input line 86.
  (C:\Users\Rober\AppData\Roaming\MiKTeX\2.9\tex\latex\microtype\mt-bch.cfg
 File: mt-bch.cfg 2007/03/03 v1.5 microtype config. file: Bitstream Charter (RS)
 
 )
 LaTeX Font Info:    Font shape `OT1/mdbch/m/n' will be
-(Font)              scaled to size 7.68005pt on input line 64.
+(Font)              scaled to size 7.68005pt on input line 86.
 LaTeX Font Info:    Font shape `OT1/mdbch/m/n' will be
-(Font)              scaled to size 6.62404pt on input line 64.
-LaTeX Font Info:    Try loading font information for OML+mdbch on input line 64
+(Font)              scaled to size 6.62404pt on input line 86.
+LaTeX Font Info:    Try loading font information for OML+mdbch on input line 86
 .
 
 (C:\Users\Rober\AppData\Roaming\MiKTeX\2.9\tex\latex\mathdesign\mdbch\omlmdbch.
@@ -1428,12 +1483,12 @@ fd
 File: omlmdbch.fd 2013/08/29 Fontinst v1.933 font definitions for OML/mdbch.
 )
 LaTeX Font Info:    Font shape `OML/mdbch/m/it' will be
-(Font)              scaled to size 11.04007pt on input line 64.
+(Font)              scaled to size 11.04007pt on input line 86.
 LaTeX Font Info:    Font shape `OML/mdbch/m/it' will be
-(Font)              scaled to size 7.68005pt on input line 64.
+(Font)              scaled to size 7.68005pt on input line 86.
 LaTeX Font Info:    Font shape `OML/mdbch/m/it' will be
-(Font)              scaled to size 6.62404pt on input line 64.
-LaTeX Font Info:    Try loading font information for OMS+mdbch on input line 64
+(Font)              scaled to size 6.62404pt on input line 86.
+LaTeX Font Info:    Try loading font information for OMS+mdbch on input line 86
 .
 
 (C:\Users\Rober\AppData\Roaming\MiKTeX\2.9\tex\latex\mathdesign\mdbch\omsmdbch.
@@ -1441,12 +1496,12 @@ fd
 File: omsmdbch.fd 2013/08/29 Fontinst v1.933 font definitions for OMS/mdbch.
 )
 LaTeX Font Info:    Font shape `OMS/mdbch/m/n' will be
-(Font)              scaled to size 11.04007pt on input line 64.
+(Font)              scaled to size 11.04007pt on input line 86.
 LaTeX Font Info:    Font shape `OMS/mdbch/m/n' will be
-(Font)              scaled to size 7.68005pt on input line 64.
+(Font)              scaled to size 7.68005pt on input line 86.
 LaTeX Font Info:    Font shape `OMS/mdbch/m/n' will be
-(Font)              scaled to size 6.62404pt on input line 64.
-LaTeX Font Info:    Try loading font information for OMX+mdbch on input line 64
+(Font)              scaled to size 6.62404pt on input line 86.
+LaTeX Font Info:    Try loading font information for OMX+mdbch on input line 86
 .
 
 (C:\Users\Rober\AppData\Roaming\MiKTeX\2.9\tex\latex\mathdesign\mdbch\omxmdbch.
@@ -1454,18 +1509,18 @@ fd
 File: omxmdbch.fd 2013/08/29 Fontinst v1.933 font definitions for OMX/mdbch.
 )
 LaTeX Font Info:    Font shape `OMX/mdbch/m/n' will be
-(Font)              scaled to size 11.04007pt on input line 64.
+(Font)              scaled to size 11.04007pt on input line 86.
 LaTeX Font Info:    Font shape `OMX/mdbch/m/n' will be
-(Font)              scaled to size 7.68005pt on input line 64.
+(Font)              scaled to size 7.68005pt on input line 86.
 LaTeX Font Info:    Font shape `OMX/mdbch/m/n' will be
-(Font)              scaled to size 6.62404pt on input line 64.
+(Font)              scaled to size 6.62404pt on input line 86.
 LaTeX Font Info:    Font shape `OML/mdbch/m/n' will be
-(Font)              scaled to size 11.04007pt on input line 64.
+(Font)              scaled to size 11.04007pt on input line 86.
 LaTeX Font Info:    Font shape `OML/mdbch/m/n' will be
-(Font)              scaled to size 7.68005pt on input line 64.
+(Font)              scaled to size 7.68005pt on input line 86.
 LaTeX Font Info:    Font shape `OML/mdbch/m/n' will be
-(Font)              scaled to size 6.62404pt on input line 64.
-LaTeX Font Info:    Try loading font information for MDA+mdbch on input line 64
+(Font)              scaled to size 6.62404pt on input line 86.
+LaTeX Font Info:    Try loading font information for MDA+mdbch on input line 86
 .
 
 (C:\Users\Rober\AppData\Roaming\MiKTeX\2.9\tex\latex\mathdesign\mdbch\mdamdbch.
@@ -1473,12 +1528,12 @@ fd
 File: mdamdbch.fd 2013/08/29 Fontinst v1.933 font definitions for MDA/mdbch.
 )
 LaTeX Font Info:    Font shape `MDA/mdbch/m/n' will be
-(Font)              scaled to size 11.04007pt on input line 64.
+(Font)              scaled to size 11.04007pt on input line 86.
 LaTeX Font Info:    Font shape `MDA/mdbch/m/n' will be
-(Font)              scaled to size 7.68005pt on input line 64.
+(Font)              scaled to size 7.68005pt on input line 86.
 LaTeX Font Info:    Font shape `MDA/mdbch/m/n' will be
-(Font)              scaled to size 6.62404pt on input line 64.
-LaTeX Font Info:    Try loading font information for MDB+mdbch on input line 64
+(Font)              scaled to size 6.62404pt on input line 86.
+LaTeX Font Info:    Try loading font information for MDB+mdbch on input line 86
 .
 
 (C:\Users\Rober\AppData\Roaming\MiKTeX\2.9\tex\latex\mathdesign\mdbch\mdbmdbch.
@@ -1486,12 +1541,12 @@ fd
 File: mdbmdbch.fd 2013/08/29 Fontinst v1.933 font definitions for MDB/mdbch.
 )
 LaTeX Font Info:    Font shape `MDB/mdbch/m/n' will be
-(Font)              scaled to size 11.04007pt on input line 64.
+(Font)              scaled to size 11.04007pt on input line 86.
 LaTeX Font Info:    Font shape `MDB/mdbch/m/n' will be
-(Font)              scaled to size 7.68005pt on input line 64.
+(Font)              scaled to size 7.68005pt on input line 86.
 LaTeX Font Info:    Font shape `MDB/mdbch/m/n' will be
-(Font)              scaled to size 6.62404pt on input line 64.
-LaTeX Font Info:    Try loading font information for OML+mdput on input line 64
+(Font)              scaled to size 6.62404pt on input line 86.
+LaTeX Font Info:    Try loading font information for OML+mdput on input line 86
 .
 
 (C:\Users\Rober\AppData\Roaming\MiKTeX\2.9\tex\latex\mathdesign\mdput\omlmdput.
@@ -1499,15 +1554,15 @@ fd
 File: omlmdput.fd 2013/08/29 Fontinst v1.933 font definitions for OML/mdput.
 )
 LaTeX Font Info:    Font shape `OML/mdput/m/it' will be
-(Font)              scaled to size 10.81003pt on input line 64.
+(Font)              scaled to size 10.81003pt on input line 86.
 LaTeX Font Info:    Font shape `OML/mdput/m/it' will be
-(Font)              scaled to size 7.52002pt on input line 64.
+(Font)              scaled to size 7.52002pt on input line 86.
 LaTeX Font Info:    Font shape `OML/mdput/m/it' will be
-(Font)              scaled to size 6.48601pt on input line 64.
- <tud_logo.pdf, id=146, 157.58875pt x 63.23625pt>
+(Font)              scaled to size 6.48601pt on input line 86.
+ <tud_logo.pdf, id=150, 157.58875pt x 63.23625pt>
 File: tud_logo.pdf Graphic file (type pdf)
  <use tud_logo.pdf>
-Package pdftex.def Info: tud_logo.pdf used on input line 64.
+Package pdftex.def Info: tud_logo.pdf used on input line 86.
 (pdftex.def)             Requested size: 134.92238pt x 62.59605pt.
 \TUD@titleboxheight=\skip131
 \TUD@titleboxdepth=\skip132
@@ -1523,48 +1578,48 @@ Package pdftex.def Info: tud_logo.pdf used on input line 64.
 \TUD@instlogoheight=\skip142
 \TUD@instlogowidth=\skip143
 
-Overfull \hbox (11.0pt too wide) in paragraph at lines 64--64
+Overfull \hbox (11.0pt too wide) in paragraph at lines 86--86
 [][]  
  []
 
 
-Overfull \hbox (11.0pt too wide) in paragraph at lines 64--64
+Overfull \hbox (11.0pt too wide) in paragraph at lines 86--86
 [][][]  
  []
 
 
-Overfull \hbox (11.0pt too wide) in paragraph at lines 64--64
+Overfull \hbox (11.0pt too wide) in paragraph at lines 86--86
 [][]  
  []
 
 
-Overfull \hbox (11.0pt too wide) in paragraph at lines 64--64
+Overfull \hbox (11.0pt too wide) in paragraph at lines 86--86
 [][][]  
  []
 
 File: tud_logo.pdf Graphic file (type pdf)
 <use tud_logo.pdf>
-Package pdftex.def Info: tud_logo.pdf used on input line 64.
+Package pdftex.def Info: tud_logo.pdf used on input line 86.
 (pdftex.def)             Requested size: 134.92238pt x 62.59605pt.
- <images/logo.pdf, id=149, 137.51375pt x 99.37125pt>
+ <images/logo.pdf, id=153, 137.51375pt x 99.37125pt>
 File: images/logo.pdf Graphic file (type pdf)
 
 <use images/logo.pdf>
-Package pdftex.def Info: images/logo.pdf used on input line 64.
+Package pdftex.def Info: images/logo.pdf used on input line 86.
 (pdftex.def)             Requested size: 89.94824pt x 65.00145pt.
 
-Overfull \hbox (11.0pt too wide) in paragraph at lines 64--64
+Overfull \hbox (11.0pt too wide) in paragraph at lines 86--86
 [][]  
  []
 
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 64.
+(babel)             in language  on input line 86.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 64.
+(babel)             in language  on input line 86.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 64.
+(babel)             in language  on input line 86.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 64.
+(babel)             in language  on input line 86.
 [0
 Non-PDF special ignored!
 
@@ -1572,6 +1627,26 @@ Non-PDF special ignored!
 Non-PDF special ignored!{C:/Users/Rober/AppData/Local/MiKTeX/2.9/pdftex/config/
 pdftex.map} <C:/Program Files/tuddesign/tex/latex/tuddesign/logo/tud_logo.pdf> 
 <./images/logo.pdf>]
+Package tocbasic Info: character protrusion at toc deactivated on input line 96
+.
+ (PS_RS_spillnfill.toc)
+\tf@toc=\write5
+\openout5 = `PS_RS_spillnfill.toc'.
+
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 97.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 97.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 97.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 97.
+ [1
+
+
+
+
+]
 \openout2 = `Aufgabenstellung.aux'.
 
  (Aufgabenstellung.tex
@@ -1597,17 +1672,14 @@ Class scrreprt Warning: \float@addtolists detected!
 
 )
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 74.
+(babel)             in language  on input line 97.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 74.
+(babel)             in language  on input line 97.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 74.
+(babel)             in language  on input line 97.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 74.
- [1
-
-
-
+(babel)             in language  on input line 97.
+ [2
 
 
 ]
@@ -1624,120 +1696,95 @@ Package babel Info: Redefining ngerman shorthand "|
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 4.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 5.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 5.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 6.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 6.
-LaTeX Font Info:    Try loading font information for TS1+5ch on input line 8.
-("C:\Program Files\tuddesign\tex\latex\tex-tudfonts\softmake\charter\ts15ch.fd"
-File: ts15ch.fd 2008/06/23 Fontinst v1.927 font definitions for TS1/5ch.
-)
-Package microtype Info: Loading generic settings for font family
-(microtype)             `5ch' (encoding: TS1).
-(microtype)             For optimal results, create family-specific settings.
-(microtype)             See the microtype manual for details.
-Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 9.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 9.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 11.
+(babel)             in language  on input line 10.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 11.
+(babel)             in language  on input line 10.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 15.
+(babel)             in language  on input line 13.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 15.
-
-
-LaTeX Warning: File `PS_RS_graphics/Stackframe before Invoke.pdf' not found on 
-input line 26.
-
-
-<PS_RS_graphics/Stackframe before Invoke.pdf, id=179, 845.1575pt x 597.23125pt>
-File: PS_RS_graphics/Stackframe before Invoke.pdf Graphic file (type pdf)
-<use PS_RS_graphics/Stackframe before Invoke.pdf>
-Package pdftex.def Info: PS_RS_graphics/Stackframe before Invoke.pdf used on in
-put line 26.
-(pdftex.def)             Requested size: 402.64043pt x 284.52756pt.
-
-
-LaTeX Warning: File `PS_RS_graphics/Stackframe after Invoke.pdf' not found on i
-nput line 33.
-
-
-<PS_RS_graphics/Stackframe after Invoke.pdf, id=180, 845.1575pt x 597.23125pt>
-File: PS_RS_graphics/Stackframe after Invoke.pdf Graphic file (type pdf)
-
-<use PS_RS_graphics/Stackframe after Invoke.pdf>
-Package pdftex.def Info: PS_RS_graphics/Stackframe after Invoke.pdf used on inp
-ut line 33.
-(pdftex.def)             Requested size: 402.64043pt x 284.52756pt.
+(babel)             in language  on input line 13.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 36.
+(babel)             in language  on input line 16.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 36.
+(babel)             in language  on input line 16.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 36.
+(babel)             in language  on input line 24.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 36.
- [2
+(babel)             in language  on input line 24.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 24.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 24.
+[3
 
 
 
 ]
+<PS_RS_graphics/StackframebeforeInvoke.pdf, id=229, 845.1575pt x 597.23125pt>
+File: PS_RS_graphics/StackframebeforeInvoke.pdf Graphic file (type pdf)
 
-LaTeX Warning: File `PS_RS_graphics/Stackframe after return.pdf' not found on i
-nput line 44.
+<use PS_RS_graphics/StackframebeforeInvoke.pdf>
+Package pdftex.def Info: PS_RS_graphics/StackframebeforeInvoke.pdf used on inpu
+t line 27.
+(pdftex.def)             Requested size: 402.64043pt x 284.52756pt.
 
+<PS_RS_graphics/StackframeafterInvoke.pdf, id=230, 845.1575pt x 597.23125pt>
+File: PS_RS_graphics/StackframeafterInvoke.pdf Graphic file (type pdf)
 
-<PS_RS_graphics/Stackframe after return.pdf, id=186, 845.1575pt x 597.23125pt>
-File: PS_RS_graphics/Stackframe after return.pdf Graphic file (type pdf)
+<use PS_RS_graphics/StackframeafterInvoke.pdf>
+Package pdftex.def Info: PS_RS_graphics/StackframeafterInvoke.pdf used on input
+ line 34.
+(pdftex.def)             Requested size: 402.64043pt x 284.52756pt.
 
-<use PS_RS_graphics/Stackframe after return.pdf>
-Package pdftex.def Info: PS_RS_graphics/Stackframe after return.pdf used on inp
-ut line 44.
+<PS_RS_graphics/Stackframeafterreturn.pdf, id=231, 845.1575pt x 597.23125pt>
+File: PS_RS_graphics/Stackframeafterreturn.pdf Graphic file (type pdf)
+
+<use PS_RS_graphics/Stackframeafterreturn.pdf>
+Package pdftex.def Info: PS_RS_graphics/Stackframeafterreturn.pdf used on input
+ line 45.
 (pdftex.def)             Requested size: 603.97353pt x 426.79134pt.
 
-Overfull \hbox (106.05028pt too wide) in paragraph at lines 44--45
- [] 
+Overfull \hbox (106.05028pt too wide) in paragraph at lines 45--46
+ [][] 
  []
 
-)
+
+Underfull \vbox (badness 1264) has occurred while \output is active []
+
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 75.
+(babel)             in language  on input line 47.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 75.
+(babel)             in language  on input line 47.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 75.
+(babel)             in language  on input line 47.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 75.
- [3 <./PS_RS_graphics/Stackframe before Invoke.pdf>]
+(babel)             in language  on input line 47.
+ [4 <./PS_RS_graphics/StackframebeforeInvoke.pdf>])
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 75.
+(babel)             in language  on input line 98.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 75.
+(babel)             in language  on input line 98.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 75.
+(babel)             in language  on input line 98.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 75.
- [4 <./PS_RS_graphics/Stackframe after Invoke.pdf>]
+(babel)             in language  on input line 98.
+ [5 <./PS_RS_graphics/StackframeafterInvoke.pdf>]
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 75.
+(babel)             in language  on input line 98.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 75.
+(babel)             in language  on input line 98.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 75.
+(babel)             in language  on input line 98.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 75.
- [5 <./PS_RS_graphics/Stackframe after return.pdf>]
+(babel)             in language  on input line 98.
+ [6 <./PS_RS_graphics/Stackframeafterreturn.pdf>]
 \openout2 = `Implementierung.aux'.
 
-
-(Implementierung.tex
+ (Implementierung.tex
 chapter 3.
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 1.
@@ -1751,243 +1798,236 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 7.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 7.
+<PS_RS_graphics/FSBlocksinRam.pdf, id=278, 845.1575pt x 597.23125pt>
+File: PS_RS_graphics/FSBlocksinRam.pdf Graphic file (type pdf)
 
-LaTeX Warning: File `PS_RS_graphics/FS Blocks in Ram.pdf' not found on input li
-ne 13.
-
-<PS_RS_graphics/FS Blocks in Ram.pdf, id=231, 845.1575pt x 597.23125pt>
-File: PS_RS_graphics/FS Blocks in Ram.pdf Graphic file (type pdf)
-
-<use PS_RS_graphics/FS Blocks in Ram.pdf>
-Package pdftex.def Info: PS_RS_graphics/FS Blocks in Ram.pdf used on input line
- 13.
+<use PS_RS_graphics/FSBlocksinRam.pdf>
+Package pdftex.def Info: PS_RS_graphics/FSBlocksinRam.pdf used on input line 13
+.
 (pdftex.def)             Requested size: 603.97353pt x 426.79134pt.
 
 Overfull \hbox (106.05028pt too wide) in paragraph at lines 13--14
- [] 
+ [][] 
  []
 
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 20.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 20.
+<PS_RS_graphics/AxiWriteBuffer.pdf, id=279, 597.23125pt x 421.575pt>
+File: PS_RS_graphics/AxiWriteBuffer.pdf Graphic file (type pdf)
 
-LaTeX Warning: File `PS_RS_graphics/Axi Write Buffer.pdf' not found on input li
-ne 29.
-
-<PS_RS_graphics/Axi Write Buffer.pdf, id=232, 597.23125pt x 421.575pt>
-File: PS_RS_graphics/Axi Write Buffer.pdf Graphic file (type pdf)
-
-<use PS_RS_graphics/Axi Write Buffer.pdf>
-Package pdftex.def Info: PS_RS_graphics/Axi Write Buffer.pdf used on input line
- 29.
-(pdftex.def)             Requested size: 604.62953pt x 426.79134pt.
-
-Overfull \hbox (106.70628pt too wide) in paragraph at lines 29--30
- [] 
- []
-
+<use PS_RS_graphics/AxiWriteBuffer.pdf>
+Package pdftex.def Info: PS_RS_graphics/AxiWriteBuffer.pdf used on input line 3
+5.
+(pdftex.def)             Requested size: 403.08635pt x 284.52756pt.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 33.
+(babel)             in language  on input line 37.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 33.
+(babel)             in language  on input line 37.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 35.
+(babel)             in language  on input line 37.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 35.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 35.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 35.
-[6
+(babel)             in language  on input line 37.
+ [7
 
 
 
 ]
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 35.
+(babel)             in language  on input line 37.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 35.
+(babel)             in language  on input line 37.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 35.
+(babel)             in language  on input line 37.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 35.
- [7 <./PS_RS_graphics/FS Blocks in Ram.pdf>]
+(babel)             in language  on input line 37.
+ [8 <./PS_RS_graphics/FSBlocksinRam.pdf>]
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 35.
+(babel)             in language  on input line 39.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 35.
+(babel)             in language  on input line 39.
+ <PS_RS_graphics/AxiReadBuffer.pdf, id=301, 597.23125pt x 421.575pt>
+File: PS_RS_graphics/AxiReadBuffer.pdf Graphic file (type pdf)
+
+<use PS_RS_graphics/AxiReadBuffer.pdf>
+Package pdftex.def Info: PS_RS_graphics/AxiReadBuffer.pdf used on input line 44
+.
+(pdftex.def)             Requested size: 403.08635pt x 284.52756pt.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 35.
+(babel)             in language  on input line 48.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 35.
- [8 <./PS_RS_graphics/Axi Write Buffer.pdf>]
-
-LaTeX Warning: File `PS_RS_graphics/Axi Read Buffer.pdf' not found on input lin
-e 38.
-
-<PS_RS_graphics/Axi Read Buffer.pdf, id=275, 597.23125pt x 421.575pt>
-File: PS_RS_graphics/Axi Read Buffer.pdf Graphic file (type pdf)
-
-<use PS_RS_graphics/Axi Read Buffer.pdf>
-Package pdftex.def Info: PS_RS_graphics/Axi Read Buffer.pdf used on input line 
-38.
-(pdftex.def)             Requested size: 604.62953pt x 426.79134pt.
-
-Overfull \hbox (106.70628pt too wide) in paragraph at lines 38--39
- [] 
- []
-
+(babel)             in language  on input line 48.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 42.
+(babel)             in language  on input line 53.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 42.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
+(babel)             in language  on input line 53.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 50.
+(babel)             in language  on input line 53.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 50.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 50.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 50.
- [9 <./PS_RS_graphics/Axi Read Buffer.pdf>]
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 51.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 51.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 55.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 55.
+(babel)             in language  on input line 53.
+ [9 <./PS_RS_graphics/AxiWriteBuffer.pdf>] <PS_RS_graphics/SpillandFillWindow.p
+df, id=322, 421.575pt x 597.23125pt>
+File: PS_RS_graphics/SpillandFillWindow.pdf Graphic file (type pdf)
 
+<use PS_RS_graphics/SpillandFillWindow.pdf>
+Package pdftex.def Info: PS_RS_graphics/SpillandFillWindow.pdf used on input li
+ne 56.
+(pdftex.def)             Requested size: 200.84201pt x 284.52756pt.
 
-LaTeX Warning: File `PS_RS_graphics/Stackframe after Invoke.pdf' not found on i
-nput line 62.
+<PS_RS_graphics/SpillandFillWindownacheinenSpill.pdf, id=323, 421.575pt x 597.2
+3125pt>
+File: PS_RS_graphics/SpillandFillWindownacheinenSpill.pdf Graphic file (type pd
+f)
+ <use PS_RS_graphics/SpillandFillWindownacheinenSpill.pdf>
+Package pdftex.def Info: PS_RS_graphics/SpillandFillWindownacheinenSpill.pdf us
+ed on input line 62.
+(pdftex.def)             Requested size: 200.84201pt x 284.52756pt.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 68.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 68.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 72.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 72.
+File: PS_RS_graphics/StackframeafterInvoke.pdf Graphic file (type pdf)
 
-File: PS_RS_graphics/Stackframe after Invoke.pdf Graphic file (type pdf)
-<use PS_RS_graphics/Stackframe after Invoke.pdf>
-Package pdftex.def Info: PS_RS_graphics/Stackframe after Invoke.pdf used on inp
-ut line 62.
+<use PS_RS_graphics/StackframeafterInvoke.pdf>
+Package pdftex.def Info: PS_RS_graphics/StackframeafterInvoke.pdf used on input
+ line 79.
 (pdftex.def)             Requested size: 402.64043pt x 284.52756pt.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 66.
+(babel)             in language  on input line 83.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 66.
+(babel)             in language  on input line 83.
 
-<PS_RS_graphics/spill.pdf, id=294, 597.23125pt x 845.1575pt>
+<PS_RS_graphics/spill.pdf, id=324, 597.23125pt x 845.1575pt>
 File: PS_RS_graphics/spill.pdf Graphic file (type pdf)
 
 <use PS_RS_graphics/spill.pdf>
-Package pdftex.def Info: PS_RS_graphics/spill.pdf used on input line 73.
+Package pdftex.def Info: PS_RS_graphics/spill.pdf used on input line 90.
 (pdftex.def)             Requested size: 201.06018pt x 284.52756pt.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 77.
+(babel)             in language  on input line 93.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 77.
+(babel)             in language  on input line 93.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 93.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 93.
+ [10 <./PS_RS_graphics/AxiReadBuffer.pdf>]
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 93.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 93.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 93.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 93.
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+[11 <./PS_RS_graphics/SpillandFillWindow.pdf> <./PS_RS_graphics/SpillandFillWin
+downacheinenSpill.pdf
 
+pdfTeX warning: pdflatex.exe (file ./PS_RS_graphics/SpillandFillWindownacheinen
+Spill.pdf): PDF inclusion: multiple pdfs with page group included in a single p
+age
+>]
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 80.
+(babel)             in language  on input line 94.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 80.
+(babel)             in language  on input line 94.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 80.
+(babel)             in language  on input line 97.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 80.
- [10]
+(babel)             in language  on input line 97.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 80.
+(babel)             in language  on input line 101.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 80.
+(babel)             in language  on input line 101.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 80.
+(babel)             in language  on input line 101.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 80.
-
-[11 <./PS_RS_graphics/spill.pdf>]
+(babel)             in language  on input line 101.
+ [12]
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 80.
+(babel)             in language  on input line 102.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 80.
-
-Overfull \hbox (23.3034pt too wide) in paragraph at lines 81--84
-\T1/5ch/m/n/11 (-20) Im ers-ten Takt wird der ak-tu-el-le cal-ler-con-text poin
--ter im Re-gis-ter öld_callercontext_pointerÿwischengespeichert
- []
-
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 85.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 85.
-<PS_RS_graphics/fill.pdf, id=311, 597.23125pt x 845.1575pt>
+(babel)             in language  on input line 102.
+ <PS_RS_graphics/fill.pdf, id=368, 597.23125pt x 845.1575pt>
 File: PS_RS_graphics/fill.pdf Graphic file (type pdf)
 
 <use PS_RS_graphics/fill.pdf>
-Package pdftex.def Info: PS_RS_graphics/fill.pdf used on input line 91.
+Package pdftex.def Info: PS_RS_graphics/fill.pdf used on input line 108.
 (pdftex.def)             Requested size: 201.06018pt x 284.52756pt.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 94.
+(babel)             in language  on input line 111.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 94.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 97.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 97.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 101.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 101.
+(babel)             in language  on input line 111.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 104.
+(babel)             in language  on input line 114.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 104.
+(babel)             in language  on input line 114.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 104.
+(babel)             in language  on input line 114.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 104.
- [12]
+(babel)             in language  on input line 114.
+ [13 <./PS_RS_graphics/spill.pdf>]
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 105.
+(babel)             in language  on input line 114.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 105.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 107.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 107.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 107.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 107.
-
-[13 <./PS_RS_graphics/fill.pdf>]
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 113.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 113.
+(babel)             in language  on input line 114.
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 118.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 118.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 121.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 121.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 121.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 121.
+ [14 <./PS_RS_graphics/fill.pdf>]
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 122.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 122.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 130.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 130.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 134.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 134.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 134.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 134.
+ [15]
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 135.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 135.
 )
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 76.
+(babel)             in language  on input line 99.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 76.
+(babel)             in language  on input line 99.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 76.
+(babel)             in language  on input line 99.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 76.
- [14]
+(babel)             in language  on input line 99.
+ [16]
 \openout2 = `Evaluation.aux'.
 
- (Evaluation.tex
+
+(Evaluation.tex
 chapter 4.
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 1.
@@ -2006,48 +2046,55 @@ Package babel Info: Redefining ngerman shorthand "|
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 11.
 
-Underfull \hbox (badness 10000) in paragraph at lines 12--15
+Underfull \hbox (badness 10000) in paragraph at lines 12--13
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 12--15
-
- []
+LaTeX Font Info:    Try loading font information for T1+txtt on input line 15.
+(C:\Users\Rober\AppData\Roaming\MiKTeX\2.9\tex\latex\txfonts\t1txtt.fd
+File: t1txtt.fd 2000/12/15 v3.1
+)
+Package microtype Info: Loading generic settings for font family
+(microtype)             `txtt' (encoding: T1).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
 
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 16.
+               Default added (so using `tbp') on input line 34.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 39--40
+! LaTeX Error: Not in outer par mode.
 
- []
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.34 \begin{table}[]
+                    
+You've lost some text.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
 
+! Undefined control sequence.
+\@float@Hx ...ltovf \fi \global \setbox \@currbox 
+                                                  \color@vbox \normalcolor \...
+l.34 \begin{table}[]
+                    
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
 
-Underfull \vbox (badness 3386) has occurred while \output is active []
+! Missing number, treated as zero.
+<to be read again> 
+                   \vbox 
+l.34 \begin{table}[]
+                    
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
 
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 40.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 40.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 40.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 40.
- [15
-
-
-
-]
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 44.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 44.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 48.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 48.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
@@ -2059,22 +2106,46 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 57.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 57.
- [16]
+ [17
+
+
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 57--58
+
+ []
+
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 59.
+(babel)             in language  on input line 62.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 59.
+(babel)             in language  on input line 62.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 66.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 66.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 75.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 75.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 75.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 75.
+[18]
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 77.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 77.
 )
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 77.
+(babel)             in language  on input line 100.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 77.
+(babel)             in language  on input line 100.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 77.
+(babel)             in language  on input line 100.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 77.
-
-[17]
+(babel)             in language  on input line 100.
+ [19]
 \openout2 = `Fazit.aux'.
 
  (Fazit.tex
@@ -2083,16 +2154,20 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 1.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 1.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 14.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 14.
 )
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 78.
+(babel)             in language  on input line 101.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 78.
+(babel)             in language  on input line 101.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 78.
+(babel)             in language  on input line 101.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 78.
- [18
+(babel)             in language  on input line 101.
+ [20
 
 
 
@@ -2104,36 +2179,55 @@ Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 1.
 )
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 89.
+(babel)             in language  on input line 110.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 89.
+(babel)             in language  on input line 110.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 89.
+(babel)             in language  on input line 110.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 89.
- [19
+(babel)             in language  on input line 110.
+ [21
 
 
 
 ]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 89.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 89.
- (PS_RS_spillnfill.aux (Aufgabenstellung.aux) (Grundlagen.aux)
-(Implementierung.aux) (Evaluation.aux) (Fazit.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 89.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 89.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 110.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 110.
+ (PS_RS_spillnfill.lof)
+\tf@lof=\write6
+\openout6 = `PS_RS_spillnfill.lof'.
+
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 112.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 112.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 112.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 112.
+ [22
+
+]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 112.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 112.
+ (PS_RS_spillnfill.aux (Aufgabenstellung.aux) (Grundlagen.aux) (Implementierung
+.aux) (Evaluation.aux) (Fazit.aux))
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 112.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 112.
 Package rerunfilecheck Info: File `PS_RS_spillnfill.out' has not changed.
-(rerunfilecheck)             Checksum: AC25ED9681EDD35D62F61AD770DB49A0;2670.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 89.
+(rerunfilecheck)             Checksum: A53627F08C82FC9C965C45E4C646BA1C;2710.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 112.
  ) 
 Here is how much of TeX's memory you used:
- 25616 strings out of 493334
- 485450 string characters out of 3139252
- 671887 words of memory out of 3000000
- 28339 multiletter control sequences out of 15000+200000
- 103991 words of font info for 158 fonts, out of 3000000 for 9000
+ 28415 strings out of 493334
+ 528630 string characters out of 3139252
+ 739708 words of memory out of 3000000
+ 31086 multiletter control sequences out of 15000+200000
+ 112742 words of font info for 166 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 59i,12n,100p,8830b,501s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 59i,13n,100p,8830b,1192s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/fontname/texnansi.enc}{C:/Progra
 m Files/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}<C:/Program Files/tuddesign/
 fonts/type1/softmake/charter/5chr8a.pfb><C:/Program Files/tuddesign/fonts/type1
@@ -2143,10 +2237,11 @@ tstrea/charter/bchr8a.pfb><C:/Users/Rober/AppData/Roaming/MiKTeX/2.9/fonts/type
 1/bitstrea/charter/bchri8a.pfb><C:/Users/Rober/AppData/Roaming/MiKTeX/2.9/fonts
 /type1/mathdesign/mdbch/md-chr7t.pfb><C:/Users/Rober/AppData/Roaming/MiKTeX/2.9
 /fonts/type1/mathdesign/mdbch/md-chr7y.pfb><C:/Users/Rober/AppData/Roaming/MiKT
-eX/2.9/fonts/type1/mathdesign/mdbch/md-chri7m.pfb>
-Output written on PS_RS_spillnfill.pdf (20 pages, 261371 bytes).
+eX/2.9/fonts/type1/mathdesign/mdbch/md-chri7m.pfb><C:/Users/Rober/AppData/Roami
+ng/MiKTeX/2.9/fonts/type1/public/txfonts/t1xtt.pfb>
+Output written on PS_RS_spillnfill.pdf (23 pages, 314268 bytes).
 PDF statistics:
- 403 PDF objects out of 1000 (max. 8388607)
- 72 named destinations out of 1000 (max. 500000)
- 18793 words of extra memory for PDF output out of 20736 (max. 10000000)
+ 510 PDF objects out of 1000 (max. 8388607)
+ 95 named destinations out of 1000 (max. 500000)
+ 22395 words of extra memory for PDF output out of 24883 (max. 10000000)
 

@@ -10,23 +10,29 @@ F\"ur den Garbarbagecollector werden zu jedem 32bit Datenwort noch 2 Statusbit g
 
 \begin{figure}
 	\centering
-	\includegraphics[height = 15cm]{PS_RS_graphics/FS Blocks in Ram.pdf}
+	\includegraphics[height = 15cm]{PS_RS_graphics/FSBlocksinRam.pdf}
 	\caption{Zuordnung der Framestack Adressen im Hauptspeicher}
 \end{figure}
 
-Der Ausgelagerter Framestack wird in das obere Ende des 512MB großen DDR3 Speicher gelegt und belegt:\\ $(number max threads * words per thread)*(1+1/16) $ W"orter.\\
-Als Ausgangspunkt wird die h"ochste Speicheradresse des DDR Speichers verwendet und 2 mal nach links geshiftet, da der externe Speicher Byte adressiert, der Framestack jedoch wortadressiert ist. Davon wird die Maximale Gr"o{\ss} des Framestacks abgezogen. Von da an aufw"arts werden die Daten der einzelnen Threads gespeichert.
+Der Ausgelagerter Framestack wird in das obere Ende des 512MB gro"zen DDR3 Speicher gelegt und belegt:\\ $(number max threads * words per thread)*(1+1/16) $ W"orter.\\
+Als Ausgangspunkt wird die h"ochste Speicheradresse des DDR Speichers verwendet und 2 mal nach links geshiftet, da der externe Speicher Byte adressiert, der Framestack jedoch wortadressiert ist. Davon wird die Maximale Gr"o"ze des Framestacks abgezogen. Von da an aufw"arts werden die Daten der einzelnen Threads gespeichert.
 
 \subsection{Schreiben von Framestackinhalten in den Hauptspeicher}
 F\"ur das Zwischenspeichern und packen der Bl\"ocke wird ein eigenes Modul verwendet.
-Vom Framestack aus kann auf dieses Modul geschrieben werden. Dabei wird die Startadresse des Blocks, die l"ange des AXI Bursts und das erste Datenwort angelegt. Zum Zwischenspeichern dieser Daten werden jeweils Fifos verwendet. Wobei die Fifos f"ur Burstl"ange und Startadresse einen Sechzehntel der Gr"o{\ss}e des Datenfifos haben. F"ur jedes "ubertragene Datenwort werden 2 Statusbits in einen 32 Bit Register geschrieben. Nach dem 16 Datenworte in den Datenfifo geschrieben wurden wird der Inhalt dieses Registers in den Fifo geschrieben. 
+Vom Framestack aus kann auf dieses Modul geschrieben werden. Dabei wird die Startadresse des Blocks, die l"ange des AXI Bursts und das erste Datenwort angelegt. Zum Zwischenspeichern dieser Daten werden jeweils Fifos verwendet. Wobei die Fifos f"ur Burstl"ange und Startadresse einen Sechzehntel der Gr"o{"z}e des Datenfifos haben. F"ur jedes "ubertragene Datenwort werden 2 Statusbits in einen 32 Bit Register geschrieben. Nach dem 16 Datenworte in den Datenfifo geschrieben wurden wird der Inhalt dieses Registers in den Fifo geschrieben. 
 Das Modul, indem die eigentliche AXI "Ubertragung verarbeitet wird wartet darauf das der Adress- und Burstlengthfifo nicht leer sind. Wenn die der Fall ist wird die Adresse und Burstl"ange ausgelesen und wie folgt umgerechnet:
 
-Anschlie{\ss}end werden die Daten aus dem Fifo \"ubertragen bis die neu berechnete Burstl"ange erreicht wurde. Solange der noch Eintr\"age in den Fifos f"ur Bursl"ange und Adresse liegen wird eine neue "Ubertragung gestartet. 
+$AXI\_adress := (RAM\_MaxAddress - MaxThreads*WordsPThread + address +(address >> 4))<<2$
+$AXI\_burst := burst\_length + (burst\_length >> 4)$
+
+F"ur die Adressenberechnung wird die maximale Anzahl an W"ortern, die in den DRAM gespeichert werden kann, als Basis genommen davon wird die maximale Gr"o"ze des Framestacks im Hauptspeicher abgezogen um die Basisadresse des Framestacks zu bekommen. Auf diese wird die Framestack Adresse, mit eingeplanten Pl"atzen f"ur die Statusworte, drauf gerechnet. 
+Die "ubergebene Burstl"ange wird ebenfalls umgerechnet um den Platz f"ur die zusammengefassten Statusbits zu ber"ucksichtigen.
+
+Anschlie"zend werden die Daten aus dem Fifo \"ubertragen bis die neu berechnete Burstl"ange erreicht wurde. Solange noch Eintr\"age in den Fifos f"ur Bursl"ange und Adresse liegen wird eine neue "Ubertragung gestartet. 
 
 \begin{figure}
 	\centering
-	\includegraphics[height = 15cm]{PS_RS_graphics/Axi Write Buffer.pdf}
+	\includegraphics[height = 10cm]{PS_RS_graphics/AxiWriteBuffer.pdf}
 	\caption{Schema des AXI Schreib Puffers}
 \end{figure}
 
@@ -35,18 +41,29 @@ Wenn die Daten ausgelesen werden sollen, wird das selbe Modul verwendet. Es wird
 
 \begin{figure}
 	\centering
-	\includegraphics[height = 15cm]{PS_RS_graphics/Axi Read Buffer.pdf}
+	\includegraphics[height = 10cm]{PS_RS_graphics/AxiReadBuffer.pdf}
 	\caption{Schema des AXI Lese Puffers}
 \end{figure}
 
 \section{Spill and Fill Windows}
 
 Bei den Spill and Fill Prozess werden Teile des aktuellen Threads  und evtl die anderer Threads in sogenanntes Windows vorgehalten. Die Windows werden als Blockrams realisiert. 
-Die Anzahl und Gr"o{ss}e dieser Windows kann "uber Parameter eingestellt werden. Für jedes Window werden die Framestack Adressen der oberen und unteren Grenze, des Adressbereichs gespeichert, der in dem Window vorgehalten wird. Dazu wird jeweils die Basis Adresse im Window gespeichert, die angibt an welcher Window Adresse die unterste Framestackaddresse liegt. 
-%todo picture
-Das Window selber wird als Ringspeicher organisiert. Für jedes Window wird in einen Register gespeichert welcher Thread in diesen momentan vorgehalten wird. 
-Die Adressen werden f"ur das Window wie folgt umgerechnet:
-%todo Formel 
+Die Anzahl und Gr"o"ze dieser Windows kann "uber Parameter eingestellt werden. F"ur jedes Window werden die Framestack Adressen der oberen und unteren Grenze, des Adressbereichs gespeichert, der in dem Window vorgehalten wird.Das Window selbst wird dabei als Ringspeicher organisiert. Dazu wird jeweils die Basis Adresse im Window gespeichert, die angibt an welcher Stelle innerhalb des Windows die nach außen angezeigt untere Grenze zeigt. Mit diesen drei Adresse kann jeweils der Speichertort der gew"unschten Daten berechnet werden. 
+F"ir jedes Window wird in einen Register gespeichert welcher Thread in diesen momentan vorgehalten wird. 
+
+\begin{figure}
+
+	\includegraphics[height = 10cm]{PS_RS_graphics/SpillandFillWindow.pdf}
+	\caption{Schema des Spill and Fill Windows im Ursprungszustand}
+
+\end{figure}
+
+\begin{figure}
+	\includegraphics[height = 10cm]{PS_RS_graphics/SpillandFillWindownacheinenSpill.pdf}
+	\caption{Schema des Spill and Fill Windows nach einen Spill}
+
+\end{figure}
+
 
 \section{Framestackteile des aktiven Threads auslagern (Spill)}
 
@@ -55,19 +72,19 @@ Stackteile des aktiven Threads auf den externen Speicher auslagern ist eines der
 \subsection{"Uberpr"ufen des freien Speichers im Window}
 Bei jeden Funktionsaufruf wird der Platzbedarf im Stack abgesch"atzt und gepr"uft ob noch Platz daf"ur im aktuellen Window ist. 
 
-Ein Stackframe in AMIDAR beginnt mit den Argumenten und lokalen Variablen, darüber kommt der Callercontext bestehend aus: Localspointer, Callercontextpointer und Stackpointer. Zum bestimmen ob der im Window vorhandene Platz noch ausreicht wird vom aktuellen Stackpointer die Anzahl der Parameter der aufgerufen nen Funktion abgezogen und Anzahl lokaler Variablen die gr"o{"ss}e des Callercontexts darauf addiert und eine Kostante f"ur die Anzahl m"oglicher Parameter drauf addiert. Wenn das Ergebnis noch im aktuellen Addressbereichs des Windows liegt, wird ein normaler Invoke durchgef"uhrt, andernfalls wird ein Spill durchgef"uhrt. 
+Ein Stackframe in AMIDAR beginnt mit den Argumenten und lokalen Variablen, dar"uber kommt der Callercontext bestehend aus: Localspointer, Callercontextpointer und Stackpointer. Zum Bestimmen ob der im Window vorhandene Platz noch ausreicht wird vom aktuellen Stackpointer die Anzahl der Parameter der aufgerufen nen Funktion abgezogen und Anzahl lokaler Variablen die gr"o{"ss}e des Callercontexts darauf addiert und eine Kostante f"ur die Anzahl m"oglicher Parameter drauf addiert. Wenn das Ergebnis noch im aktuellen Addressbereichs des Windows liegt, wird ein normaler Invoke durchgef"uhrt, andernfalls wird ein Spill durchgef"uhrt. 
 
 \begin{figure}
 	\centering
-	\includegraphics[height = 10cm]{PS_RS_graphics/Stackframe after Invoke.pdf}
+	\includegraphics[height = 10cm]{PS_RS_graphics/StackframeafterInvoke.pdf}
 	\caption{Stackframe nach einen Funktionsaufruf}
 \end{figure}
 
 \subsection{Spill}
 Zu beginn des Spill Vorgangs wird die Burstl"ange f"ur die AXI "Ubertragung auf 128 gesetzt und die Bottom Adresse des unteren Windows wird in ein Register zwischengespeichert, das als Laufvariable f"ur den folgenden Prozess verwendet wird und in ein Register kopiert die Basis des aktuellen 16er Block angibt. 
 Anschlie{\ss}end wird darauf gewartet, dass das AXI Modul geschrieben werden kann, ist dies der Fall wird der Speicher im Window mit den Wert im Address Register adressiert. 
-Nachdem die Daten aus dem Blockram gelesen wurden wird ein in das oben beschriebene AXI Modul geschrieben. Dafür wird die Threadadresse zur Framestackadresse umgerechnet. Gleichzeitig wird der Wert im Register mit der Laufvariable um eins erh"oht.  In den folgenden Takten wird dieses Vorgang wiederholt, bis die Laufvariable um 15 "uber der Basisadresse des aktuellen Blocks liegt. Ist dies der Fall wird gepr"uft, ob das ende des zu "ubertragenen Window Parts erreicht ist. Ansonsten wird der Vorgang mit ge"anderter Adresse neu gestartet. 
-Am Ende des Spill Vorgangs werden die Register f"ur die bottom and top Adressen aktualisiert. Im drauf folgenden Takt wird die Ausf"uhrung der Invoke Instruktion neu gestartet.
+Nachdem die Daten aus dem Blockram gelesen wurden wird ein in das oben beschriebene AXI Modul geschrieben. Daf"ur wird die Threadadresse zur Framestackadresse umgerechnet. Gleichzeitig wird der Wert im Register mit der Laufvariable um eins erh"oht.  In den folgenden Takten wird dieses Vorgang wiederholt, bis die Laufvariable um 15 "uber der Basisadresse des aktuellen Blocks liegt. Ist dies der Fall wird gepr"uft, ob das Ende des zu "ubertragenen Window Parts erreicht ist. Ansonsten wird der Vorgang mit ge"anderter Adresse neu gestartet. 
+Am Ende des Spill Vorgangs werden die Register f"ur die bottom und top Adresse aktualisiert. Im darauf folgenden Takt wird die Ausf"uhrung der Invoke Instruktion neu gestartet.
 \begin{figure}
 	\centering
 	\includegraphics[height = 10cm]{PS_RS_graphics/spill.pdf}
@@ -78,13 +95,13 @@ Am Ende des Spill Vorgangs werden die Register f"ur die bottom and top Adressen 
 Wenn der Stack durch R"uckspr"unge schrumpft und nahe dem unteren Ende des vorgehaltenen Adressbereichs kommt muss der ausgelagerte Framestack wiederhergestellt werden. 
 
 \subsection{Ablauf eines return Vorgangs mit fill}
-Im ersten Takt wird der aktuelle callercontext pointer im Register "old\_callercontext\_pointer" zwischengespeichert und es wird der Callercontext des wiederherzustellenden Stackframes ausgelesen beginnend mit den localspointer . 
-Anschlie{"ss}end wird der ausgelesene localspointer gespeichert und der Stackpointer zum Auslesen adressiert. Der lokalspointer stellt das untere Ende des neuen Stackframes da. Nach dem der Stackpointer wiederhergestellt wurde wird "uberp"uft ob, der localspointer kleiner, als die unterste Adresse im Window ist, ist dies der Fall muss der Fill Vorgang gestartet werden.  
-Ansonsten geht der return Vorgang normal weiter mit der Wiederherstellung des Callercontextpointers, der R"uckgabe des neuen Programmcounters "uber den AMIDAR Bus und dem aktualisieren der "Top\_of\_Stack" und "Next\_of\_Stack Register. 
+Im ersten Takt wird der aktuelle callercontext pointer im Register old\_callercontext\_pointer zwischengespeichert und es wird der Callercontext des wiederherzustellenden Stackframes ausgelesen beginnend mit den localspointer . 
+Anschlie"zend wird der ausgelesene localspointer gespeichert und der Stackpointer zum Auslesen adressiert. Der lokalspointer stellt das untere Ende des neuen Stackframes da. Nach dem der Stackpointer wiederhergestellt wurde wird "uberp"uft ob, der localspointer kleiner, als die unterste Adresse im Window ist, ist dies der Fall muss der Fill Vorgang gestartet werden.  
+Ansonsten geht der return Vorgang normal weiter mit der Wiederherstellung des Callercontextpointers, der R"uckgabe des neuen Programmcounters "uber den AMIDAR Bus und dem aktualisieren der Top\_of\_Stack und Next\_of\_Stack Register. 
 
-\subsection {Ablauf des eigentlichen Fill Vorgangs}
+\subsection {Ablauf des Fill Vorgangs}
 
-Bevor das kopieren der Stackdaten passieren kann werden m"ussen die -Bottom -Top und Baseadressregister des aktuellen Windows angepasst werden. Im n"achsten Takt muss der vorher ausgelesene Programmcounter in einen Register zwischengespeichert werden, damit dieser sp"ater zur"uck gegeben werden kann. Anschlie{"ss}end wird die neue untere Adresse des Windows umgerechnet und der Lesevorgang im AXI Modul gestartet. In dem n"achsten Takt wird gewartet bis der Lesebuffer gefüllt ist. Wenn dies der Fall ist wird mit jeden weiteren Takt ein Datenwort und die dazu gehörigen Status Bits ausgelesen und von unten beginnend in das Window gespeichert. Nach jeden gespeicherten 16 Bit block wird "uberp"uft ob ein ganzes Segment "ubertragen wurde oder der ganze Burst ausgelesen wurde. Wenn ersteres der Fall ist wird der Vorgang beendet. Falls der Burst komplett "ubertragen wurde das aktuelle Segment jedoch nicht vollst"andig "ubertragen wurde wird ein neuer Leseburst mit der aktuellen Adresse gestartet. 
+Bevor das kopieren der Stackdaten passieren kann werden m"ussen die Bottom- Top- und Baseadressregister des aktuellen Windows angepasst werden. Im n"achsten Takt muss der vorher ausgelesene Programmcounter in einen Register zwischengespeichert werden, damit dieser sp"ater zur"uck gegeben werden kann. Anschlie"zend wird die neue untere Adresse des Windows umgerechnet und der Lesevorgang im AXI Modul gestartet. In dem n"achsten Takt wird gewartet bis der Lesebuffer gef"ullt ist. Wenn dies der Fall ist wird mit jeden weiteren Takt ein Datenwort und die dazu geh"origen Status Bits ausgelesen und von unten beginnend in das Window gespeichert. Nach jeden gespeicherten 16 Bit Block wird "uberp"uft ob ein ganzes Segment "ubertragen wurde oder der ganze Burst ausgelesen wurde. Wenn ersteres der Fall ist wird der Vorgang beendet. Falls der Burst komplett "ubertragen wurde, das aktuelle Segment jedoch nicht vollst"andig "ubertragen ist, wird ein neuer Leseburst mit der aktuellen Adresse gestartet. 
 
 \begin{figure}
 	\centering
@@ -100,7 +117,7 @@ Es gibt f"ur jedes Window ein Register in dem die zugeordnete ThreadID gespeiche
 
 \subsection{"Anderungen am der Threaderzeugung}
 Bisher wurden Threads im Framestack angelegt in dem "uber das Wishbone Interface erst der Threadtable initialisiert wird und anschlie{"ss}end der Stackframe durch Schreiben der R"ucksprungadresse und eines leeren Callercontext in den Blockram. Das Problem dabei ist durch die Auslagerung der Threads in den Framestack die Daten in den Hauptspeicher geschrieben werden m"usste, was aufwendig zu implementieren w"are und sehr viel Zeit bei der Ausf"urung ben"otigen w"urde. Es ist au{"ss}erdem nicht m"oglich neue Threads direkt im Window zu initialisieren, da es m"oglich ist das mehr Threads initialisiert werden, als Windows verf"ugbar sind, bevor die Ausf"uhrung der Threads zum ersten mal gestartet wird. 
-Stattdessen wurde f"ur die Threaderzeugung der bisher ungenutzte Framestack Opcode "OP\_FRAMESTACK\_NEWTHREAD" genutzt um den Stackframe der Threads zu initialisieren. Der Threadtable wird weiterhin "uber Wishbone initialisiert. Sobald der NEWTHREAD Opcode abgearbeitet wird gepr"uft ob schon ein Thread mit der zu "uber Wishbone "ubergebenen ID in einen der Windows vorhanden ist. Ist dies der Fall wird der als Parameter mit den Opcode "ubergebene Threadhandle an Adresse 0 des entsprechenden Windows geschrieben. Dar"uber wird der Callercontext initialisiert. Wenn die ThreadID noch keinen der Windows zugewiesen ist, muss der Stackframe des Threads im externen Speicher initialisiert werden. Daf"ur wird auch das vorher beschriebene AXI Modul verwendet. Es wird der Threadhandle und der leere Callercontext "ubertragen. Au{"ss}erdem m"ussen noch 12 weitere leere W"orter "ubertragen werden um einen 16 Wort Block "ubertragen zu k"onnen. 
+Stattdessen wurde f"ur die Threaderzeugung der bisher ungenutzte Framestack Opcode OP\_FRAMESTACK\_NEWTHREAD genutzt um den Stackframe der Threads zu initialisieren. Der Threadtable wird weiterhin "uber Wishbone initialisiert. Sobald der NEWTHREAD Opcode abgearbeitet wird gepr"uft ob schon ein Thread mit der zu "uber Wishbone "ubergebenen ID in einen der Windows vorhanden ist. Ist dies der Fall wird der als Parameter mit den Opcode "ubergebene Threadhandle an Adresse 0 des entsprechenden Windows geschrieben. Dar"uber wird der Callercontext initialisiert. Wenn die ThreadID noch keinen der Windows zugewiesen ist, muss der Stackframe des Threads im externen Speicher initialisiert werden. Daf"ur wird auch das vorher beschriebene AXI Modul verwendet. Es wird der Threadhandle und der leere Callercontext "ubertragen. Au{"ss}erdem m"ussen noch 12 weitere leere W"orter "ubertragen werden um einen 16 Wort Block "ubertragen zu k"onnen. 
 
 \subsection{Threadwechsel}
 F"ur einen Threadwechsel bei einen AMIDAR Prozessor werden im Framestack die Werte der Register Stackpointer, Localspointer und Callercontext aus dem Threadtable "ubernommen. In der neuen Implementierung wird zus"atzlich gepr"uft ob, der Thread auf den gewechselt wird bereits in einen der Windows vorgehalten wird. Ist dies der Fall kann einfach auf das entsprechende Window gewechselt werden um den Thread weiter auszuf"uhren. Wenn der Stack des Threads noch nicht in einen der Windows sein sollte wird dieser aus dem Speicher geladen. Davor wird gegebenenfalls noch der Stack eines zu verdr"angender Threads in den externen Speicher vorschoben. 
@@ -108,11 +125,11 @@ F"ur einen Threadwechsel bei einen AMIDAR Prozessor werden im Framestack die Wer
 Der Threadwechsel beginnt, wenn der Opcode "OP\_FRAMESTACK\_THREADSWITCH" abgearbeitet wird. Die ThreadID des neuen Threads wird "uber den AMIDAR-Bus "ubergeben und in einem Register gespeichert. Zu Beginn des Vorgangs wird gep"uft ob die ThreadID schon im WINDOW\_TO\_THREAD Register eingetragen ist. Ist dies nicht der Fall wird gepr"uft ob es noch ein Window leer ist. 
 Wenn kein Window verf"ugbar ist werden die LRU Bits "uberpr"uft und der am wenigsten verwendete Thread bestimmt. Wenn auf einen schon vorgehaltenen Thread gewechselt wird, wird der LFU Counter des Threads um eins erh"oht. Dabei wird "uberpr"uft ob der counter des aktuellen n"achsten Threads gleich 15 ist. Ist dies der Fall wird der counter, aller Threads halbiert. 
 In dem Fall, in dem ein Thread verdr"angt werden muss wird der am wenigsten verwendete Thread in den externen Speicher transferiert. Daf"ur wird die passende Burstl"ange anhand des Stackpointers und der unteren Windowadresse berechnet. Sie muss ein Vielfaches von 16 sein. Danach findet die eigentliche "Ubertragung des Stacks statt. 
-Nachdem der Stackframe des zu verdr"angenden Threads gesichert wurde kann das Window mit den Stack des neuen Threads "uberschrieben werden. Daf"ur wird die untere Startadresse der "Übertragung anhand des Localspointer und der gr"o{ss}e der Windowabschnitte soda{ss} der Locals und der Stackpointer im Window liegen. Daraufhin wird der zu "ubertragende Stackframe ausgelesen und in das Window kopiert.  
+Nachdem der Stackframe des zu verdr"angenden Threads gesichert wurde kann das Window mit den Stack des neuen Threads "uberschrieben werden. Daf"ur wird die untere Startadresse der "Ubertragung anhand des Localspointer und der gr"o"ze der Windowabschnitte soda"z der Locals und der Stackpointer im Window liegen. Daraufhin wird der zu "ubertragende Stackframe ausgelesen und in das Window kopiert.  
 
 \section{Garbage Collector Interface}
 
-Der Framestack muss den Garabage Collector ein Interface zur Verf"ugung stellen "uber dass, das Rootset ausgelesen werden kann. Daf"ur werden f"ur jedes Datenwort im Framestack zwei Statusbits angegeben, die den Entrytype bescreiben. Der Entrytype 2'b10 gibt dabei Referenzen an. Um das Rootset zu erzeugen muss der Stack jedes einzelnen Threads ausgelesen werden, dabei wird bei jeden Wort gepr"uft ob der EntryType 2'b10 hinterlegt wurde, in dem Fall wird das Word an an Garbage Collector "ubertragen. Da Teile des Framestacks im externen Speicher liegen m"ussen diese ausgelesen werden.
+Der Framestack muss den Garabage Collector ein Interface zur Verf"ugung stellen "uber dass, das Rootset ausgelesen werden kann. Daf"ur werden f"ur jedes Datenwort im Framestack zwei Statusbits angegeben, die den Entrytype beschreiben. Der Entrytype 2'b10 gibt dabei Referenzen an. Um das Rootset zu erzeugen muss der Stack jedes einzelnen Threads ausgelesen werden, dabei wird bei jeden Wort gepr"uft ob der EntryType 2'b10 hinterlegt wurde, in dem Fall wird das Word an an Garbage Collector "ubertragen. Da Teile des Framestacks im externen Speicher liegen m"ussen diese ausgelesen werden.
 Wenn der Eingang gc\_request\_rootset gesetzt ist beginnt der Auslese Vorgang. Der Stack wird Thread f"ur Thread ausgelesen. Nachdem ein Thread zum auslesen ausgew"ahlt wurde wird gepr"uft, ob dieser im Window liegt. Ist das der Fall wird gepr"uft, ob der komplette Stack im Window liegt. Wenn Teile des Stacks ausgelagert wurden, werden diese in 16er Bl"ocken ausgelesen und gepr"uft. Sobald die untere Grenze des Windows dabei erreicht ist, kann der Rest aus dem Window gelesen werden. Sobald alle Threads nach diesen Verfahren abgearbeitet wurden ist das Rootset komplett "ubertragen. 
 
 \section{Lesezugriff Wishbone}
