@@ -22,7 +22,7 @@ F\"ur das Zwischenspeichern und packen der Bl\"ocke wird ein eigenes Modul verwe
 Vom Framestack aus kann auf dieses Modul geschrieben werden. Dabei wird die Startadresse des Blocks, die l"ange des AXI Bursts und das erste Datenwort angelegt. Zum Zwischenspeichern dieser Daten werden jeweils Fifos verwendet. Wobei die Fifos f"ur Burstl"ange und Startadresse einen Sechzehntel der Gr"o{"z}e des Datenfifos haben. F"ur jedes "ubertragene Datenwort werden 2 Statusbits in einen 32 Bit Register geschrieben. Nach dem 16 Datenworte in den Datenfifo geschrieben wurden wird der Inhalt dieses Registers in den Fifo geschrieben. 
 Das Modul, indem die eigentliche AXI "Ubertragung verarbeitet wird wartet darauf das der Adress- und Burstlengthfifo nicht leer sind. Wenn die der Fall ist wird die Adresse und Burstl"ange ausgelesen und wie folgt umgerechnet:
 
-$AXI\_adress := (RAM\_MaxAddress - MaxThreads*WordsPThread + address +(address >> 4))<<2$
+$AXI\_address := (RAM\_MaxAddress - MaxThreads*WordsPThread + address +(address >> 4))<<2$\\
 $AXI\_burst := burst\_length + (burst\_length >> 4)$
 
 F"ur die Adressenberechnung wird die maximale Anzahl an W"ortern, die in den DRAM gespeichert werden kann, als Basis genommen davon wird die maximale Gr"o"ze des Framestacks im Hauptspeicher abgezogen um die Basisadresse des Framestacks zu bekommen. Auf diese wird die Framestack Adresse, mit eingeplanten Pl"atzen f"ur die Statusworte, drauf gerechnet. 
@@ -49,7 +49,7 @@ Wenn die Daten ausgelesen werden sollen, wird das selbe Modul verwendet. Es wird
 
 Bei den Spill and Fill Prozess werden Teile des aktuellen Threads  und evtl die anderer Threads in sogenanntes Windows vorgehalten. Die Windows werden als Blockrams realisiert. 
 Die Anzahl und Gr"o"ze dieser Windows kann "uber Parameter eingestellt werden. F"ur jedes Window werden die Framestack Adressen der oberen und unteren Grenze, des Adressbereichs gespeichert, der in dem Window vorgehalten wird.Das Window selbst wird dabei als Ringspeicher organisiert. Dazu wird jeweils die Basis Adresse im Window gespeichert, die angibt an welcher Stelle innerhalb des Windows die nach außen angezeigt untere Grenze zeigt. Mit diesen drei Adresse kann jeweils der Speichertort der gew"unschten Daten berechnet werden. 
-F"ir jedes Window wird in einen Register gespeichert welcher Thread in diesen momentan vorgehalten wird. 
+F"ur jedes Window wird in einen Register gespeichert welcher Thread in diesen momentan vorgehalten wird. 
 
 \begin{figure}
 
@@ -106,7 +106,7 @@ Bevor das kopieren der Stackdaten passieren kann werden m"ussen die Bottom- Top-
 \begin{figure}
 	\centering
 	\includegraphics[height = 10cm]{PS_RS_graphics/fill.pdf}
-	\caption{fill: Verschieben des Windows}
+	\caption{Fill: Verschieben des Windows}
 \end{figure}
 \section{Multithreading mit Verdr\"angung}
 Es kann eine konstante Anzahl an Threads in den Windows vorgehalten werden. Um die Multithreading Funktionalit"at mit Threads weiterhin zu gew"arleisten wurde eine Threadverdr"angung implementiert durch die Stacks von in den Hauptspeicher ausgelagert und wiederhergestellt werden k"onnen.

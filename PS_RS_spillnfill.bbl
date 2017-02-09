@@ -1,8 +1,26 @@
 \begin{thebibliography}{1}
 
-\bibitem{guo}
-Tao Guo.
-\newblock {Ansteuerung eines SDRAM auf einem Xilinx FPGA-Board}.
-\newblock Master's thesis, TU Darmstadt, Fachgebiet Rechnersysteme, 2008.
+\bibitem{Illy}
+Illy Christian.
+\newblock {Implementierung der Thread-Verwaltung in einem AMIDAR}.
+\newblock Master's thesis, TU Darmstadt, Fachgebiet Rechnersysteme, Dezember
+  2015.
+
+\bibitem{Gove}
+Gove Darryl.
+\newblock {Flush Register Windows}.
+\newblock \url{https://blogs.oracle.com/d/entry/flush_register_windows}, M"arz
+  2008.
+\newblock Accessed: 9.02.2016.
+
+\bibitem{Andresen}
+Andresen Jan.
+\newblock {Erweiterung des Bus Protokolls f"ur AMIDAR-Prozessoren}.
+\newblock Master's thesis, Tu Darmstadt, Fachgebiet Rechnersysteme, Juni 2016.
+
+\bibitem{Burkert}
+Burkert Tim.
+\newblock {Entwicklung eines Beschleuniger-Frameworks f"ur den
+  AMIDAR-Prozessor}, Juni 2016.
 
 \end{thebibliography}
