@@ -63,6 +63,9 @@ Eine weitere Anpassung der Testbench ist eine Methode die "uber Wishbone die im 
 Bei den Performance Messungen wurde die Dauer bestimmter Vorg"ange gemessen in dem die oben beschriebenen Tests ausgef"uhrt und die Messdaten ausgelesen worden sind. 
 Die Tests wurden mit Unterschiedlichen Konfigurationen den Spill and Fill Windows des Framestacks durchgef"uhrt. Es wurde sowohl mit einer Window Gr"o"ze von 512 W"orter als auch mit 1024 W"ortern getestet. 1024 W"orter entspricht dabei der Anzahl der W"orter die im urspr"unglichen Framestack einen Thread jeweils zur Verf"ugung standen. Das Window wird dabei in 2 Segmente geteilt, die jeweils 256 oder 512 W"orter gro"z sind.
 
+
+
+
 \subsection{Spill and Fill}
 
 Bei der Variante mit 512 W"ortern werden f"ur einen Spill Vorgang 288 Takte ben"otigt. Der Wert ist konstant da, Verz"ogerungen der AXI Verbindung durch den Schreibpuffer ausgeglichen werden. Ein Fill Vorgang dauerte in dem Fall mindestens 363 und maximal 370, im Durchschnitt 363 Takte 
@@ -70,6 +73,23 @@ Beim Durchlauf der Ackermanntests findet der Spill und der Fill Vorgang jeweils 
 Ein Fill ben"otigt mehr Takte, da zum einen das adressieren des AXI Busses f"ur den Auslese Vorgang Zeit ben"otigt. Außerdem m"ussen nach dem Ende der AXI "Ubertragung noch mindestens 16 W"orter aus dem Lesepuffer gelesen werden.  
 Wenn ein Window 1024 W"orter umfasst werden f"ur einen Spill 576 Takte gemessen. F"ur den Fill werden dabei zwischen 725 und 744 Takte gemessen. Im Durchschnitt werden 726 Takte ben"otigt. 
 Es finden beim Durchlauf der Testbench jeweils 131 Spill and Fill Vorg"ange statt. 
+\begin{table}[]
+	\centering
+	\caption{Spill and Fill Performance}
+	\label{my-label}
+	\begin{tabular}{lllllllll}
+		& Anzahl Segmente pro Window  &2 & &4 & &8 & &\\		
+		& Fenstergr"o"ze & 512 & 1024 & 512 & 1024 & 512 & 1024&\\
+		& Anzahl Takte Spill & 288 & 576 & 144 & 288 & 72 & 144 &\\
+		& Anzahl Takte Fill & 363 & 726 & 183 & 363 & 111 & 182 & \\
+		& Anzahl Spill and Fill Vorg"ange & 462 & 131 & 787 & 199 & 1435 & 329 & \\
+		& Takte gesamt  & 300762 & 170562 & & & & & \\
+		& Anteil an Ausf"uhrungszeit   & 1,676\% & 0,914\% & & & & &\\
+		
+	\end{tabular}
+\end{table}
+
+
 \subsubsection{Interpretation}
 Bei der Variante mit 512 W"ortern werden insgesamt 300762 Takte f"ur Spill and Fill Operationen genutzt. Mit einen 1024 W"orter gro"zen Window werden lediglich 162702 Takte durch Spill and Fill blockiert. Bei der Variante mit einen 1024 W"orter großen Window ist in diesen Testf"allen die Anzahl der Takte die f"ur Spill and Fill ben"otigt werden beinahe halbiert, was ein großen Performance Vorteil andeutet. Ber"ucksichtigt man jedoch, das die Gesamtlaufzeit der Testf"alle 17943867 bzw 17805807 Takte betr"agt, ist Spill and Fill nur f"ur 0,91376\% bzw 0,1676\% der Laufzeit der Tests verantwortlich. Gemessen wurde dabei wirklich nur die Laufzeit der Testf"alle ohne Bootloader, static Initializer und uart Ausgaben. Bei realen Anwendungen d"urften der Prozentsatz deutlich niedriger liegen als bei der Ackermannfunktion. 
 

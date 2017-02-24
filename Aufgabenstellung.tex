@@ -1,9 +1,9 @@
 \chapter{Aufgabenstellung}
 \label{cha:Aufgabenstellung}
 
-Entwicklung eines "Spill and Fill" Mechanismus um den Framestack des AMIDAR Prozessors auf einen externen DDR3 Speicher auszulagern und so die maximal mögliche Stackgröße deutlich zu erhöhen. Dazu gehört das einrichten verschiebbarer "windows" die jeweils einen Ausschnitt des Stacks beinhalten. 
-Bei einen Methodenaufruf, dessen Stackframe den aktuellen Ausschnitt überschreiten würde soll ein Teil der im Window enthaltenen Daten auf den externen Speicher ausgelagert werden um Platz für den neuen Stackframe zu schaffen. Bei einem Methoden Rücksprung sollen die Daten wieder zurück kopiert werden um den alten Stackframe wiederherzustellen. 
-Es sollen 4 Windows angelegt werden um die Stacks von bis zu 4 threads vorzuhalten. Es soll die Möglichkeit einer Threadverdrängung realisiert werden, damit mehr als 4 Threads ausgeführt werden können.
+Entwicklung eines Spill and Fill Mechanismus um den Framestack des AMIDAR Prozessors auf einen externen DDR3 Speicher auszulagern und so die maximal mögliche Stackgröße deutlich zu erhöhen. Dazu gehört das einrichten verschiebbarer "windows", die jeweils einen Ausschnitt des Stacks beinhalten. 
+Bei einem Methodenaufruf, dessen Stackframe den aktuellen Ausschnitt überschreiten würde, soll ein Teil der im Window enthaltenen Daten auf den externen Speicher ausgelagert werden, um Platz für den neuen Stackframe zu schaffen. Bei einem Methoden Rücksprung sollen die Daten wieder zurück kopiert werden um den alten Stackframe wiederherzustellen. 
+Es sollen 4 Windows angelegt werden um die Stacks von bis zu 4 Threads vorzuhalten. Es soll die Möglichkeit einer Threadverdrängung realisiert werden, damit mehr als 4 Threads ausgeführt werden können. 
 
 
 

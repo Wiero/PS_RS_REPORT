@@ -1,21 +1,13 @@
 \chapter{Grundlagen}
 \label{cha:Grundlagen}
 
-\section{Spill and Fill}
+\section{AMIDAR }
+Bei der Klasse der AMIDAR Prozessoren handelt es sich um ein konfigurierbares System, bestehend aus Function Units (FU). Komplexe Instruktionen werden in mehrere Arbeitsschritte unterteilt, die als Token an die einzelnen FUs verteilt werden. Daf"ur wird das Token Distribution Network genutzt. F"ur die Kommunikation zwischen den FUs gibt es auch noch einen Datenbus. Ein Vorteil der AMIDAR Architektur ist, das leicht FUs eingef"ugt werden k"onnen um den Prozessor an die Aufgaben anzupassen. Ein gutes Beispiel daf"ur sind die Hardwarebeschleuniger. \cite{Burkert}\cite{Andresen}
+\subsection{Java Stacks}
 
-Spill and Fill beschreibt eine Strategie, durch die der Zugriff auf einen Stapelspeicher deutlich beschleunigt werden kann. Ein kleinerer schnellerer Speicher h"alt einen Ausschnitt des Hauptspeichers vor der je nach Bedarf hoch oder runter geschoben werden kann, sodass immer das obere Ende des Stapelspeichers im Window Ausschnitt liegt. Spill beschreibt dabei den Vorgang des nach oben Schiebens des Speichers bei den der untere Abschnitt des Ausschnitts in den Hauptspeicher geschrieben wird. Wird des Stack weit genug abgebaut wird ein Fill durchgef"uhrt, bei den ausgelagerte Teile zur"uck kopiert werden.  
-
-
-\section{Verwendung eines Spill and Fill Mechanismus in anderen Prozessoren}
-\subsection{Sun Sparc Prozessoren}
-Die Sun Sparc Prozessoren V8/V9 verf\"ugen \"uber ein sliding register Window mit jeweils 16 64 Bit gro"zen Registern in 7 Registers\"atzen. Sliding Window bezeichnet ein Verfahren, bei dem die Registers\"atze im Falle eines Funktionsaufruf nicht auf dem Stack gesichert werden m\"ussen, stattdessen wird auf den n\"achsten Registersatz gewechselt. Dabei wird meistens auch die Parameter\"ubergabe realisiert. Dabei sind die Input Register in dem Registerwindow des Callers identisch mit dem Output Registern, in dem Registerwindow des Callee.   
-Mit speziellen Bytecode Instruktionen werden im Spill an Fill Verfahren Registers\"atze auf einen externen Speicher gesichert, was allerdings wegen den gro"zen Registers\"atzen recht viel Zeit in Anspruch nimmt. Da das Spill and Fill durch spezielle Bytecodes ausgel"ost wird muss der Compiler vorher festlegen an welchen Stellen das Spill and Fill stattfinden soll. \cite{Gove}
-\section{AMIDAR}
-Bei der Klasse der AMIDAR Prozessoren handelt es sich um ein konfigurierbares System bestehend aus Function Units (FU). Die Komplexen Instruktionen werden in mehrere Arbeitsschritte unterteilt, die als Token an die einzelnen FUs verteilt werden. Daf"ur wird das Token Distribution Network genutzt. F"ur die Kommunikation zwischen den FUs gibt es auch noch einen Datenbus. Ein Vorteil der AMIDAR Architektur ist, das leicht FUs eingef"ugt werden k"onnen um den Prozessor an die Aufgaben anzupassen. Ein gutes Beispiel daf"ur sind die Hardwarebeschleuniger. \cite{Burkert}\cite{Andresen}
 
 \subsection{Framestack}
-
-Die Framestack FU dient dazu die Funktionen des Operand Stacks und des Speichers f"ur lokale Variablen zur Verf"ugung zu stellen. 
+Die AMIDAR Implementierung, die am Fachgebiet Rechnersysteme entwickelt wird, arbeitet mit Java Bytecode. Dabei wird der Stack für Lokale Variablen und der Operandenstack in der Framestack FU zusammengefasst. Durch das Zusammenfassen beider Stacks werden Kopiervorg"ange über den AMIDAR Bus eingespart. Zum einen müssten Lokale Variablen bei jeder Verwendung auf den Operandstack kopiert werden, zum anderen müssten Parameter bei jeden Funktionsaufruf in den lokalen Variablenspeicher kopiert werden.
 Der AMIDAR Framestack arbeitet bei der Stackframe Verarbeitung mit drei grunds"atzlichen Zeigern. Der Stackpointer gibt die n"achste freie Speicheradresse "uber den aktuellen Stackframe an. Der Locals Pointer gibt die unterste Lokale Variable und damit auch das untere Ende des Stackframes an. Die dritte wichtige Zeiger ist der Callercontext Pointer, der auf die unterste Adresse des Callercontext deutet. \cite{Illy}
 
 \subsubsection{Stackframe}
@@ -46,3 +38,12 @@ Bei einen Funktionsr"ucksprung werden im AMIDAR Framestack die Locals- Stack- un
 	\includegraphics[height = 15cm]{PS_RS_graphics/Stackframeafterreturn.pdf}
 	\caption{Stackframe nach einen Funktionsr"ucksprung}
 \end{figure}
+\section{Spill and Fill}
+
+Spill and Fill beschreibt eine Strategie, durch die der Zugriff auf einen Stapelspeicher deutlich beschleunigt werden kann. Ein kleinerer, schnellerer Speicher h"alt einen Ausschnitt des Hauptspeichers vor, der je nach Bedarf hoch oder runter geschoben werden kann, sodass immer das obere Ende des Stapelspeichers im Window Ausschnitt liegt. Spill beschreibt dabei den Vorgang des nach oben Schiebens des Speichers, bei den der untere Abschnitt des Ausschnitts in den Hauptspeicher geschrieben wird. Wird der Stack weit genug abgebaut, wird ein Fill durchgef"uhrt, bei dem die ausgelagerte Teile zur"uck kopiert werden.  
+
+
+\section{Verwendung eines Spill and Fill Mechanismus in anderen Prozessoren}
+\subsection{Sun Sparc Prozessoren}
+Die Sun Sparc Prozessoren V8/V9 verf\"ugen \"uber ein sliding register Window mit jeweils 16 64 Bit gro"zen Registern in 7 Registers\"atzen. Sliding Window bezeichnet ein Verfahren, bei dem die Registers\"atze im Falle eines Funktionsaufruf nicht auf dem Stack gesichert werden m\"ussen, stattdessen wird auf den n\"achsten Registersatz gewechselt. Dabei wird meistens auch die Parameter\"ubergabe realisiert. Dabei sind die Input Register in dem Registerwindow des Callers identisch mit dem Output Registern, in dem Registerwindow des Callee.   
+Mit speziellen Bytecode Instruktionen werden im Spill an Fill Verfahren Registers\"atze auf einen externen Speicher gesichert. Da das Spill and Fill durch spezielle Bytecodes ausgel"ost wird muss der Compiler vorher festlegen an welchen Stellen im Programm das Spill and Fill stattfinden soll. \cite{Gove}
