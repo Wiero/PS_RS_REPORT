@@ -1,38 +1,38 @@
 \relax 
 \providecommand\hyper@newdestlabel[2]{}
-\@writefile{toc}{\contentsline {chapter}{\numberline {3}Implementierung}{7}{chapter.3}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {3}Implementierung}{9}{chapter.3}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
 \@writefile{lol}{\addvspace {10\p@ }}
-\newlabel{cha:Implementierung}{{3}{7}{Implementierung}{chapter.3}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {3.1}DRAM Anbindung \"uber AXI}{7}{section.3.1}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.1.1}Addressbereich des Framestacks im Hauptspeicher}{7}{subsection.3.1.1}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.1.2}Schreiben von Framestackinhalten in den Hauptspeicher}{7}{subsection.3.1.2}}
-\@writefile{lof}{\contentsline {figure}{\numberline {3.1}{\ignorespaces Zuordnung der Framestack Adressen im Hauptspeicher\relax }}{8}{figure.caption.10}}
-\@writefile{lof}{\contentsline {figure}{\numberline {3.2}{\ignorespaces Schema des AXI Schreib Puffers\relax }}{9}{figure.caption.11}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.1.3}Lesen von Framestackinhalten aus den Hauptspeicher}{9}{subsection.3.1.3}}
-\@writefile{toc}{\contentsline {section}{\numberline {3.2}Spill and Fill Windows}{9}{section.3.2}}
-\@writefile{lof}{\contentsline {figure}{\numberline {3.3}{\ignorespaces Schema des AXI Lese Puffers\relax }}{10}{figure.caption.12}}
-\@writefile{toc}{\contentsline {section}{\numberline {3.3}Framestackteile des aktiven Threads auslagern (Spill)}{10}{section.3.3}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.3.1}"Uberpr"ufen des freien Speichers im Window}{10}{subsection.3.3.1}}
-\@writefile{lof}{\contentsline {figure}{\numberline {3.4}{\ignorespaces Schema des Spill and Fill Windows im Ursprungszustand\relax }}{11}{figure.caption.13}}
-\@writefile{lof}{\contentsline {figure}{\numberline {3.5}{\ignorespaces Schema des Spill and Fill Windows nach einen Spill\relax }}{11}{figure.caption.14}}
-\@writefile{lof}{\contentsline {figure}{\numberline {3.6}{\ignorespaces Stackframe nach einen Funktionsaufruf\relax }}{12}{figure.caption.15}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.3.2}Spill}{12}{subsection.3.3.2}}
-\@writefile{toc}{\contentsline {section}{\numberline {3.4}Ausgelagerte Framestackteile des aktiven Threads wiederherstellen (Fill)}{12}{section.3.4}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.4.1}Ablauf eines return Vorgangs mit fill}{12}{subsection.3.4.1}}
-\@writefile{lof}{\contentsline {figure}{\numberline {3.7}{\ignorespaces Spill: Verschieben des Windows \relax }}{13}{figure.caption.16}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.4.2}Ablauf des Fill Vorgangs}{13}{subsection.3.4.2}}
-\@writefile{lof}{\contentsline {figure}{\numberline {3.8}{\ignorespaces Fill: Verschieben des Windows\relax }}{14}{figure.caption.17}}
-\@writefile{toc}{\contentsline {section}{\numberline {3.5}Multithreading mit Verdr\"angung}{14}{section.3.5}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.5.1}Zuordnung von Threads zu den Windows}{14}{subsection.3.5.1}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.5.2}"Anderungen am der Threaderzeugung}{14}{subsection.3.5.2}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.5.3}Threadwechsel}{15}{subsection.3.5.3}}
-\@writefile{toc}{\contentsline {subsubsection}{Ablauf des Threadwechsels}{15}{subsubsection*.18}}
-\@writefile{toc}{\contentsline {section}{\numberline {3.6}Garbage Collector Interface}{15}{section.3.6}}
-\@writefile{toc}{\contentsline {section}{\numberline {3.7}Lesezugriff Wishbone}{16}{section.3.7}}
+\newlabel{cha:Implementierung}{{3}{9}{Implementierung}{chapter.3}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {3.1}"Ubersicht "uber den AMIDAR FRAMESTACK}{9}{section.3.1}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.1}{\ignorespaces "Ubersicht "uber den AMIDAR FRAMESTACK\relax }}{9}{figure.caption.13}}
+\@writefile{toc}{\contentsline {section}{\numberline {3.2}DRAM Anbindung \"uber AXI}{10}{section.3.2}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2.1}Addressbereich des Framestacks im Hauptspeicher}{10}{subsection.3.2.1}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.2}{\ignorespaces Zuordnung der Framestack Adressen im Hauptspeicher\relax }}{10}{figure.caption.14}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2.2}Schreiben von Framestackinhalten in den Hauptspeicher}{11}{subsection.3.2.2}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.3}{\ignorespaces Schema des AXI Schreib Puffers\relax }}{12}{figure.caption.15}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2.3}Lesen von Framestackinhalten aus den Hauptspeicher}{12}{subsection.3.2.3}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.4}{\ignorespaces Schema des AXI Lese Puffers\relax }}{13}{figure.caption.16}}
+\@writefile{toc}{\contentsline {section}{\numberline {3.3}Spill and Fill Windows}{13}{section.3.3}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.5}{\ignorespaces Schema des Spill and Fill Windows im Ursprungszustand\relax }}{14}{figure.caption.17}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.6}{\ignorespaces Schema des Spill and Fill Windows nach einen Spill\relax }}{14}{figure.caption.18}}
+\@writefile{toc}{\contentsline {section}{\numberline {3.4}Framestackteile des aktiven Threads auslagern (Spill)}{15}{section.3.4}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.4.1}"Uberpr"ufen des freien Speichers im Window}{15}{subsection.3.4.1}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.7}{\ignorespaces Stackframe nach einen Funktionsaufruf\relax }}{15}{figure.caption.19}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.4.2}Spill}{15}{subsection.3.4.2}}
+\@writefile{toc}{\contentsline {section}{\numberline {3.5}Ausgelagerte Framestackteile des aktiven Threads wiederherstellen (Fill)}{16}{section.3.5}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.5.1}Ablauf eines return Vorgangs mit fill}{16}{subsection.3.5.1}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.5.2}Ablauf des Fill Vorgangs}{16}{subsection.3.5.2}}
+\@writefile{toc}{\contentsline {section}{\numberline {3.6}Multithreading mit Verdr\"angung}{16}{section.3.6}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.6.1}Zuordnung von Threads zu den Windows}{17}{subsection.3.6.1}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.6.2}"Anderungen am der Threaderzeugung}{17}{subsection.3.6.2}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.6.3}Threadwechsel}{17}{subsection.3.6.3}}
+\@writefile{toc}{\contentsline {subsubsection}{Ablauf des Threadwechsels}{17}{subsubsection*.20}}
+\@writefile{toc}{\contentsline {section}{\numberline {3.7}Garbage Collector Interface}{18}{section.3.7}}
+\@writefile{toc}{\contentsline {section}{\numberline {3.8}Lesezugriff Wishbone}{18}{section.3.8}}
 \@setckpt{Implementierung}{
-\setcounter{page}{17}
+\setcounter{page}{19}
 \setcounter{equation}{0}
 \setcounter{enumi}{0}
 \setcounter{enumii}{0}
@@ -42,12 +42,12 @@
 \setcounter{mpfootnote}{0}
 \setcounter{part}{0}
 \setcounter{chapter}{3}
-\setcounter{section}{7}
+\setcounter{section}{8}
 \setcounter{subsection}{0}
 \setcounter{subsubsection}{0}
 \setcounter{paragraph}{0}
 \setcounter{subparagraph}{0}
-\setcounter{figure}{8}
+\setcounter{figure}{7}
 \setcounter{table}{0}
 \setcounter{TUD@cols@n}{12}
 \setcounter{ContinuedFloat}{0}
@@ -57,7 +57,7 @@
 \setcounter{parentequation}{0}
 \setcounter{Item}{0}
 \setcounter{Hfootnote}{0}
-\setcounter{bookmark@seq@number}{26}
+\setcounter{bookmark@seq@number}{27}
 \setcounter{lstnumber}{1}
 \setcounter{section@level}{0}
 \setcounter{lstlisting}{0}

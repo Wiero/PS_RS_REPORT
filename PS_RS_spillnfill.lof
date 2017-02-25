@@ -1,18 +1,20 @@
 \select@language {ngerman}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {2.1}{\ignorespaces Stackframe vor einen Funktionsaufruf\relax }}{4}{figure.caption.6}
-\contentsline {figure}{\numberline {2.2}{\ignorespaces Stackframe nach einen Funktionsaufruf\relax }}{4}{figure.caption.7}
-\contentsline {figure}{\numberline {2.3}{\ignorespaces Stackframe nach einen Funktionsr"ucksprung\relax }}{5}{figure.caption.9}
+\contentsline {figure}{\numberline {2.1}{\ignorespaces AMIDAR\relax }}{3}{figure.caption.4}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Stackframe vor einen Funktionsaufruf\relax }}{4}{figure.caption.7}
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Stackframe nach einen Funktionsaufruf\relax }}{5}{figure.caption.8}
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Stackframe nach einen Funktionsr"ucksprung\relax }}{6}{figure.caption.10}
+\contentsline {figure}{\numberline {2.5}{\ignorespaces Spill: Verschieben des Windows \relax }}{7}{figure.caption.11}
+\contentsline {figure}{\numberline {2.6}{\ignorespaces Fill: Verschieben des Windows\relax }}{7}{figure.caption.12}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Zuordnung der Framestack Adressen im Hauptspeicher\relax }}{8}{figure.caption.10}
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Schema des AXI Schreib Puffers\relax }}{9}{figure.caption.11}
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Schema des AXI Lese Puffers\relax }}{10}{figure.caption.12}
-\contentsline {figure}{\numberline {3.4}{\ignorespaces Schema des Spill and Fill Windows im Ursprungszustand\relax }}{11}{figure.caption.13}
-\contentsline {figure}{\numberline {3.5}{\ignorespaces Schema des Spill and Fill Windows nach einen Spill\relax }}{11}{figure.caption.14}
-\contentsline {figure}{\numberline {3.6}{\ignorespaces Stackframe nach einen Funktionsaufruf\relax }}{12}{figure.caption.15}
-\contentsline {figure}{\numberline {3.7}{\ignorespaces Spill: Verschieben des Windows \relax }}{13}{figure.caption.16}
-\contentsline {figure}{\numberline {3.8}{\ignorespaces Fill: Verschieben des Windows\relax }}{14}{figure.caption.17}
+\contentsline {figure}{\numberline {3.1}{\ignorespaces "Ubersicht "uber den AMIDAR FRAMESTACK\relax }}{9}{figure.caption.13}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Zuordnung der Framestack Adressen im Hauptspeicher\relax }}{10}{figure.caption.14}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Schema des AXI Schreib Puffers\relax }}{12}{figure.caption.15}
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Schema des AXI Lese Puffers\relax }}{13}{figure.caption.16}
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Schema des Spill and Fill Windows im Ursprungszustand\relax }}{14}{figure.caption.17}
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Schema des Spill and Fill Windows nach einen Spill\relax }}{14}{figure.caption.18}
+\contentsline {figure}{\numberline {3.7}{\ignorespaces Stackframe nach einen Funktionsaufruf\relax }}{15}{figure.caption.19}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
